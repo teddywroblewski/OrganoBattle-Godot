@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="OrganoBattle2.0"
+run/main_scene="res://SplashScreen.tscn"
 config/icon="res://icon.png"
 
 [rendering]
