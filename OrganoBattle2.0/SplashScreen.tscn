@@ -1,17 +1,30 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://StartButton.gd" type="Script" id=1]
-[ext_resource path="res://MainMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://splashPageBG.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://StartButton.gd" type="Script" id=3]
+[ext_resource path="res://MainMenu.tscn" type="PackedScene" id=4]
 
 [node name="SplashScreen" type="TextureRect"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1025.0
+margin_bottom = 594.0
+texture = ExtResource( 1 )
+expand = true
 
 [node name="StartButton" type="TextureButton" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 1 )
+margin_left = 449.225
+margin_top = 411.259
+margin_right = 513.225
+margin_bottom = 475.259
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+script = ExtResource( 3 )
 
-[node name="MainMenu" parent="." instance=ExtResource( 2 )]
+[node name="MainMenu" parent="." instance=ExtResource( 4 )]
+visible = false
+margin_left = 3.26428
+margin_top = 3.28117
+margin_right = 225.264
+margin_bottom = 69.2812
 
 [connection signal="pressed" from="StartButton" to="MainMenu" method="_on_StartButton_pressed"]
