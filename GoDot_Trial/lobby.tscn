@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://lobby.gd" type="Script" id=1]
+[ext_resource path="res://coin.png" type="Texture" id=2]
 
 [node name="lobby" type="Control"]
 editor/display_folded = true
@@ -86,6 +87,25 @@ size_flags_horizontal = 2
 size_flags_vertical = 0
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 align = 1
+
+[node name="coin" type="Sprite" parent="panel"]
+position = Vector2( -180.934, -133.802 )
+texture = ExtResource( 2 )
+
+[node name="Node" type="Node" parent="panel/coin"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 16.9864, 112.017 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="Control" type="Control" parent="Node2"]
+margin_left = 74.1949
+margin_top = 209.832
+margin_right = 114.195
+margin_bottom = 249.832
 
 [connection signal="pressed" from="panel/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="panel/join" to="." method="_on_join_pressed"]
