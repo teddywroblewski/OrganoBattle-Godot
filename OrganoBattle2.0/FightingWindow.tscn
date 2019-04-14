@@ -1,6 +1,57 @@
-[gd_scene format=2]
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://FightingWindow.gd" type="Script" id=1]
+[ext_resource path="res://Red.png" type="Texture" id=2]
+[ext_resource path="res://Blue.png" type="Texture" id=3]
+[ext_resource path="res://AttackButton.gd" type="Script" id=4]
+[ext_resource path="res://AttackPopupMenu.gd" type="Script" id=5]
+[ext_resource path="res://DefenseButton.gd" type="Script" id=6]
+[ext_resource path="res://DefensePopupMenu.gd" type="Script" id=7]
+[ext_resource path="res://BattleWindow.tscn" type="PackedScene" id=8]
 
 [node name="FightingWindow" type="TextureRect"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1028.0
+margin_bottom = 603.0
+script = ExtResource( 1 )
 
+[node name="AttackButton" type="TextureButton" parent="."]
+margin_left = 79.2808
+margin_top = 452.194
+margin_right = 898.281
+margin_bottom = 912.194
+rect_scale = Vector2( 0.3, 0.2 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="AttackPopupMenu" type="PopupMenu" parent="."]
+margin_left = 79.2808
+margin_top = 199.67
+margin_right = 325.281
+margin_bottom = 445.67
+script = ExtResource( 5 )
+
+[node name="DefenseButton" type="TextureButton" parent="."]
+margin_left = 678.291
+margin_top = 446.321
+margin_right = 1497.29
+margin_bottom = 906.321
+rect_scale = Vector2( 0.3, 0.2 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+script = ExtResource( 6 )
+
+[node name="DefensePopupMenu" type="PopupMenu" parent="."]
+margin_left = 685.0
+margin_top = 200.0
+margin_right = 919.0
+margin_bottom = 423.0
+script = ExtResource( 7 )
+
+[node name="BattleWindow" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[connection signal="pressed" from="AttackButton" to="." method="_on_AttackButton_pressed"]
+[connection signal="id_pressed" from="AttackPopupMenu" to="." method="_on_AttackPopupMenu_id_pressed"]
+[connection signal="pressed" from="DefenseButton" to="." method="_on_DefenseButton_pressed"]
+[connection signal="id_pressed" from="DefensePopupMenu" to="." method="_on_DefensePopupMenu_id_pressed"]

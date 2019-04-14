@@ -12,5 +12,8 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_StartButton_pressed():
-	get_tree().change_scene("res://MainMenu.tscn")
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://FightingWindow.tscn")
+	
