@@ -51,6 +51,24 @@ script = ExtResource( 7 )
 [node name="BattleWindow" parent="." instance=ExtResource( 8 )]
 visible = false
 
+[node name="HealthBar" type="TextureProgress" parent="."]
+margin_left = 91.3821
+margin_top = 58.9363
+margin_right = 910.382
+margin_bottom = 518.936
+rect_scale = Vector2( 0.3, 0.1 )
+value = 100.0
+texture_progress = ExtResource( 2 )
+
+[node name="PowerBar" type="TextureProgress" parent="."]
+margin_left = 681.227
+margin_top = 61.6628
+margin_right = 1500.23
+margin_bottom = 521.663
+rect_scale = Vector2( 0.3, 0.1 )
+value = 50.0
+texture_progress = ExtResource( 3 )
+
 [connection signal="pressed" from="AttackButton" to="." method="_on_AttackButton_pressed"]
 [connection signal="id_pressed" from="AttackPopupMenu" to="." method="_on_AttackPopupMenu_id_pressed"]
 [connection signal="pressed" from="DefenseButton" to="." method="_on_DefenseButton_pressed"]
