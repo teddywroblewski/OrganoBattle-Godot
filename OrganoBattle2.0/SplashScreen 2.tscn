@@ -2,9 +2,9 @@
 
 [ext_resource path="res://01_Background.png" type="Texture" id=1]
 [ext_resource path="res://SplashScreen.gd" type="Script" id=2]
-[ext_resource path="res://02_StartButton.png" type="Texture" id=3]
-[ext_resource path="res://02_StartButtonPressed.png" type="Texture" id=4]
-[ext_resource path="res://02_StartButtonHover.png" type="Texture" id=5]
+[ext_resource path="res://StartB.png" type="Texture" id=3]
+[ext_resource path="res://StartP.png" type="Texture" id=4]
+[ext_resource path="res://StartHover.png" type="Texture" id=5]
 [ext_resource path="res://StartButton.gd" type="Script" id=6]
 [ext_resource path="res://MainMenu.tscn" type="PackedScene" id=7]
 
@@ -16,10 +16,10 @@ expand = true
 script = ExtResource( 2 )
 
 [node name="StartButton" type="TextureButton" parent="."]
-margin_left = 307.119
-margin_top = 450.108
-margin_right = 560.119
-margin_bottom = 567.108
+margin_left = 285.948
+margin_top = 458.709
+margin_right = 601.948
+margin_bottom = 604.709
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
