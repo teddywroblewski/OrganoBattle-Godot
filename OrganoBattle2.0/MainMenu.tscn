@@ -1,43 +1,56 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://FightingWindow.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Blue.png" type="Texture" id=3]
-[ext_resource path="res://TextureButton.gd" type="Script" id=4]
+[ext_resource path="res://BTest.png" type="Texture" id=3]
+[ext_resource path="res://buttonPressed.png" type="Texture" id=4]
+[ext_resource path="res://TextureButton.gd" type="Script" id=5]
 
 [node name="MainMenu" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/margin_right = 120
+custom_constants/margin_top = 80
+custom_constants/margin_left = 120
+custom_constants/margin_bottom = 80
 script = ExtResource( 1 )
 
 [node name="FightingWindow" parent="." instance=ExtResource( 2 )]
 visible = false
-margin_right = 1024.0
-margin_bottom = 600.0
-
-[node name="Label" type="Label" parent="."]
-margin_top = 293.0
-margin_right = 1024.0
-margin_bottom = 307.0
-text = "ADAM TEST"
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1112.0
+margin_bottom = 570.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1112.0
+margin_bottom = 570.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 819.0
-margin_bottom = 600.0
+margin_right = 418.0
+margin_bottom = 490.0
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
-margin_right = 819.0
-margin_bottom = 460.0
+[node name="Begin" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+margin_right = 418.0
+margin_bottom = 209.0
 texture_normal = ExtResource( 3 )
-script = ExtResource( 4 )
+texture_pressed = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+margin_top = 213.0
+margin_right = 418.0
+margin_bottom = 213.0
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
-margin_left = 823.0
-margin_right = 823.0
-margin_bottom = 600.0
+margin_left = 422.0
+margin_right = 422.0
+margin_bottom = 490.0
 
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/CenterContainer"]
+margin_top = 245.0
+margin_bottom = 245.0
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Begin" to="." method="_on_TextureButton_pressed"]
