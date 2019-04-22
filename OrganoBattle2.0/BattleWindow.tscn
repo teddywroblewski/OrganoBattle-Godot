@@ -22,4 +22,8 @@ margin_bottom = 676.056
 [node name="BackgroundAnnimation" type="AnimationPlayer" parent="."]
 
 [node name="Chemical" parent="." instance=ExtResource( 4 )]
+margin_left = 432.047
+margin_top = 208.199
+margin_right = 1251.05
+margin_bottom = 668.199
 
