@@ -1,73 +1,123 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://FightingWindow.gd" type="Script" id=1]
-[ext_resource path="res://Red.png" type="Texture" id=2]
-[ext_resource path="res://Blue.png" type="Texture" id=3]
-[ext_resource path="res://AttackButton.gd" type="Script" id=4]
-[ext_resource path="res://AttackPopupMenu.gd" type="Script" id=5]
-[ext_resource path="res://DefenseButton.gd" type="Script" id=6]
-[ext_resource path="res://DefensePopupMenu.gd" type="Script" id=7]
-[ext_resource path="res://BattleWindow.tscn" type="PackedScene" id=8]
+[ext_resource path="res://07_FightingWindow-01.png" type="Texture" id=1]
+[ext_resource path="res://FightingWindow.gd" type="Script" id=2]
+[ext_resource path="res://Red.png" type="Texture" id=3]
+[ext_resource path="res://Blue.png" type="Texture" id=4]
+[ext_resource path="res://AttackButton.gd" type="Script" id=5]
+[ext_resource path="res://AttackPopupMenu.gd" type="Script" id=6]
+[ext_resource path="res://DefenseButton.gd" type="Script" id=7]
+[ext_resource path="res://DefensePopupMenu.gd" type="Script" id=8]
+[ext_resource path="res://BattleWindow.tscn" type="PackedScene" id=9]
+[ext_resource path="res://icon.png" type="Texture" id=10]
+[ext_resource path="res://08_Scientist1.png" type="Texture" id=11]
+[ext_resource path="res://08_Scientist2.png" type="Texture" id=12]
+[ext_resource path="res://09_Bubble1.png" type="Texture" id=13]
+[ext_resource path="res://09_Bubble2.png" type="Texture" id=14]
+[ext_resource path="res://09_Bubble3.png" type="Texture" id=15]
+[ext_resource path="res://09_Bubble4.png" type="Texture" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "New Anim 1",
+"speed": 1.7
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="FightingWindow" type="TextureRect"]
-margin_right = 1028.0
-margin_bottom = 603.0
-script = ExtResource( 1 )
+margin_right = 900.0
+margin_bottom = 650.0
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="AttackButton" type="TextureButton" parent="."]
-margin_left = 79.2808
-margin_top = 452.194
-margin_right = 898.281
-margin_bottom = 912.194
+margin_left = 87.6921
+margin_top = 487.942
+margin_right = 906.692
+margin_bottom = 947.942
 rect_scale = Vector2( 0.3, 0.2 )
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-script = ExtResource( 4 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="AttackPopupMenu" type="PopupMenu" parent="."]
 margin_left = 79.2808
 margin_top = 199.67
 margin_right = 325.281
 margin_bottom = 445.67
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [node name="DefenseButton" type="TextureButton" parent="."]
-margin_left = 678.291
-margin_top = 446.321
-margin_right = 1497.29
-margin_bottom = 906.321
+margin_left = 606.796
+margin_top = 484.171
+margin_right = 1425.8
+margin_bottom = 944.172
 rect_scale = Vector2( 0.3, 0.2 )
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 2 )
-script = ExtResource( 6 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+script = ExtResource( 7 )
 
 [node name="DefensePopupMenu" type="PopupMenu" parent="."]
 margin_left = 685.0
 margin_top = 200.0
 margin_right = 919.0
 margin_bottom = 423.0
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 
-[node name="BattleWindow" parent="." instance=ExtResource( 8 )]
+[node name="BattleWindow" parent="." instance=ExtResource( 9 )]
 visible = false
 
 [node name="HealthBar" type="TextureProgress" parent="."]
-margin_left = 91.3821
-margin_top = 58.9363
-margin_right = 910.382
-margin_bottom = 518.936
+margin_left = 72.4569
+margin_top = 75.7587
+margin_right = 891.457
+margin_bottom = 535.759
 rect_scale = Vector2( 0.3, 0.1 )
 value = 100.0
-texture_progress = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
 
 [node name="PowerBar" type="TextureProgress" parent="."]
-margin_left = 681.227
-margin_top = 61.6628
-margin_right = 1500.23
-margin_bottom = 521.663
+margin_left = 548.75
+margin_top = 72.1768
+margin_right = 1367.75
+margin_bottom = 532.177
 rect_scale = Vector2( 0.3, 0.1 )
 value = 50.0
-texture_progress = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+
+[node name="Scientist" type="AnimatedSprite" parent="."]
+position = Vector2( 365.262, 303.813 )
+scale = Vector2( 0.912347, 0.912347 )
+frames = SubResource( 1 )
+animation = "New Anim 1"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 483.747, 386.005 )
+scale = Vector2( 1.50049, 1.5005 )
+frames = SubResource( 2 )
+frame = 2
+playing = true
 
 [connection signal="pressed" from="AttackButton" to="." method="_on_AttackButton_pressed"]
 [connection signal="id_pressed" from="AttackPopupMenu" to="." method="_on_AttackPopupMenu_id_pressed"]
