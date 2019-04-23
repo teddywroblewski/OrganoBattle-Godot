@@ -7,7 +7,7 @@ var nextChemical
 var parent
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	parent = get_parent()
+	parent = get_tree().get_root().get_node("BattleWindow")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -15,8 +15,9 @@ func _ready():
 
 
 func _on_Reaction1_pressed():
-	nextChemical = parent.get_node("res://Chemical2.tscn")
-	get_node("AnnimationDialog").show()
+	print(parent)
+	nextChemical = parent.get_node("Chemical2")
+	
 	var t = Timer.new()
 	t.set_wait_time(3)
 	t.set_one_shot(true)

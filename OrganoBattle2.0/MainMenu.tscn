@@ -26,7 +26,6 @@ animations = [ {
 } ]
 
 [node name="MainMenu" type="MarginContainer"]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 120
@@ -115,7 +114,6 @@ texture = ExtResource( 15 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="HBoxContainer/CenterContainer"]
 position = Vector2( 244.406, 227.154 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/MenuOptions/NewGame" to="." method="_on_TextureButton_pressed"]
