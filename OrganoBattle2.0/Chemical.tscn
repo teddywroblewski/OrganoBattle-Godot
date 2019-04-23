@@ -1,18 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Red.png" type="Texture" id=1]
 [ext_resource path="res://Chemical.gd" type="Script" id=2]
 [ext_resource path="res://Blue.png" type="Texture" id=3]
-[ext_resource path="res://Black.png" type="Texture" id=4]
-[ext_resource path="res://Green.png" type="Texture" id=5]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Arrow1",
-"speed": 5.0
-} ]
 
 [node name="Chemical" type="TextureRect"]
 margin_left = 466.854
@@ -54,20 +44,5 @@ margin_right = 2433.1
 margin_bottom = 1126.05
 rect_scale = Vector2( 1, 0.5 )
 texture_normal = ExtResource( 3 )
-
-[node name="AnnimationDialog" type="TextureRect" parent="."]
-visible = false
-margin_left = -499.175
-margin_top = -117.453
-margin_right = 1375.83
-margin_bottom = 656.547
-texture = ExtResource( 4 )
-expand = true
-
-[node name="Reaction1Annimation" type="AnimatedSprite" parent="AnnimationDialog"]
-visible = false
-position = Vector2( 895.579, 371.934 )
-frames = SubResource( 1 )
-animation = "Arrow1"
 
 [connection signal="pressed" from="Reaction1" to="." method="_on_Reaction1_pressed"]
