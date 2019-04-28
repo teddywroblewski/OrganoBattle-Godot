@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="FinalSynthesisWindow" type="TextureRect"]
+margin_right = 903.0
+margin_bottom = 651.0
+
