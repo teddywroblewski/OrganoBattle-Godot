@@ -14,12 +14,6 @@ func _ready():
 #	pass
 
 
-func _on_AttackButton_pressed():
-	print("attack button")
-	attack_popup = get_node("AttackPopupMenu")
-	attack_popup.show()
-
-
 func _on_AttackPopupMenu_id_pressed(ID):
 	get_tree().change_scene("res://BattleWindow.tscn")
 	global.currentChemical = ID
@@ -33,3 +27,14 @@ func _on_DefenseButton_pressed():
 
 func _on_DefensePopupMenu_id_pressed(ID):
 	get_tree().change_scene("res://BattleWindow.tscn")
+
+
+func _on_AttackButton_toggled(button_pressed):
+	if(button_pressed):
+		print("attack button")
+		attack_popup = get_node("AttackPopupMenu")
+		attack_popup.show()
+	else:
+		print("else")
+		attack_popup = get_node("AttackPopupMenu")
+		attack_popup.hide()
