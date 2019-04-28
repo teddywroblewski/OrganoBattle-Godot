@@ -2,27 +2,27 @@
 
 [ext_resource path="res://MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://FightingWindow.tscn" type="PackedScene" id=2]
-[ext_resource path="res://05_Title.png" type="Texture" id=3]
-[ext_resource path="res://03_NewGame.png" type="Texture" id=4]
-[ext_resource path="res://03_NewGamePressed.png" type="Texture" id=5]
-[ext_resource path="res://03_NewGameHover.png" type="Texture" id=6]
+[ext_resource path="res://MainMenu_Graphics/05_Title.png" type="Texture" id=3]
+[ext_resource path="res://MainMenu_Graphics/03_NewGame.png" type="Texture" id=4]
+[ext_resource path="res://MainMenu_Graphics/03_NewGamePressed.png" type="Texture" id=5]
+[ext_resource path="res://MainMenu_Graphics/03_NewGameHover.png" type="Texture" id=6]
 [ext_resource path="res://TextureButton.gd" type="Script" id=7]
-[ext_resource path="res://03_Options.png" type="Texture" id=8]
-[ext_resource path="res://03_OptionsPressed.png" type="Texture" id=9]
-[ext_resource path="res://03_OptionsHover.png" type="Texture" id=10]
-[ext_resource path="res://03_About.png" type="Texture" id=11]
-[ext_resource path="res://03_AboutPressed.png" type="Texture" id=12]
-[ext_resource path="res://03_AboutHover.png" type="Texture" id=13]
-[ext_resource path="res://06_Version.png" type="Texture" id=14]
-[ext_resource path="res://04_Logo.png" type="Texture" id=15]
-[ext_resource path="res://04_Logo2.png" type="Texture" id=16]
+[ext_resource path="res://MainMenu_Graphics/03_Options.png" type="Texture" id=8]
+[ext_resource path="res://MainMenu_Graphics/03_OptionsPressed.png" type="Texture" id=9]
+[ext_resource path="res://MainMenu_Graphics/03_OptionsHover.png" type="Texture" id=10]
+[ext_resource path="res://MainMenu_Graphics/03_About.png" type="Texture" id=11]
+[ext_resource path="res://MainMenu_Graphics/03_AboutPressed.png" type="Texture" id=12]
+[ext_resource path="res://MainMenu_Graphics/03_AboutHover.png" type="Texture" id=13]
+[ext_resource path="res://MainMenu_Graphics/06_Version.png" type="Texture" id=14]
+[ext_resource path="res://MainMenu_Graphics/04_Logo.png" type="Texture" id=15]
+[ext_resource path="res://MainMenu_Graphics/04_Logo2.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "default",
-"speed": 1.5
+"speed": 1.8
 } ]
 
 [node name="MainMenu" type="MarginContainer"]
@@ -114,7 +114,6 @@ texture = ExtResource( 15 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="HBoxContainer/CenterContainer"]
 position = Vector2( 244.406, 227.154 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/MenuOptions/NewGame" to="." method="_on_TextureButton_pressed"]
