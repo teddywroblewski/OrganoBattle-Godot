@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://07_FightingWindow-01.png" type="Texture" id=1]
 [ext_resource path="res://FightingWindow.gd" type="Script" id=2]
@@ -13,14 +13,15 @@
 [ext_resource path="res://DefenseButton.gd" type="Script" id=11]
 [ext_resource path="res://DefensePopupMenu.gd" type="Script" id=12]
 [ext_resource path="res://BattleWindow.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Red.png" type="Texture" id=14]
-[ext_resource path="res://icon.png" type="Texture" id=15]
-[ext_resource path="res://08_Scientist1.png" type="Texture" id=16]
-[ext_resource path="res://08_Scientist2.png" type="Texture" id=17]
-[ext_resource path="res://09_Bubble1.png" type="Texture" id=18]
-[ext_resource path="res://09_Bubble2.png" type="Texture" id=19]
-[ext_resource path="res://09_Bubble3.png" type="Texture" id=20]
-[ext_resource path="res://09_Bubble4.png" type="Texture" id=21]
+[ext_resource path="res://011_HealthBar.png" type="Texture" id=14]
+[ext_resource path="res://011_HealthProgress.png" type="Texture" id=15]
+[ext_resource path="res://icon.png" type="Texture" id=16]
+[ext_resource path="res://08_Scientist1.png" type="Texture" id=17]
+[ext_resource path="res://08_Scientist2.png" type="Texture" id=18]
+[ext_resource path="res://09_Bubble1.png" type="Texture" id=19]
+[ext_resource path="res://09_Bubble2.png" type="Texture" id=20]
+[ext_resource path="res://09_Bubble3.png" type="Texture" id=21]
+[ext_resource path="res://09_Bubble4.png" type="Texture" id=22]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -33,12 +34,12 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ) ],
+"frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "New Anim",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "New Anim 1",
 "speed": 1.7
@@ -46,7 +47,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -63,19 +64,18 @@ margin_left = 98.5832
 margin_top = 478.929
 margin_right = 348.583
 margin_bottom = 578.929
+toggle_mode = true
 texture_normal = ExtResource( 3 )
-
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
 expand = true
 script = ExtResource( 6 )
 
-
 [node name="AttackPopupMenu" type="PopupMenu" parent="."]
-margin_left = 79.2808
-margin_top = 199.67
-margin_right = 325.281
-margin_bottom = 445.67
+margin_left = 100.447
+margin_top = 229.908
+margin_right = 346.447
+margin_bottom = 475.908
 script = ExtResource( 7 )
 
 [node name="DefenseButton" type="TextureButton" parent="."]
@@ -83,6 +83,7 @@ margin_left = 561.406
 margin_top = 480.719
 margin_right = 811.406
 margin_bottom = 580.719
+toggle_mode = true
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
@@ -104,13 +105,13 @@ script = ExtResource( 12 )
 visible = false
 
 [node name="HealthBar" type="TextureProgress" parent="."]
-margin_left = 72.4569
-margin_top = 75.7587
-margin_right = 891.457
-margin_bottom = 535.759
-rect_scale = Vector2( 0.3, 0.1 )
+margin_left = 72.0
+margin_top = 76.0
+margin_right = 373.0
+margin_bottom = 132.0
 value = 100.0
-texture_progress = ExtResource( 14 )
+texture_over = ExtResource( 14 )
+texture_progress = ExtResource( 15 )
 
 [node name="PowerBar" type="TextureProgress" parent="."]
 margin_left = 548.75
@@ -128,16 +129,13 @@ frames = SubResource( 2 )
 animation = "New Anim 1"
 playing = true
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+[node name="Bubbles" type="AnimatedSprite" parent="."]
 position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
 frames = SubResource( 3 )
-
-frame = 2
-
 playing = true
 
 [connection signal="toggled" from="AttackButton" to="." method="_on_AttackButton_toggled"]
 [connection signal="id_pressed" from="AttackPopupMenu" to="." method="_on_AttackPopupMenu_id_pressed"]
-[connection signal="pressed" from="DefenseButton" to="." method="_on_DefenseButton_pressed"]
+[connection signal="toggled" from="DefenseButton" to="." method="_on_DefenseButton_toggled"]
 [connection signal="id_pressed" from="DefensePopupMenu" to="." method="_on_DefensePopupMenu_id_pressed"]

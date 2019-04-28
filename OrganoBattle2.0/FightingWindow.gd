@@ -19,22 +19,22 @@ func _on_AttackPopupMenu_id_pressed(ID):
 	global.currentChemical = ID
 	global.startingChemical = ID
 
-
-func _on_DefenseButton_pressed():
-	defense_popup = get_node("DefensePopupMenu")
-	defense_popup.show()
-
-
 func _on_DefensePopupMenu_id_pressed(ID):
 	get_tree().change_scene("res://BattleWindow.tscn")
 
 
 func _on_AttackButton_toggled(button_pressed):
 	if(button_pressed):
-		print("attack button")
 		attack_popup = get_node("AttackPopupMenu")
 		attack_popup.show()
 	else:
-		print("else")
 		attack_popup = get_node("AttackPopupMenu")
 		attack_popup.hide()
+		
+func _on_DefenseButton_toggled(button_pressed):
+	if(button_pressed):
+		defense_popup = get_node("DefensePopupMenu")
+		defense_popup.show()
+	else:
+		defense_popup = get_node("DefensePopupMenu")
+		defense_popup.hide()
