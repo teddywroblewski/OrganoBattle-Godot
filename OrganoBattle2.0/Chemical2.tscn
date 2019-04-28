@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Blue.png" type="Texture" id=1]
+[ext_resource path="res://Chemical2.gd" type="Script" id=2]
+[ext_resource path="res://Red.png" type="Texture" id=3]
 
 [node name="Chemical2" type="TextureRect"]
 margin_left = 446.283
@@ -9,4 +11,12 @@ margin_right = 1265.28
 margin_bottom = 671.415
 rect_scale = Vector2( 0.2, 0.3 )
 texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Option 1" type="TextureButton" parent="."]
+margin_left = -1879.0
+margin_top = 969.0
+margin_right = -1060.0
+margin_bottom = 1429.0
+texture_normal = ExtResource( 3 )
 
