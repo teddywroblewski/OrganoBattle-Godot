@@ -6,13 +6,12 @@ extends TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# get_tree().get_root().get_node("BattleWindow").isFinal = true
+	pass # Replace with function body.
 
-	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 
-func _on_Option_1_pressed():
-	get_tree().change_scene("res://FinalSynthesisWindow.tscn")
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://FightingWindow.tscn")
