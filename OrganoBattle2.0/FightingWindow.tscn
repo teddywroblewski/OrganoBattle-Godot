@@ -64,10 +64,12 @@ margin_top = 478.929
 margin_right = 348.583
 margin_bottom = 578.929
 texture_normal = ExtResource( 3 )
+
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
 expand = true
 script = ExtResource( 6 )
+
 
 [node name="AttackPopupMenu" type="PopupMenu" parent="."]
 margin_left = 79.2808
@@ -130,7 +132,9 @@ playing = true
 position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
 frames = SubResource( 3 )
+
 frame = 2
+
 playing = true
 
 [connection signal="toggled" from="AttackButton" to="." method="_on_AttackButton_toggled"]
