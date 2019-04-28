@@ -13,6 +13,7 @@
 [ext_resource path="res://DefenseButton.gd" type="Script" id=11]
 [ext_resource path="res://DefensePopupMenu.gd" type="Script" id=12]
 [ext_resource path="res://BattleWindow.tscn" type="PackedScene" id=13]
+
 [ext_resource path="res://011_HealthBar.png" type="Texture" id=14]
 [ext_resource path="res://011_HealthProgress.png" type="Texture" id=15]
 [ext_resource path="res://icon.png" type="Texture" id=16]
@@ -22,6 +23,7 @@
 [ext_resource path="res://09_Bubble2.png" type="Texture" id=20]
 [ext_resource path="res://09_Bubble3.png" type="Texture" id=21]
 [ext_resource path="res://09_Bubble4.png" type="Texture" id=22]
+
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -34,15 +36,22 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
+
 "frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "New Anim",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+
 "loop": true,
 "name": "New Anim 1",
 "speed": 1.7
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=3]
@@ -127,6 +136,7 @@ position = Vector2( 365.262, 303.813 )
 scale = Vector2( 0.912347, 0.912347 )
 frames = SubResource( 2 )
 animation = "New Anim 1"
+frame = 1
 playing = true
 
 [node name="Bubbles" type="AnimatedSprite" parent="."]
