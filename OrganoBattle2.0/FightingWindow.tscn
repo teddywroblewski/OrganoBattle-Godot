@@ -116,13 +116,14 @@ position = Vector2( 365.262, 303.813 )
 scale = Vector2( 0.912347, 0.912347 )
 frames = SubResource( 1 )
 animation = "New Anim 1"
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
 frames = SubResource( 2 )
-frame = 1
+frame = 2
 playing = true
 
 [connection signal="pressed" from="AttackButton" to="." method="_on_AttackButton_pressed"]
