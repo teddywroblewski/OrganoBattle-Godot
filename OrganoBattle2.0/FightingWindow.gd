@@ -22,6 +22,8 @@ func _on_AttackButton_pressed():
 
 func _on_AttackPopupMenu_id_pressed(ID):
 	get_tree().change_scene("res://BattleWindow.tscn")
+	global.currentChemical = ID
+	global.startingChemical = ID
 
 
 func _on_DefenseButton_pressed():
