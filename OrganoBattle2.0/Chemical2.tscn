@@ -20,3 +20,4 @@ margin_right = -1060.0
 margin_bottom = 1429.0
 texture_normal = ExtResource( 3 )
 
+[connection signal="pressed" from="Option 1" to="." method="_on_Option_1_pressed"]
