@@ -23,7 +23,11 @@ func _on_Reaction1_pressed():
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()
+	get_node("Reaction1Annimation").show()
+	get_node("Benzene").hide()
+	get_node("Reaction1Annimation").play()
 	yield(t, "timeout")
 	t.queue_free()
+	global.currentChemical = nextChemical
 	self.hide()
 	nextChemical.show()
