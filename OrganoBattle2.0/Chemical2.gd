@@ -15,4 +15,5 @@ func _ready():
 
 
 func _on_Option_1_pressed():
+	global.currentChemical = null
 	get_tree().change_scene("res://FinalSynthesisWindow.tscn")

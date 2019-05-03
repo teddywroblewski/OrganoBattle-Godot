@@ -16,6 +16,7 @@ func _ready():
 
 func _on_AttackPopupMenu_id_pressed(ID):
 	global.startingChemical = ID
+	global.targetChemical = ID
 	get_tree().change_scene("res://BattleWindow.tscn")
 	print(ID)
 

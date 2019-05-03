@@ -114,6 +114,7 @@ texture = ExtResource( 15 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="HBoxContainer/CenterContainer"]
 position = Vector2( 244.406, 227.154 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/MenuOptions/NewGame" to="." method="_on_TextureButton_pressed"]
