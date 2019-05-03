@@ -7,7 +7,30 @@ var attack_popup
 var defense_popup
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass# Replace with function body.
+	if (global.health <= 0) :
+		global.isGameOver = true
+		global.reset()
+		get_tree().change_scene("MainMenu.tscn")
+	if (global.isComputerTurn) :
+		get_node("AttackButton").hide()
+		get_node("DefenseButton").hide()
+		var t = Timer.new()
+		t.set_wait_time(3)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		t.queue_free()
+		global.health -= 10
+		global.isComputerTurn = false
+		get_node("AttackButton").show()
+		get_node("DefenseButton").show()
+	else :
+		get_node("AttackButton").show()
+		get_node("DefenseButton").show()
+	
+	get_node("HealthBar").value = global.health
+	get_node("PowerBar").value = global.power
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
