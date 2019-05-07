@@ -19,7 +19,7 @@ func _on_Reaction1_pressed():
 	nextChemical = parent.get_node("Chemical2")
 	
 	var t = Timer.new()
-	t.set_wait_time(3)
+	t.set_wait_time(7.5)
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()
