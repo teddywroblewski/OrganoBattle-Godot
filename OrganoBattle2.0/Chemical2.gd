@@ -15,5 +15,6 @@ func _ready():
 
 
 func _on_Option_1_pressed():
-	global.currentChemical = null
+	global.power -= 1 
+	global.currentChemical = "Chemical 3"
 	get_tree().change_scene("res://FinalSynthesisWindow.tscn")

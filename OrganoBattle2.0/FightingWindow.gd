@@ -7,6 +7,9 @@ var attack_popup
 var defense_popup
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	get_node("PowerBar").value = global.power
+	
 	if (global.health <= 0) :
 		global.isGameOver = true
 		global.reset()
@@ -30,7 +33,6 @@ func _ready():
 		get_node("DefenseButton").show()
 	
 	get_node("HealthBar").value = global.health
-	get_node("PowerBar").value = global.power
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -38,10 +40,17 @@ func _ready():
 
 
 func _on_AttackPopupMenu_id_pressed(ID):
-	global.startingChemical = ID
-	global.targetChemical = ID
-	get_tree().change_scene("res://BattleWindow.tscn")
-	print(ID)
+	if (ID == 0) :
+		global.startingChemical = "Chemical"
+		global.targetChemical = global.acidAttacks[randi()%global.acidAttacks.size()]
+		get_tree().change_scene("res://BattleWindow.tscn")
+		print(ID)
+	elif (ID == 1) :
+		global.startingChemical = "Chemical"
+		global.targetChemical = "Chemical 3"
+		get_tree().change_scene("res://BattleWindow.tscn")
+		print(ID)
+	
 
 func _on_DefensePopupMenu_id_pressed(ID):
 	get_tree().change_scene("res://BattleWindow.tscn")
