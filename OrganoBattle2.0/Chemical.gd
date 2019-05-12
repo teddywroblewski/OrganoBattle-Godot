@@ -15,9 +15,8 @@ func _ready():
 
 
 func _on_Reaction1_pressed():
-	print(parent)
 	nextChemical = parent.get_node("Chemical2")
-	
+	global.power -= 1
 	var t = Timer.new()
 	t.set_wait_time(7.5)
 	t.set_one_shot(true)
@@ -28,6 +27,6 @@ func _on_Reaction1_pressed():
 	get_node("Reaction1Annimation").play()
 	yield(t, "timeout")
 	t.queue_free()
-	global.currentChemical = nextChemical
+	global.currentChemical = "Chemical2"
 	self.hide()
 	nextChemical.show()
