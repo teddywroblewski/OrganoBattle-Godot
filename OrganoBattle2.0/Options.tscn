@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Options.gd" type="Script" id=1]
+[ext_resource path="res://FightingWindow_Graphics/010_AttackButton.png" type="Texture" id=2]
+[ext_resource path="res://FightingWindow_Graphics/010_AttackPressed.png" type="Texture" id=3]
 
 [node name="Options" type="TextureRect"]
 margin_right = 901.0
@@ -17,17 +19,26 @@ margin_right = 902.0
 margin_bottom = 648.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-margin_bottom = 8.0
+margin_right = 201.0
+margin_bottom = 89.0
 
 [node name="Reaction1" type="TextureButton" parent="ScrollContainer/VBoxContainer"]
+margin_right = 201.0
+margin_bottom = 81.0
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
 
 [node name="Reaction2" type="TextureButton" parent="ScrollContainer/VBoxContainer"]
-margin_top = 4.0
-margin_bottom = 4.0
+margin_top = 85.0
+margin_right = 201.0
+margin_bottom = 85.0
 
 [node name="Reaction3" type="TextureButton" parent="ScrollContainer/VBoxContainer"]
-margin_top = 8.0
-margin_bottom = 8.0
+margin_top = 89.0
+margin_right = 201.0
+margin_bottom = 89.0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="toggled" from="ScrollContainer/VBoxContainer/Reaction1" to="." method="_on_Reaction1_toggled"]
