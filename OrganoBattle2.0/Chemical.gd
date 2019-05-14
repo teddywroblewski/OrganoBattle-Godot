@@ -18,13 +18,13 @@ func _on_Reaction1_pressed():
 	nextChemical = parent.get_node("Chemical2")
 	global.power -= 1
 	var t = Timer.new()
-	t.set_wait_time(7.5)
+	t.set_wait_time(12)
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()
-	get_node("Reaction1Annimation").show()
-	get_node("Benzene").hide()
-	get_node("Reaction1Annimation").play()
+	get_node("3MB-2HMB-OxM").show()
+	get_node("3MB").hide()
+	get_node("3MB-2HMB-OxM").play()
 	yield(t, "timeout")
 	t.queue_free()
 	global.currentChemical = "Chemical2"

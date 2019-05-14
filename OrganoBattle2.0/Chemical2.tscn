@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Chemical2.gd" type="Script" id=1]
-[ext_resource path="res://Reaction1/R30-01.png" type="Texture" id=2]
+[ext_resource path="res://3MB-2HMB-OxM/2-Hydroxyl-3-methyl-butane-01.png" type="Texture" id=2]
 [ext_resource path="res://Red.png" type="Texture" id=3]
 
 [node name="Chemical2" type="TextureRect"]
