@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Chemical.gd" type="Script" id=1]
 [ext_resource path="res://3MB-2HMB-OxM/3-methyl-1-butene-01.png" type="Texture" id=2]
-[ext_resource path="res://ReactionsButtons/HydroborationButton.png" type="Texture" id=3]
-[ext_resource path="res://ReactionsButtons/HydroBorationPressed.png" type="Texture" id=4]
-[ext_resource path="res://ReactionsButtons/HydroborationHover.png" type="Texture" id=5]
+[ext_resource path="res://ReactionsButtons/OxymercuationButton.png" type="Texture" id=3]
+[ext_resource path="res://ReactionsButtons/OxymercurationPressed.png" type="Texture" id=4]
+[ext_resource path="res://ReactionsButtons/OxymercurationHover.png" type="Texture" id=5]
 [ext_resource path="res://Blue.png" type="Texture" id=6]
 [ext_resource path="res://Red.png" type="Texture" id=7]
 [ext_resource path="res://3MB-2HMB-OxM/A1-01.png" type="Texture" id=8]
@@ -45,10 +45,10 @@ texture = ExtResource( 2 )
 stretch_mode = 4
 
 [node name="Reaction1" type="TextureButton" parent="."]
-margin_left = 99.5061
-margin_top = 507.939
-margin_right = 315.506
-margin_bottom = 568.939
+margin_left = 100.0
+margin_top = 500.0
+margin_right = 317.0
+margin_bottom = 562.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
