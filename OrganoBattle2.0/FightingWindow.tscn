@@ -101,7 +101,7 @@ script = ExtResource( 12 )
 [node name="BattleWindow" parent="." instance=ExtResource( 13 )]
 visible = false
 
-[node name="HealthBar" type="TextureProgress" parent="."]
+[node name="PlayerHealthBar" type="TextureProgress" parent="."]
 margin_left = 51.0
 margin_top = 55.0
 margin_right = 302.0
@@ -110,7 +110,7 @@ value = 100.0
 texture_over = ExtResource( 14 )
 texture_progress = ExtResource( 15 )
 
-[node name="PowerBar" type="TextureProgress" parent="."]
+[node name="PlayerPowerBar" type="TextureProgress" parent="."]
 margin_left = 599.142
 margin_top = 58.8729
 margin_right = 809.142
@@ -125,13 +125,13 @@ position = Vector2( 365.262, 303.813 )
 scale = Vector2( 0.912347, 0.912347 )
 frames = SubResource( 1 )
 animation = "New Anim 1"
+frame = 1
 playing = true
 
 [node name="Bubbles" type="AnimatedSprite" parent="."]
 position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
 frames = SubResource( 2 )
-frame = 1
 playing = true
 
 [connection signal="toggled" from="AttackButton" to="." method="_on_AttackButton_toggled"]

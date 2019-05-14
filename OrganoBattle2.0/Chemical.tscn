@@ -1,54 +1,42 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Chemical.gd" type="Script" id=1]
-[ext_resource path="res://Reaction1/ROG-01.png" type="Texture" id=2]
-[ext_resource path="res://Reactions/HydroborationButton.png" type="Texture" id=3]
-[ext_resource path="res://Reactions/HydroBorationPressed.png" type="Texture" id=4]
-[ext_resource path="res://Reactions/HydroborationHover.png" type="Texture" id=5]
+[ext_resource path="res://3MB-2HMB-OxM/3-methyl-1-butene-01.png" type="Texture" id=2]
+[ext_resource path="res://ReactionsButtons/HydroborationButton.png" type="Texture" id=3]
+[ext_resource path="res://ReactionsButtons/HydroBorationPressed.png" type="Texture" id=4]
+[ext_resource path="res://ReactionsButtons/HydroborationHover.png" type="Texture" id=5]
 [ext_resource path="res://Blue.png" type="Texture" id=6]
 [ext_resource path="res://Red.png" type="Texture" id=7]
-[ext_resource path="res://Reaction1/ROG2-01.png" type="Texture" id=8]
-[ext_resource path="res://Reaction1/R1-01.png" type="Texture" id=9]
-[ext_resource path="res://Reaction1/R2-01.png" type="Texture" id=10]
-[ext_resource path="res://Reaction1/R3-01.png" type="Texture" id=11]
-[ext_resource path="res://Reaction1/R4-01.png" type="Texture" id=12]
-[ext_resource path="res://Reaction1/R5-01.png" type="Texture" id=13]
-[ext_resource path="res://Reaction1/R9-01.png" type="Texture" id=14]
-[ext_resource path="res://Reaction1/R10-01.png" type="Texture" id=15]
-[ext_resource path="res://Reaction1/R12-01.png" type="Texture" id=16]
-[ext_resource path="res://Reaction1/R13-01.png" type="Texture" id=17]
-[ext_resource path="res://Reaction1/R14-01.png" type="Texture" id=18]
-[ext_resource path="res://Reaction1/R15-01.png" type="Texture" id=19]
-[ext_resource path="res://Reaction1/R16-01.png" type="Texture" id=20]
-[ext_resource path="res://Reaction1/R17-01.png" type="Texture" id=21]
-[ext_resource path="res://Reaction1/R18-01.png" type="Texture" id=22]
-[ext_resource path="res://Reaction1/R19-01.png" type="Texture" id=23]
-[ext_resource path="res://Reaction1/R20-01.png" type="Texture" id=24]
-[ext_resource path="res://Reaction1/R22-01.png" type="Texture" id=25]
-[ext_resource path="res://Reaction1/R23-01.png" type="Texture" id=26]
-[ext_resource path="res://Reaction1/R24-01.png" type="Texture" id=27]
-[ext_resource path="res://Reaction1/R25-01.png" type="Texture" id=28]
-[ext_resource path="res://Reaction1/R26-01.png" type="Texture" id=29]
-[ext_resource path="res://Reaction1/R27-01.png" type="Texture" id=30]
-[ext_resource path="res://Reaction1/R28-01.png" type="Texture" id=31]
-[ext_resource path="res://Reaction1/R29-01.png" type="Texture" id=32]
-[ext_resource path="res://Reaction1/R30-01.png" type="Texture" id=33]
+[ext_resource path="res://3MB-2HMB-OxM/A1-01.png" type="Texture" id=8]
+[ext_resource path="res://3MB-2HMB-OxM/A2-01.png" type="Texture" id=9]
+[ext_resource path="res://3MB-2HMB-OxM/A3-01.png" type="Texture" id=10]
+[ext_resource path="res://3MB-2HMB-OxM/A4-01.png" type="Texture" id=11]
+[ext_resource path="res://3MB-2HMB-OxM/A5-01.png" type="Texture" id=12]
+[ext_resource path="res://3MB-2HMB-OxM/A6-01.png" type="Texture" id=13]
+[ext_resource path="res://3MB-2HMB-OxM/A7-01.png" type="Texture" id=14]
+[ext_resource path="res://3MB-2HMB-OxM/A8-01.png" type="Texture" id=15]
+[ext_resource path="res://3MB-2HMB-OxM/A9-01.png" type="Texture" id=16]
+[ext_resource path="res://3MB-2HMB-OxM/A10-01.png" type="Texture" id=17]
+[ext_resource path="res://3MB-2HMB-OxM/A11-01.png" type="Texture" id=18]
+[ext_resource path="res://3MB-2HMB-OxM/A12-01.png" type="Texture" id=19]
+[ext_resource path="res://3MB-2HMB-OxM/A13-01.png" type="Texture" id=20]
+[ext_resource path="res://3MB-2HMB-OxM/A14-01.png" type="Texture" id=21]
+[ext_resource path="res://3MB-2HMB-OxM/2-Hydroxyl-3-methyl-butane-01.png" type="Texture" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 22 ) ],
 "loop": false,
-"name": "default",
-"speed": 4.5
+"name": "New Anim",
+"speed": 1.35
 } ]
 
 [node name="Chemical" type="TextureRect"]
-editor/display_folded = true
 margin_right = 900.0
 margin_bottom = 650.0
 script = ExtResource( 1 )
 
-[node name="Benzene" type="TextureRect" parent="."]
+[node name="3MB" type="TextureRect" parent="."]
 margin_right = 900.0
 margin_bottom = 650.0
 grow_horizontal = 2
@@ -92,9 +80,10 @@ margin_bottom = 1212.07
 rect_scale = Vector2( 1, 0.5 )
 texture_normal = ExtResource( 6 )
 
-[node name="Reaction1Annimation" type="AnimatedSprite" parent="."]
+[node name="3MB-2HMB-OxM" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 450, 325 )
 frames = SubResource( 1 )
+animation = "New Anim"
 
 [connection signal="pressed" from="Reaction1" to="." method="_on_Reaction1_pressed"]
