@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Chemical2.gd" type="Script" id=1]
 [ext_resource path="res://3MB-2HMB-OxM/2-Hydroxyl-3-methyl-butane-01.png" type="Texture" id=2]
-[ext_resource path="res://Red.png" type="Texture" id=3]
+[ext_resource path="res://ReactionsButtons/DehydrationButton.png" type="Texture" id=3]
+[ext_resource path="res://ReactionsButtons/DehydrationPressed.png" type="Texture" id=4]
+[ext_resource path="res://ReactionsButtons/DehydrationHover.png" type="Texture" id=5]
 
 [node name="Chemical2" type="TextureRect"]
 margin_right = 900.0
@@ -15,11 +17,12 @@ margin_bottom = 40.0
 texture = ExtResource( 2 )
 
 [node name="Option 1" type="TextureButton" parent="."]
-margin_left = 36.3494
-margin_top = 527.638
-margin_right = 230.349
-margin_bottom = 606.638
+margin_left = 100.0
+margin_top = 500.0
+margin_right = 317.0
+margin_bottom = 562.0
 texture_normal = ExtResource( 3 )
-expand = true
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
 
 [connection signal="pressed" from="Option 1" to="." method="_on_Option_1_pressed"]
