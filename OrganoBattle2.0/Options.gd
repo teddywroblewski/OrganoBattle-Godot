@@ -16,8 +16,10 @@ func _ready():
 func _on_Reaction1_toggled(button_pressed):
 	if (button_pressed) :
 		global.acidAttacks.remove(0)
+		
 	else:
 		global.acidAttacks.append("Chemical0")
+	
 
 func _on_Reaction2_toggled(button_pressed):
 	if (button_pressed) :
