@@ -31,15 +31,15 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
-"loop": true,
-"name": "New Anim 1",
-"speed": 1.7
-}, {
 "frames": [ ExtResource( 18 ) ],
 "loop": true,
 "name": "New Anim",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "New Anim 1",
+"speed": 1.7
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -57,10 +57,10 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="AttackButton" type="TextureButton" parent="."]
-margin_left = 98.5832
-margin_top = 478.929
-margin_right = 348.583
-margin_bottom = 578.929
+margin_left = 100.0
+margin_top = 480.0
+margin_right = 350.0
+margin_bottom = 580.0
 toggle_mode = true
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
@@ -76,10 +76,10 @@ margin_bottom = 475.908
 script = ExtResource( 7 )
 
 [node name="DefenseButton" type="TextureButton" parent="."]
-margin_left = 561.406
-margin_top = 480.719
-margin_right = 811.406
-margin_bottom = 580.719
+margin_left = 560.0
+margin_top = 480.0
+margin_right = 809.406
+margin_bottom = 580.0
 toggle_mode = true
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
@@ -125,13 +125,13 @@ position = Vector2( 365.262, 303.813 )
 scale = Vector2( 0.912347, 0.912347 )
 frames = SubResource( 1 )
 animation = "New Anim 1"
-frame = 1
 playing = true
 
 [node name="Bubbles" type="AnimatedSprite" parent="."]
 position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
 frames = SubResource( 2 )
+frame = 2
 playing = true
 
 [connection signal="toggled" from="AttackButton" to="." method="_on_AttackButton_toggled"]

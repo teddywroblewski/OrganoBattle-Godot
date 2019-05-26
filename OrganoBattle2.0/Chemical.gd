@@ -14,11 +14,15 @@ func _ready():
 #	pass
 
 
-func _on_Reaction1_pressed():
-	nextChemical = parent.get_node("Chemical2")
+func _on_Oxymercuration_pressed():
+	get_node("Oxymercuration").hide()
+	get_node("Ozonolysis").hide()
+	get_node("Hydroboration").hide()
+	get_node("FRA").hide()
+	nextChemical = parent.get_node("2HMB")
 	global.power -= 1
 	var t = Timer.new()
-	t.set_wait_time(12)
+	t.set_wait_time(10)
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()
@@ -27,6 +31,6 @@ func _on_Reaction1_pressed():
 	get_node("3MB-2HMB-OxM").play()
 	yield(t, "timeout")
 	t.queue_free()
-	global.currentChemical = "Chemical2"
+	global.currentChemical = "2HMB"
 	self.hide()
 	nextChemical.show()

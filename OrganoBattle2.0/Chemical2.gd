@@ -15,6 +15,17 @@ func _ready():
 
 
 func _on_Option_1_pressed():
+	get_node("Reaction1").hide()
 	global.power -= 1 
-	global.currentChemical = "Chemical 3"
+	global.currentChemical = "2M2B"
+	var t = Timer.new()
+	t.set_wait_time(11)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	get_node("2HMB-2M2B-DeH").show()
+	get_node("2HMB").hide()
+	get_node("2HMB-2M2B-DeH").play()
+	yield(t, "timeout")
+	t.queue_free()
 	get_tree().change_scene("res://FinalSynthesisWindow.tscn")
