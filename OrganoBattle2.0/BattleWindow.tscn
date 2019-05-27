@@ -40,3 +40,9 @@ margin_bottom = 639.0
 [node name="2HMB" parent="." instance=ExtResource( 10 )]
 visible = false
 
+[node name="TargetChemical" type="TextureRect" parent="."]
+margin_left = 55.7902
+margin_top = 58.7265
+margin_right = 95.7902
+margin_bottom = 98.7265
+

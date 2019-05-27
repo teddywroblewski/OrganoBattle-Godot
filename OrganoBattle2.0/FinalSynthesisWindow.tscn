@@ -32,7 +32,6 @@ margin_bottom = 534.996
 grow_horizontal = 0
 grow_vertical = 0
 action_mode = 0
-button_mask = 4
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 6 )

@@ -12,7 +12,7 @@ var currentChemical
 var targetChemical
 var isGameOver
 var isComputerTurn
-const acidAttacks = ["Chemical 3"]
+const acidAttacks = ["1-bromo-3-methyl-butane", "1-chloro-3-methyl-butane","1-iodo-3-methyl-butane"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
