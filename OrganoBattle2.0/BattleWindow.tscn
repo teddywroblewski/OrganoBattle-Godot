@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://BattleWindow_Graphics/012_BattleWindow.png" type="Texture" id=1]
 [ext_resource path="res://BattleWindow.gd" type="Script" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://BattleWindow_Graphics/013_BWBubbles6.png" type="Texture" id=8]
 [ext_resource path="res://Chemical.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Chemical2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Form2MPal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://3MBoh.tscn" type="PackedScene" id=12]
+[ext_resource path="res://1Br3MB.tscn" type="PackedScene" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -40,7 +43,16 @@ margin_bottom = 639.0
 [node name="2HMB" parent="." instance=ExtResource( 10 )]
 visible = false
 
+[node name="Form2MPal" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[node name="3MBoh" parent="." instance=ExtResource( 12 )]
+visible = false
+
+[node name="1Br3MB" parent="." instance=ExtResource( 13 )]
+
 [node name="TargetChemical" type="TextureRect" parent="."]
+visible = false
 margin_left = 55.7902
 margin_top = 58.7265
 margin_right = 95.7902
