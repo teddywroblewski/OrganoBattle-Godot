@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Chemical.gd" type="Script" id=1]
 [ext_resource path="res://Chemicals/3-methyl-1-butene-01.png" type="Texture" id=2]
-[ext_resource path="res://ReactionsButtons/OxMButton.png" type="Texture" id=3]
-[ext_resource path="res://ReactionsButtons/OxM_Pressed.png" type="Texture" id=4]
-[ext_resource path="res://ReactionsButtons/OxM_Hover.png" type="Texture" id=5]
+[ext_resource path="res://ReactionsButtons/NEWOxMButton.png" type="Texture" id=3]
+[ext_resource path="res://ReactionsButtons/NEWOxM_Pressed.png" type="Texture" id=4]
+[ext_resource path="res://ReactionsButtons/NEWOxM_Hover.png" type="Texture" id=5]
 [ext_resource path="res://ReactionsButtons/OzonButton.png" type="Texture" id=6]
 [ext_resource path="res://ReactionsButtons/Ozon_Pressed.png" type="Texture" id=7]
 [ext_resource path="res://ReactionsButtons/Ozon_Hover.png" type="Texture" id=8]
@@ -109,7 +109,6 @@ animations = [ {
 } ]
 
 [node name="3MB" type="TextureRect"]
-editor/display_folded = true
 margin_right = 900.0
 margin_bottom = 650.0
 script = ExtResource( 1 )
@@ -124,9 +123,9 @@ stretch_mode = 4
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -409.0
-margin_top = 540.0
+margin_top = 440.579
 margin_right = -228.0
-margin_bottom = 627.0
+margin_bottom = 620.579
 rect_pivot_offset = Vector2( 83.9217, -0.117828 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )

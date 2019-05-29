@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/3-methyl-1-butanol.png-9ce3b5437c31610e5c1241dbd26a568e.stex"
+path="res://.import/E2Hover.png-3b42e5e1ba75b6670ef614de08b3e852.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3-methyl-1-butanol.png"
-dest_files=[ "res://.import/3-methyl-1-butanol.png-9ce3b5437c31610e5c1241dbd26a568e.stex" ]
+source_file="res://ReactionsButtons/E2Hover.png"
+dest_files=[ "res://.import/E2Hover.png-3b42e5e1ba75b6670ef614de08b3e852.stex" ]
 
 [params]
 

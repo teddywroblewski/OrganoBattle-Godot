@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://1Br3MB.gd" type="Script" id=1]
 [ext_resource path="res://Chemicals/1-bromo-3-methyl-butane-01.png" type="Texture" id=2]
+[ext_resource path="res://ReactionsButtons/E2Button.png" type="Texture" id=3]
+[ext_resource path="res://ReactionsButtons/E2_Pressed.png" type="Texture" id=4]
+[ext_resource path="res://ReactionsButtons/E2Hover.png" type="Texture" id=5]
 
 [node name="1Br3MB" type="TextureRect"]
-visible = false
+editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
@@ -13,4 +16,13 @@ script = ExtResource( 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 2 )
+
+[node name="E2" type="TextureButton" parent="."]
+margin_left = 40.75
+margin_top = 540.0
+margin_right = 221.75
+margin_bottom = 625.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
 

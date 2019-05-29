@@ -8,6 +8,7 @@ var parent
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	parent = get_tree().get_root().get_node("BattleWindow")
+	global.currentChemical = "3MB"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -19,7 +20,7 @@ func _on_Oxymercuration_pressed():
 	get_node("Ozonolysis").hide()
 	get_node("Hydroboration").hide()
 	get_node("FRA").hide()
-	nextChemical = parent.get_node("2HMB")
+	nextChemical = parent.get_node("3M2Boh")
 	global.power -= 1
 	var t = Timer.new()
 	t.set_wait_time(10)
@@ -31,7 +32,7 @@ func _on_Oxymercuration_pressed():
 	get_node("3MB-2HMB-OxM").play()
 	yield(t, "timeout")
 	t.queue_free()
-	global.currentChemical = "2HMB"
+	global.currentChemical = "3M2Boh"
 	self.hide()
 	nextChemical.show()
 func _on_Ozonolysis_pressed():
