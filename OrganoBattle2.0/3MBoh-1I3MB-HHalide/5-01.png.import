@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2-hydroxy-3-methyl-butane-01.png-eb975c36737703c78203de78577ea8c0.stex"
+path="res://.import/5-01.png-c0dee63f9752bee34525d01903524b67.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Chemicals/2-hydroxy-3-methyl-butane-01.png"
-dest_files=[ "res://.import/2-hydroxy-3-methyl-butane-01.png-eb975c36737703c78203de78577ea8c0.stex" ]
+source_file="res://3MBoh-1I3MB-HHalide/5-01.png"
+dest_files=[ "res://.import/5-01.png-c0dee63f9752bee34525d01903524b67.stex" ]
 
 [params]
 
