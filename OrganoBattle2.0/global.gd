@@ -12,6 +12,7 @@ var currentChemical
 var targetChemical
 var isGameOver
 var isComputerTurn
+var nextChemical
 const acidAttacks = ["1-bromo-3-methyl-butane", "1-chloro-3-methyl-butane","1-iodo-3-methyl-butane"]
 
 # Called when the node enters the scene tree for the first time.
@@ -25,6 +26,7 @@ func _ready():
 	isGameOver = false
 	targetChemical = null
 	isComputerTurn = false
+	nextChemical = null
 
 func reset() :
 	health = 100
@@ -36,6 +38,7 @@ func reset() :
 	isGameOver = false
 	targetChemical = null
 	isComputerTurn = false
+	nextChemical = null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
