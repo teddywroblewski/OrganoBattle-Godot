@@ -46,7 +46,7 @@ func _on_AttackPopupMenu_id_pressed(ID):
 		get_tree().change_scene("res://BattleWindow.tscn")
 		print(ID)
 	elif (ID == 1) :
-		global.startingChemical = "3MB"
+		global.startingChemical = "3MBoh"
 		global.targetChemical = "Chemical 3"
 		get_tree().change_scene("res://BattleWindow.tscn")
 		print(ID)

@@ -8,7 +8,7 @@
 [ext_resource path="res://BattleWindow_Graphics/013_BWBubbles-01.png" type="Texture" id=6]
 [ext_resource path="res://BattleWindow_Graphics/013_BWBubbles5.png" type="Texture" id=7]
 [ext_resource path="res://BattleWindow_Graphics/013_BWBubbles6.png" type="Texture" id=8]
-[ext_resource path="res://Chemical.tscn" type="PackedScene" id=9]
+[ext_resource path="res://3MB.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Chemical2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Form2MPal.tscn" type="PackedScene" id=11]
 [ext_resource path="res://3MBoh.tscn" type="PackedScene" id=12]
@@ -80,7 +80,6 @@ visible = false
 script = ExtResource( 20 )
 
 [node name="TargetChemical" type="TextureRect" parent="."]
-visible = false
 margin_left = 670.0
 margin_top = 46.0
 margin_right = 835.0
@@ -88,3 +87,4 @@ margin_bottom = 155.0
 texture = SubResource( 2 )
 expand = true
 
+[connection signal="visibility_changed" from="3MBoh" to="." method="_on_3MBoh_visibility_changed"]
