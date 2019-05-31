@@ -20,7 +20,7 @@ func _on_Option_1_pressed():
 	nextChemical = parent.get_node("2M2B")
 	global.power -= 1 
 	var t = Timer.new()
-	t.set_wait_time(11)
+	t.set_wait_time(9)
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()
@@ -38,7 +38,7 @@ func _on_PBr3_pressed():
 	nextChemical = parent.get_node("2Br3MB")
 	global.power -= 1 
 	var t = Timer.new()
-	t.set_wait_time(11)
+	t.set_wait_time(8)
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()
