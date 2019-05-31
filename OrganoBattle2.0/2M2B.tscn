@@ -1,14 +1,151 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=46 format=2]
 
-[ext_resource path="res://Chemicals/2-methyl-2-butene-01.png" type="Texture" id=1]
+[ext_resource path="res://2M2B.gd" type="Script" id=1]
+[ext_resource path="res://Chemicals/2-methyl-2-butene-01.png" type="Texture" id=2]
+[ext_resource path="res://ReactionsButtons/H20ationButton.png" type="Texture" id=3]
+[ext_resource path="res://ReactionsButtons/H2OationPressed.png" type="Texture" id=4]
+[ext_resource path="res://ReactionsButtons/H2OationHover.png" type="Texture" id=5]
+[ext_resource path="res://ReactionsButtons/H2ationButton.png" type="Texture" id=6]
+[ext_resource path="res://ReactionsButtons/H2ationPressed.png" type="Texture" id=7]
+[ext_resource path="res://ReactionsButtons/H2ationHover.png" type="Texture" id=8]
+[ext_resource path="res://ReactionsButtons/HydBorButton.png" type="Texture" id=9]
+[ext_resource path="res://ReactionsButtons/HBro_Pressed.png" type="Texture" id=10]
+[ext_resource path="res://ReactionsButtons/HBor_Hover.png" type="Texture" id=11]
+[ext_resource path="res://ReactionsButtons/HalogenationButton.png" type="Texture" id=12]
+[ext_resource path="res://ReactionsButtons/HalogenationPressed.png" type="Texture" id=13]
+[ext_resource path="res://ReactionsButtons/HalogenationHover.png" type="Texture" id=14]
+[ext_resource path="res://2M2B-2M2Boh-H2Oation/1-01.png" type="Texture" id=15]
+[ext_resource path="res://2M2B-2M2Boh-H2Oation/2-01.png" type="Texture" id=16]
+[ext_resource path="res://2M2B-2M2Boh-H2Oation/3-01.png" type="Texture" id=17]
+[ext_resource path="res://2M2B-2M2Boh-H2Oation/4-01.png" type="Texture" id=18]
+[ext_resource path="res://2M2B-2M2Boh-H2Oation/5-01.png" type="Texture" id=19]
+[ext_resource path="res://2M2B-2M2Boh-H2Oation/6-01.png" type="Texture" id=20]
+[ext_resource path="res://2M2B-2M2Boh-H2Oation/7-01.png" type="Texture" id=21]
+[ext_resource path="res://2M2B-2M2Boh-H2Oation/8-01.png" type="Texture" id=22]
+[ext_resource path="res://2M2B-2MBane-H2ation/1-01.png" type="Texture" id=23]
+[ext_resource path="res://2M2B-2MBane-H2ation/2-01.png" type="Texture" id=24]
+[ext_resource path="res://2M2B-2MBane-H2ation/3-01.png" type="Texture" id=25]
+[ext_resource path="res://2M2B-3M2Boh-Hbor/1-01.png" type="Texture" id=26]
+[ext_resource path="res://2M2B-3M2Boh-Hbor/2.png" type="Texture" id=27]
+[ext_resource path="res://2M2B-3M2Boh-Hbor/3.png" type="Texture" id=28]
+[ext_resource path="res://2M2B-3M2Boh-Hbor/4.png" type="Texture" id=29]
+[ext_resource path="res://2M2B-3M2Boh-Hbor/5.png" type="Texture" id=30]
+[ext_resource path="res://2M2B-3M2Boh-Hbor/6.png" type="Texture" id=31]
+[ext_resource path="res://2M2B-3M2Boh-Hbor/7.png" type="Texture" id=32]
+[ext_resource path="res://2M2B-23Br2MB-Halo/1-01.png" type="Texture" id=33]
+[ext_resource path="res://2M2B-23Br2MB-Halo/2-01.png" type="Texture" id=34]
+[ext_resource path="res://2M2B-23Br2MB-Halo/3-01.png" type="Texture" id=35]
+[ext_resource path="res://2M2B-23Br2MB-Halo/4-01.png" type="Texture" id=36]
+[ext_resource path="res://2M2B-23Br2MB-Halo/5-01.png" type="Texture" id=37]
+[ext_resource path="res://2M2B-23Br2MB-Halo/6-01.png" type="Texture" id=38]
+[ext_resource path="res://2M2B-23Br2MB-Halo/7-01.png" type="Texture" id=39]
+[ext_resource path="res://2M2B-23Br2MB-Halo/8-01.png" type="Texture" id=40]
+[ext_resource path="res://2M2B-23Br2MB-Halo/9-01.png" type="Texture" id=41]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": false,
+"name": "2M2B-2M2Boh-H2Oation",
+"speed": 1.5
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "2M2B-2MBane-H2ation",
+"speed": 1.5
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "2M2B-3M2Boh-Hbor",
+"speed": 1.5
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": false,
+"name": "2M2B-23Br2MB-Halo",
+"speed": 1.5
+} ]
 
 [node name="2M2B" type="TextureRect"]
-editor/display_folded = true
 margin_right = 900.0
 margin_bottom = 650.0
+script = ExtResource( 1 )
 
 [node name="2M2B" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
 
+[node name="H2Oation" type="TextureButton" parent="."]
+margin_left = 40.75
+margin_top = 540.0
+margin_right = 221.75
+margin_bottom = 627.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+
+[node name="H2ation" type="TextureButton" parent="."]
+margin_left = 253.25
+margin_top = 540.0
+margin_right = 434.25
+margin_bottom = 627.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+
+[node name="Hydroboration" type="TextureButton" parent="."]
+margin_left = 465.75
+margin_top = 540.0
+margin_right = 646.75
+margin_bottom = 625.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+
+[node name="Halogenation" type="TextureButton" parent="."]
+margin_left = 678.25
+margin_top = 540.0
+margin_right = 859.25
+margin_bottom = 627.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+
+[node name="2M2B-2M2Boh-H2Oation" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 1 )
+animation = "2M2B-2M2Boh-H2Oation"
+centered = false
+
+[node name="2M2B-2MBane-H2ation" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 2 )
+animation = "2M2B-2MBane-H2ation"
+centered = false
+
+[node name="2M2B-3M2Boh-Hbor" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 3 )
+animation = "2M2B-3M2Boh-Hbor"
+centered = false
+
+[node name="2M2B-23Br2MB" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 4 )
+animation = "2M2B-23Br2MB-Halo"
+centered = false
+
+[connection signal="pressed" from="H2Oation" to="." method="_on_H2Oation_pressed"]
+[connection signal="pressed" from="H2ation" to="." method="_on_H2ation_pressed"]
+[connection signal="pressed" from="Hydroboration" to="." method="_on_Hydroboration_pressed"]
+[connection signal="pressed" from="Halogenation" to="." method="_on_Halogenation_pressed"]

@@ -16,7 +16,7 @@ func _on_Dehydration_pressed():
 	get_node("SOCl2").hide()
 	get_node("PBr3").hide()
 	get_node("HydrogenHalide").hide()
-	global.nextChemical = "3MB"
+	global.nextChemical = "3MB" #different for backwards
 	global.power -= 1
 	var t = Timer.new()
 	t.set_wait_time(10)
@@ -28,9 +28,9 @@ func _on_Dehydration_pressed():
 	get_node("3MBoh-3MB-DeH").play()
 	yield(t, "timeout")
 	t.queue_free()
-	global.currentChemical = "3MB"
+	global.currentChemical = "3MB" 
 	self.hide()
-	get_tree().change_scene("res://BattleWindow.tscn")
+	get_tree().change_scene("res://BattleWindow.tscn") #different for backwards
 func _on_SOCl2_pressed():
 	get_node("Dehydration").hide()
 	get_node("SOCl2").hide()
