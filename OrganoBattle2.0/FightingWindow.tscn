@@ -125,7 +125,6 @@ position = Vector2( 365.262, 303.813 )
 scale = Vector2( 0.912347, 0.912347 )
 frames = SubResource( 1 )
 animation = "New Anim 1"
-frame = 1
 playing = true
 
 [node name="Bubbles" type="AnimatedSprite" parent="."]

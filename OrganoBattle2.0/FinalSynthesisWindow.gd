@@ -6,7 +6,7 @@ extends TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("ChemicalMade").set_texture(load("res://Chemicals/" + str(global.currentChemical) + ".png"))
+	get_node("ChemicalMade").set_texture(load("res://Chemicals/" + str(global.targetChemical) + ".png"))
 	global.isFinalChemical = true
 	if (global.currentChemical == global.targetChemical) :
 		get_node("SuccessPage").show()
