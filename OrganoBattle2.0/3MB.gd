@@ -95,3 +95,35 @@ func _on_FRA_pressed():
 	global.currentChemical = "1Br3MB"
 	self.hide()
 	nextChemical.show()
+
+
+func _on_Oxymercuration_mouse_entered():
+	get_node("OxymercurationPopup").show()
+
+
+func _on_Oxymercuration_mouse_exited():
+	get_node("OxymercurationPopup").hide()
+
+
+func _on_Ozonolysis_mouse_entered():
+	get_node("OzonolysisPopup").show()
+
+
+func _on_Ozonolysis_mouse_exited():
+	get_node("OzonolysisPopup").hide()
+
+
+func _on_Hydroboration_mouse_entered():
+	get_node("HydroborationPopup").show()
+
+
+func _on_Hydroboration_mouse_exited():
+	get_node("HydroborationPopup").hide()
+
+
+func _on_FRA_mouse_entered():
+	get_node("FRAPopup").show()
+
+
+func _on_FRA_mouse_exited():
+	get_node("FRAPopup").hide()

@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://1I3MB.gd" type="Script" id=1]
 [ext_resource path="res://Chemicals/1-Iodo-3-methylbutane.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [node name="1I3MB" type="TextureRect"]
-visible = false
 margin_right = 900.0
 margin_bottom = 650.0
 script = ExtResource( 1 )
@@ -14,3 +14,11 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 2 )
 
+[node name="ContinueButton" type="TextureButton" parent="."]
+margin_left = 422.83
+margin_top = 522.666
+margin_right = 486.83
+margin_bottom = 586.666
+texture_normal = ExtResource( 3 )
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

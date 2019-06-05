@@ -89,6 +89,7 @@ visible = false
 script = ExtResource( 18 )
 
 [node name="1I3MB" parent="." instance=ExtResource( 19 )]
+visible = false
 
 [node name="ADD1_1Br3MB" type="TextureRect" parent="."]
 visible = false
@@ -122,10 +123,11 @@ visible = false
 visible = false
 
 [node name="TargetChemical" type="TextureRect" parent="."]
-margin_left = 705.19
-margin_top = 26.76
-margin_right = 865.19
-margin_bottom = 131.76
+margin_left = 688.0
+margin_top = 65.0
+margin_right = 862.0
+margin_bottom = 195.0
 texture = SubResource( 2 )
 expand = true
+stretch_mode = 1
 

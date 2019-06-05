@@ -24,6 +24,10 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 3 )
 
+[node name="ChemicalMade" type="TextureRect" parent="."]
+margin_right = 900.0
+margin_bottom = 650.0
+
 [node name="ContinueButton" type="TextureButton" parent="."]
 margin_left = 268.0
 margin_top = 438.996
@@ -32,14 +36,9 @@ margin_bottom = 534.996
 grow_horizontal = 0
 grow_vertical = 0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
-
-[node name="ChemicalMade" type="TextureButton" parent="."]
-margin_left = 422.831
-margin_top = 199.67
-margin_right = 462.831
-margin_bottom = 239.67
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

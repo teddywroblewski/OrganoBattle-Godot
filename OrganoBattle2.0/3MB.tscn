@@ -1,10 +1,10 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=82 format=2]
 
 [ext_resource path="res://3MB.gd" type="Script" id=1]
 [ext_resource path="res://Chemicals/3-methyl-1-butene-01.png" type="Texture" id=2]
 [ext_resource path="res://ReactionsButtons/NEWOxMButton.png" type="Texture" id=3]
 [ext_resource path="res://ReactionsButtons/NEWOxM_Pressed.png" type="Texture" id=4]
-[ext_resource path="res://ReactionsButtons/NEWOxM_Hover.png" type="Texture" id=5]
+[ext_resource path="res://ReactionsButtons/OxM_Hover.png" type="Texture" id=5]
 [ext_resource path="res://ReactionsButtons/OzonButton.png" type="Texture" id=6]
 [ext_resource path="res://ReactionsButtons/Ozon_Pressed.png" type="Texture" id=7]
 [ext_resource path="res://ReactionsButtons/Ozon_Hover.png" type="Texture" id=8]
@@ -75,6 +75,7 @@
 [ext_resource path="res://3MB-1Br3MB-FRA/14.png" type="Texture" id=73]
 [ext_resource path="res://3MB-1Br3MB-FRA/15-01.png" type="Texture" id=74]
 [ext_resource path="res://3MB-1Br3MB-FRA/16-01.png" type="Texture" id=75]
+[ext_resource path="res://ReactionsButtons/NEWOxM_Hover.png" type="Texture" id=76]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -108,6 +109,10 @@ animations = [ {
 "speed": 1.5
 } ]
 
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 76 )
+region_rect = Rect2( 0, 0, 183, 180 )
+
 [node name="3MB" type="TextureRect"]
 margin_right = 900.0
 margin_bottom = 650.0
@@ -123,9 +128,9 @@ stretch_mode = 4
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -409.0
-margin_top = 440.579
+margin_top = 441.0
 margin_right = -228.0
-margin_bottom = 620.579
+margin_bottom = 621.0
 rect_pivot_offset = Vector2( 83.9217, -0.117828 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
@@ -182,7 +187,40 @@ frames = SubResource( 4 )
 animation = "3MB-1BrMB-FRA"
 centered = false
 
+[node name="OxymercurationPopup" type="PopupPanel" parent="."]
+margin_left = 37.3629
+margin_top = 365.182
+margin_right = 224.363
+margin_bottom = 546.182
+custom_styles/panel = SubResource( 5 )
+
+[node name="OzonolysisPopup" type="PopupPanel" parent="."]
+margin_left = 290.541
+margin_top = 380.176
+margin_right = 400.541
+margin_bottom = 524.176
+
+[node name="HydroborationPopup" type="PopupPanel" parent="."]
+margin_left = 503.811
+margin_top = 386.358
+margin_right = 610.811
+margin_bottom = 521.358
+
+[node name="FRAPopup" type="PopupPanel" parent="."]
+margin_left = 711.0
+margin_top = 389.0
+margin_right = 833.0
+margin_bottom = 526.0
+
+[connection signal="mouse_entered" from="Oxymercuration" to="." method="_on_Oxymercuration_mouse_entered"]
+[connection signal="mouse_exited" from="Oxymercuration" to="." method="_on_Oxymercuration_mouse_exited"]
 [connection signal="pressed" from="Oxymercuration" to="." method="_on_Oxymercuration_pressed"]
+[connection signal="mouse_entered" from="Ozonolysis" to="." method="_on_Ozonolysis_mouse_entered"]
+[connection signal="mouse_exited" from="Ozonolysis" to="." method="_on_Ozonolysis_mouse_exited"]
 [connection signal="pressed" from="Ozonolysis" to="." method="_on_Ozonolysis_pressed"]
+[connection signal="mouse_entered" from="Hydroboration" to="." method="_on_Hydroboration_mouse_entered"]
+[connection signal="mouse_exited" from="Hydroboration" to="." method="_on_Hydroboration_mouse_exited"]
 [connection signal="pressed" from="Hydroboration" to="." method="_on_Hydroboration_pressed"]
+[connection signal="mouse_entered" from="FRA" to="." method="_on_FRA_mouse_entered"]
+[connection signal="mouse_exited" from="FRA" to="." method="_on_FRA_mouse_exited"]
 [connection signal="pressed" from="FRA" to="." method="_on_FRA_pressed"]
