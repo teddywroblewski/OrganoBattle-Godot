@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://SplashScreen_Graphics/01_Background.png" type="Texture" id=1]
+[ext_resource path="res://SplashScreen_Graphics/splash screen-01.png" type="Texture" id=1]
 [ext_resource path="res://SplashScreen.gd" type="Script" id=2]
-[ext_resource path="res://SplashScreen_Graphics/02_StartButton.png" type="Texture" id=3]
-[ext_resource path="res://SplashScreen_Graphics/02_StartButtonPressed.png" type="Texture" id=4]
-[ext_resource path="res://SplashScreen_Graphics/02_StartButtonHover.png" type="Texture" id=5]
-[ext_resource path="res://StartButton.gd" type="Script" id=6]
-[ext_resource path="res://MainMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://SplashScreen_Graphics/startButton.png" type="Texture" id=3]
+[ext_resource path="res://SplashScreen_Graphics/StartHover.png" type="Texture" id=4]
+[ext_resource path="res://StartButton.gd" type="Script" id=5]
+[ext_resource path="res://MainMenu.tscn" type="PackedScene" id=6]
 
 [node name="SplashScreen" type="TextureRect"]
 margin_right = 900.0
@@ -16,17 +15,19 @@ expand = true
 script = ExtResource( 2 )
 
 [node name="StartButton" type="TextureButton" parent="."]
-margin_left = 307.119
-margin_top = 450.108
-margin_right = 560.119
-margin_bottom = 567.108
+margin_left = 387.243
+margin_top = 521.57
+margin_right = 515.243
+margin_bottom = 580.57
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
 expand = true
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 
-[node name="MainMenu" parent="." instance=ExtResource( 7 )]
+[node name="MainMenu" parent="." instance=ExtResource( 6 )]
 visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
