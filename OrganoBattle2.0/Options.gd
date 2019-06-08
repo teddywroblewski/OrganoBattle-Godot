@@ -48,8 +48,14 @@ func _on_Hydroboration_toggled(button_pressed):
 		global.oralToxicityAttack.add("1-iodo-3-methyl-butane")
 
 func _on_FRA_toggled(button_pressed):
-	pass # Replace with function body.
-
+	if (button_pressed) :
+		global.basicAttack.remove("1-propoxy-3-methyl-butane")
+		global.oralToxicityAttack.remove("2-methyl-hexane")
+		global.oralToxicityAttack.remove("5-methyl-hexanol")
+	else :
+		global.basicAttack.add("1-propoxy-3-methyl-butane")
+		global.oralToxicityAttack.add("2-methyl-hexane")
+		global.oralToxicityAttack.add("5-methyl-hexanol")
 
 func _on_Dehydration_toggled(button_pressed):
 	if (button_pressed) :
@@ -87,7 +93,7 @@ func _on_SOCl2_toggled(button_pressed):
 	
 
 func _on_E2_toggled(button_pressed):
-	pass # Replace with function body.
+	pass
 
 
 func _on_Hydration_toggled(button_pressed):
@@ -112,4 +118,21 @@ func _on_Halogenation_toggled(button_pressed):
 
 
 func _on_Sn2_toggled(button_pressed):
-	pass # Replace with function body.
+	if (button_pressed) :
+		global.basicAttack.remove("1-propoxy-3-methyl-butane")
+	else :
+		global.basicAttack.add("1-propoxy-3-methyl-butane")
+
+
+func _on_EpoxAdd_toggled(button_pressed):
+	if (button_pressed) :
+		global.oralToxicityAttack.remove("5-methyl-hexanol")
+	else :
+		global.oralToxicityAttack.add("5-methyl-hexanol")
+
+
+func _on_AHAdd_toggled(button_pressed):
+	if (button_pressed) :
+		global.oralToxicityAttack.remove("2-methyl-hexane")
+	else :
+		global.oralToxicityAttack.add("2-methyl-hexane")

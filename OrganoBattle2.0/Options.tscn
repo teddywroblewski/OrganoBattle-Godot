@@ -1,8 +1,8 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Options.gd" type="Script" id=1]
-[ext_resource path="res://FightingWindow_Graphics/010_AttackButton.png" type="Texture" id=2]
-[ext_resource path="res://FightingWindow_Graphics/010_AttackPressed.png" type="Texture" id=3]
+[ext_resource path="res://ReactionsButtons/OxMButton.png" type="Texture" id=2]
+[ext_resource path="res://ReactionsButtons/OxM_Pressed.png" type="Texture" id=3]
 [ext_resource path="res://ReactionsButtons/OzonButton.png" type="Texture" id=4]
 [ext_resource path="res://ReactionsButtons/Ozon_Pressed.png" type="Texture" id=5]
 [ext_resource path="res://ReactionsButtons/HydBorButton.png" type="Texture" id=6]
@@ -25,9 +25,16 @@
 [ext_resource path="res://ReactionsButtons/H2ationPressed.png" type="Texture" id=23]
 [ext_resource path="res://ReactionsButtons/HalogenationButton.png" type="Texture" id=24]
 [ext_resource path="res://ReactionsButtons/HalogenationPressed.png" type="Texture" id=25]
+[ext_resource path="res://ReactionsButtons/SN2Button.png" type="Texture" id=26]
+[ext_resource path="res://ReactionsButtons/SN2Pressed.png" type="Texture" id=27]
+[ext_resource path="res://ReactionsButtons/EpoxAddButton.png" type="Texture" id=28]
+[ext_resource path="res://ReactionsButtons/EpoxAddPressed.png" type="Texture" id=29]
+[ext_resource path="res://ReactionsButtons/AHAddButton.png" type="Texture" id=30]
+[ext_resource path="res://ReactionsButtons/AHAddPressed.png" type="Texture" id=31]
 
 [node name="Options" type="TextureRect"]
-margin_right = 901.0
+margin_left = 2.0
+margin_right = 903.0
 margin_bottom = 652.0
 script = ExtResource( 1 )
 
@@ -41,102 +48,118 @@ margin_right = 902.0
 margin_bottom = 648.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
-margin_right = 201.0
-margin_bottom = 1087.0
+margin_right = 181.0
+margin_bottom = 1346.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
-margin_right = 201.0
-margin_bottom = 1087.0
+margin_right = 181.0
+margin_bottom = 1346.0
 
 [node name="Oxymercuration" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_right = 201.0
-margin_bottom = 81.0
+margin_right = 181.0
+margin_bottom = 87.0
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 
 [node name="Ozonolysis" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 85.0
-margin_right = 201.0
-margin_bottom = 170.0
+margin_top = 91.0
+margin_right = 181.0
+margin_bottom = 176.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Hydroboration" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 174.0
-margin_right = 201.0
-margin_bottom = 259.0
+margin_top = 180.0
+margin_right = 181.0
+margin_bottom = 265.0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
 
 [node name="FRA" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 263.0
-margin_right = 201.0
-margin_bottom = 345.0
+margin_top = 269.0
+margin_right = 181.0
+margin_bottom = 351.0
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 
 [node name="Dehydration" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 349.0
-margin_right = 201.0
-margin_bottom = 436.0
+margin_top = 355.0
+margin_right = 181.0
+margin_bottom = 442.0
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 
 [node name="PBr3" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 440.0
-margin_right = 201.0
-margin_bottom = 532.0
+margin_top = 446.0
+margin_right = 181.0
+margin_bottom = 538.0
 texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 13 )
 
 [node name="HHalide" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 536.0
-margin_right = 201.0
-margin_bottom = 625.0
+margin_top = 542.0
+margin_right = 181.0
+margin_bottom = 631.0
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 15 )
 
 [node name="SOCl2" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 629.0
-margin_right = 201.0
-margin_bottom = 721.0
+margin_top = 635.0
+margin_right = 181.0
+margin_bottom = 727.0
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 17 )
 
 [node name="E2" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 725.0
-margin_right = 201.0
-margin_bottom = 810.0
+margin_top = 731.0
+margin_right = 181.0
+margin_bottom = 816.0
 texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 19 )
 
 [node name="Hydration" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 814.0
-margin_right = 201.0
-margin_bottom = 901.0
+margin_top = 820.0
+margin_right = 181.0
+margin_bottom = 907.0
 texture_normal = ExtResource( 20 )
 texture_pressed = ExtResource( 21 )
 
 [node name="Hydrogenation" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 905.0
-margin_right = 201.0
-margin_bottom = 992.0
+margin_top = 911.0
+margin_right = 181.0
+margin_bottom = 998.0
 texture_normal = ExtResource( 22 )
 texture_pressed = ExtResource( 23 )
 
 [node name="Halogenation" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 996.0
-margin_right = 201.0
-margin_bottom = 1083.0
+margin_top = 1002.0
+margin_right = 181.0
+margin_bottom = 1089.0
 texture_normal = ExtResource( 24 )
 texture_pressed = ExtResource( 25 )
 
 [node name="Sn2" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_top = 1087.0
-margin_right = 201.0
-margin_bottom = 1087.0
+margin_top = 1093.0
+margin_right = 181.0
+margin_bottom = 1180.0
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+
+[node name="EpoxAdd" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 1184.0
+margin_right = 181.0
+margin_bottom = 1263.0
+texture_normal = ExtResource( 28 )
+texture_pressed = ExtResource( 29 )
+
+[node name="AHAdd" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 1267.0
+margin_right = 181.0
+margin_bottom = 1346.0
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 31 )
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Oxymercuration" to="." method="_on_Oxymercuration_toggled"]
@@ -152,3 +175,5 @@ margin_bottom = 1087.0
 [connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Hydrogenation" to="." method="_on_Hydrogenation_toggled"]
 [connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Halogenation" to="." method="_on_Halogenation_toggled"]
 [connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Sn2" to="." method="_on_Sn2_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/EpoxAdd" to="." method="_on_EpoxAdd_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/AHAdd" to="." method="_on_AHAdd_toggled"]
