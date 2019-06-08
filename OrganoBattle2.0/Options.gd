@@ -18,6 +18,7 @@ func _on_BackButton_pressed():
 
 func _on_Oxymercuration_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/OxM/OxmCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.basicAttack.remove("2-iodo-3-methyl-butane")
 		global.basicAttack.remove("2-methyl-butane")
 		global.basicAttack.remove("2,3-dibromo-2-methyl-butane")
@@ -25,19 +26,22 @@ func _on_Oxymercuration_toggled(button_pressed):
 		global.flammableAttack.remove("2-bromo-3-methyl-butane")
 		global.flammableAttack.remove("2-chloro-3-methyl-butane")
 	else :
-		global.basicAttack.add("2-iodo-3-methyl-butane")
-		global.basicAttack.add("2-methyl-butane")
-		global.basicAttack.add("2,3-dibromo-2-methyl-butane")
-		global.flammableAttack.add("2-methyl-2-butanol")
-		global.flammableAttack.add("2-bromo-3-methyl-butane")
-		global.flammableAttack.add("2-chloro-3-methyl-butane")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/OxM/OxmCB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.basicAttack.append("2-iodo-3-methyl-butane")
+		global.basicAttack.append("2-methyl-butane")
+		global.basicAttack.append("2,3-dibromo-2-methyl-butane")
+		global.flammableAttack.append("2-methyl-2-butanol")
+		global.flammableAttack.append("2-bromo-3-methyl-butane")
+		global.flammableAttack.append("2-chloro-3-methyl-butane")
 
 
 func _on_Ozonolysis_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/Ozo/OzoCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.corrosiveAttack.remove("formaldehyde_2-methylpropanal")
 	else :
-		global.corrosiveAttack.add("formaldehyde_2-methylpropanal")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/Ozo/OzoCB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.corrosiveAttack.append("formaldehyde_2-methylpropanal")
 
 func _on_Hydroboration_toggled(button_pressed):
 	if (button_pressed) :

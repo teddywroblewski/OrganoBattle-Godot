@@ -8,7 +8,6 @@
 [ext_resource path="res://MainMenu.tscn" type="PackedScene" id=6]
 
 [node name="SplashScreen" type="TextureRect"]
-editor/display_folded = true
 margin_right = 900.0
 margin_bottom = 650.0
 texture = ExtResource( 1 )
