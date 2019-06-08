@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Formaldehyde_2-methylpropanal.png-f63dd1592f812c6e80a895f9812cc7d8.stex"
+path="res://.import/1-chloro-3-methyl-butane.png-f25c1055d858ac546b2ee2289544bdd0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Chemicals/Formaldehyde_2-methylpropanal.png"
-dest_files=[ "res://.import/Formaldehyde_2-methylpropanal.png-f63dd1592f812c6e80a895f9812cc7d8.stex" ]
+source_file="res://Chemicals/1-chloro-3-methyl-butane.png"
+dest_files=[ "res://.import/1-chloro-3-methyl-butane.png-f25c1055d858ac546b2ee2289544bdd0.stex" ]
 
 [params]
 

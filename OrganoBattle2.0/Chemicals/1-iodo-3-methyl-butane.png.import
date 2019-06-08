@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1-Chloro-3-methylbutane.png-9ac43fed2d0461d675d47768d94eaebe.stex"
+path="res://.import/1-iodo-3-methyl-butane.png-596beb44f09991c31964d1b099b8a4de.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Chemicals/1-Chloro-3-methylbutane.png"
-dest_files=[ "res://.import/1-Chloro-3-methylbutane.png-9ac43fed2d0461d675d47768d94eaebe.stex" ]
+source_file="res://Chemicals/1-iodo-3-methyl-butane.png"
+dest_files=[ "res://.import/1-iodo-3-methyl-butane.png-596beb44f09991c31964d1b099b8a4de.stex" ]
 
 [params]
 

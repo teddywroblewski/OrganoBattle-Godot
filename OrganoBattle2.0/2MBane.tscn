@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://2MBane.gd" type="Script" id=1]
 [ext_resource path="res://Chemicals/2-methyl-butane.png" type="Texture" id=2]
+[ext_resource path="res://FinalSynthesis_Graphics/ContinueButton.png" type="Texture" id=3]
+[ext_resource path="res://FinalSynthesis_Graphics/ContinueButton_Pressed.png" type="Texture" id=4]
+[ext_resource path="res://FinalSynthesis_Graphics/ContinueButton_Hover.png" type="Texture" id=5]
 
 [node name="2MBane" type="TextureRect"]
 margin_right = 900.0
@@ -13,3 +16,13 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 2 )
 
+[node name="ContinueButton" type="TextureButton" parent="."]
+margin_left = 268.0
+margin_top = 500.0
+margin_right = 632.0
+margin_bottom = 596.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

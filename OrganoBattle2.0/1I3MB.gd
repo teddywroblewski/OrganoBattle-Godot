@@ -14,4 +14,5 @@ func _ready():
 
 
 func _on_ContinueButton_pressed():
+	global.currentChemical = "1-iodo-3-methyl-butane"
 	get_tree().change_scene("res://FinalSynthesisWindow.tscn")
