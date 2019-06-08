@@ -17,8 +17,7 @@ func _on_SN2_pressed():
 	#get_node("DehydrationPopup").hide()
 	get_node("SN2").hide()
 	get_node("E2").hide()
-	#get_node("HHalide").hide()
-	#get_node("SOCl2").hide()
+	get_node("Grig").hide()
 	nextChemical = parent.get_node("1P3MB")
 	global.power -= 1 
 	var t = Timer.new()
@@ -35,10 +34,10 @@ func _on_SN2_pressed():
 	self.hide()
 	nextChemical.show()
 func _on_E2_pressed():
-	#get_node("Dehydration").hide()
+	#get_node("DehydrationPopup").hide()
 	get_node("SN2").hide()
 	get_node("E2").hide()
-	#get_node("HydrogenHalide").hide()
+	get_node("Grig").hide()
 	global.nextChemical = "3MB" #different for backwards
 	global.power -= 1
 	var t = Timer.new()
@@ -54,4 +53,23 @@ func _on_E2_pressed():
 	global.currentChemical = "3MB" 
 	self.hide()
 	get_tree().change_scene("res://BattleWindow.tscn") #different for backwards
-
+func _on_Grig_pressed():
+	#get_node("DehydrationPopup").hide()
+	get_node("SN2").hide()
+	get_node("E2").hide()
+	get_node("Grig").hide()
+	nextChemical = parent.get_node("2MBMgBr")
+	global.power -= 1 
+	var t = Timer.new()
+	t.set_wait_time(9)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	get_node("1Br3MB-2MBMgBr-Grig").show()
+	get_node("1Br3MB").hide()
+	get_node("1Br3MB-2MBMgBr-Grig").play()
+	yield(t, "timeout")
+	t.queue_free()
+	global.currentChemical = "2MBMgBr"
+	self.hide()
+	nextChemical.show()

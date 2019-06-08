@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://BattleWindow_Graphics/012_BattleWindow.png" type="Texture" id=1]
 [ext_resource path="res://BattleWindow.gd" type="Script" id=2]
@@ -23,9 +23,13 @@
 [ext_resource path="res://1Cl3MB.gd" type="Script" id=21]
 [ext_resource path="res://1I3MB.tscn" type="PackedScene" id=22]
 [ext_resource path="res://1P3MB.tscn" type="PackedScene" id=23]
-[ext_resource path="res://2M2Boh.tscn" type="PackedScene" id=24]
-[ext_resource path="res://2MBane.tscn" type="PackedScene" id=25]
-[ext_resource path="res://23Br2MB.tscn" type="PackedScene" id=26]
+[ext_resource path="res://2MBMgBr.tscn" type="PackedScene" id=24]
+[ext_resource path="res://3MBMgBr.gd" type="Script" id=25]
+[ext_resource path="res://2M2Boh.tscn" type="PackedScene" id=26]
+[ext_resource path="res://2MBane.tscn" type="PackedScene" id=27]
+[ext_resource path="res://23Br2MB.tscn" type="PackedScene" id=28]
+[ext_resource path="res://2MH.tscn" type="PackedScene" id=29]
+[ext_resource path="res://5MHoh.tscn" type="PackedScene" id=30]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -49,7 +53,7 @@ script = ExtResource( 2 )
 [node name="Bubble BackGround" type="AnimatedSprite" parent="."]
 position = Vector2( 450, 325 )
 frames = SubResource( 1 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="3MB" parent="." instance=ExtResource( 9 )]
@@ -93,26 +97,25 @@ visible = false
 
 [node name="1P3MB" parent="." instance=ExtResource( 23 )]
 
-[node name="3MBMgBr" type="TextureRect" parent="."]
+[node name="2MBMgBr" parent="." instance=ExtResource( 24 )]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+script = ExtResource( 25 )
 
-[node name="ADD3_1Br3MB" type="TextureRect" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="2M2Boh" parent="." instance=ExtResource( 24 )]
+[node name="2M2Boh" parent="." instance=ExtResource( 26 )]
 visible = false
 margin_right = 900.0
 margin_bottom = 650.0
 
-[node name="2MBane" parent="." instance=ExtResource( 25 )]
+[node name="2MBane" parent="." instance=ExtResource( 27 )]
 visible = false
 
-[node name="23Br2MB" parent="." instance=ExtResource( 26 )]
+[node name="23Br2MB" parent="." instance=ExtResource( 28 )]
 visible = false
+
+[node name="2MH" parent="." instance=ExtResource( 29 )]
+visible = false
+
+[node name="5MHoh" parent="." instance=ExtResource( 30 )]
 
 [node name="TargetChemical" type="TextureRect" parent="."]
 margin_left = 688.0
