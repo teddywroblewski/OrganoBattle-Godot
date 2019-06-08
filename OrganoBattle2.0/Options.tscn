@@ -1,8 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Options.gd" type="Script" id=1]
 [ext_resource path="res://FightingWindow_Graphics/010_AttackButton.png" type="Texture" id=2]
 [ext_resource path="res://FightingWindow_Graphics/010_AttackPressed.png" type="Texture" id=3]
+[ext_resource path="res://ReactionsButtons/OzonButton.png" type="Texture" id=4]
+[ext_resource path="res://ReactionsButtons/Ozon_Pressed.png" type="Texture" id=5]
+[ext_resource path="res://ReactionsButtons/HydBorButton.png" type="Texture" id=6]
+[ext_resource path="res://ReactionsButtons/HBro_Pressed.png" type="Texture" id=7]
+[ext_resource path="res://ReactionsButtons/FRAButton.png" type="Texture" id=8]
+[ext_resource path="res://ReactionsButtons/FRA_Pressed.png" type="Texture" id=9]
+[ext_resource path="res://ReactionsButtons/DeHButton.png" type="Texture" id=10]
+[ext_resource path="res://ReactionsButtons/DeH_Pressed.png" type="Texture" id=11]
+[ext_resource path="res://ReactionsButtons/PBr3Button.png" type="Texture" id=12]
+[ext_resource path="res://ReactionsButtons/PBr3_Pressed.png" type="Texture" id=13]
+[ext_resource path="res://ReactionsButtons/HydrogenHalideButton.png" type="Texture" id=14]
+[ext_resource path="res://ReactionsButtons/HydrogenHalide_Pressed.png" type="Texture" id=15]
+[ext_resource path="res://ReactionsButtons/SOCl2Button.png" type="Texture" id=16]
+[ext_resource path="res://ReactionsButtons/SOCl2_Pressed.png" type="Texture" id=17]
+[ext_resource path="res://ReactionsButtons/E2Button.png" type="Texture" id=18]
+[ext_resource path="res://ReactionsButtons/E2_Pressed.png" type="Texture" id=19]
+[ext_resource path="res://ReactionsButtons/H20ationButton.png" type="Texture" id=20]
+[ext_resource path="res://ReactionsButtons/H2OationPressed.png" type="Texture" id=21]
+[ext_resource path="res://ReactionsButtons/H2ationButton.png" type="Texture" id=22]
+[ext_resource path="res://ReactionsButtons/H2ationPressed.png" type="Texture" id=23]
+[ext_resource path="res://ReactionsButtons/HalogenationButton.png" type="Texture" id=24]
+[ext_resource path="res://ReactionsButtons/HalogenationPressed.png" type="Texture" id=25]
 
 [node name="Options" type="TextureRect"]
 margin_right = 901.0
@@ -18,11 +40,15 @@ margin_top = 93.0
 margin_right = 902.0
 margin_bottom = 648.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
 margin_right = 201.0
-margin_bottom = 89.0
+margin_bottom = 1087.0
 
-[node name="Reaction1" type="TextureButton" parent="ScrollContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+margin_right = 201.0
+margin_bottom = 1087.0
+
+[node name="Oxymercuration" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
 margin_right = 201.0
 margin_bottom = 81.0
 toggle_mode = true
@@ -30,17 +56,99 @@ action_mode = 0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 
-[node name="Reaction2" type="TextureButton" parent="ScrollContainer/VBoxContainer"]
+[node name="Ozonolysis" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
 margin_top = 85.0
 margin_right = 201.0
-margin_bottom = 85.0
+margin_bottom = 170.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 
-[node name="Reaction3" type="TextureButton" parent="ScrollContainer/VBoxContainer"]
-margin_top = 89.0
+[node name="Hydroboration" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 174.0
 margin_right = 201.0
-margin_bottom = 89.0
+margin_bottom = 259.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+
+[node name="FRA" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 263.0
+margin_right = 201.0
+margin_bottom = 345.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+
+[node name="Dehydration" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 349.0
+margin_right = 201.0
+margin_bottom = 436.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+
+[node name="PBr3" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 440.0
+margin_right = 201.0
+margin_bottom = 532.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+
+[node name="HHalide" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 536.0
+margin_right = 201.0
+margin_bottom = 625.0
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+
+[node name="SOCl2" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 629.0
+margin_right = 201.0
+margin_bottom = 721.0
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
+
+[node name="E2" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 725.0
+margin_right = 201.0
+margin_bottom = 810.0
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 19 )
+
+[node name="Hydration" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 814.0
+margin_right = 201.0
+margin_bottom = 901.0
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 21 )
+
+[node name="Hydrogenation" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 905.0
+margin_right = 201.0
+margin_bottom = 992.0
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 23 )
+
+[node name="Halogenation" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 996.0
+margin_right = 201.0
+margin_bottom = 1083.0
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 25 )
+
+[node name="Sn2" type="TextureButton" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+margin_top = 1087.0
+margin_right = 201.0
+margin_bottom = 1087.0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
-[connection signal="toggled" from="ScrollContainer/VBoxContainer/Reaction1" to="." method="_on_Reaction1_toggled"]
-[connection signal="toggled" from="ScrollContainer/VBoxContainer/Reaction2" to="." method="_on_Reaction2_toggled"]
-[connection signal="toggled" from="ScrollContainer/VBoxContainer/Reaction3" to="." method="_on_Reaction3_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Oxymercuration" to="." method="_on_Oxymercuration_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Ozonolysis" to="." method="_on_Ozonolysis_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Hydroboration" to="." method="_on_Hydroboration_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/FRA" to="." method="_on_FRA_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Dehydration" to="." method="_on_Dehydration_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/PBr3" to="." method="_on_PBr3_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/HHalide" to="." method="_on_HHalide_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/SOCl2" to="." method="_on_SOCl2_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/E2" to="." method="_on_E2_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Hydration" to="." method="_on_Hydration_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Hydrogenation" to="." method="_on_Hydrogenation_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Halogenation" to="." method="_on_Halogenation_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/Sn2" to="." method="_on_Sn2_toggled"]
