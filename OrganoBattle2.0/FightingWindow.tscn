@@ -31,15 +31,15 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": true,
-"name": "New Anim",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "New Anim 1",
 "speed": 1.7
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -120,18 +120,40 @@ value = 10.0
 texture_over = ExtResource( 16 )
 texture_progress = ExtResource( 17 )
 
+[node name="OpponentHealthBar" type="TextureProgress" parent="."]
+margin_left = 262.68
+margin_top = 185.298
+margin_right = 513.68
+margin_bottom = 255.298
+rect_scale = Vector2( 0.28, 0.28 )
+value = 100.0
+texture_over = ExtResource( 14 )
+texture_progress = ExtResource( 15 )
+
+[node name="OpponentPowerBar" type="TextureProgress" parent="."]
+margin_left = 416.989
+margin_top = 183.325
+margin_right = 626.989
+margin_bottom = 250.325
+rect_scale = Vector2( 0.3, 0.3 )
+max_value = 10.0
+value = 10.0
+texture_over = ExtResource( 16 )
+texture_progress = ExtResource( 17 )
+
 [node name="Scientist" type="AnimatedSprite" parent="."]
 position = Vector2( 365.262, 303.813 )
 scale = Vector2( 0.912347, 0.912347 )
 frames = SubResource( 1 )
 animation = "New Anim 1"
+frame = 1
 playing = true
 
 [node name="Bubbles" type="AnimatedSprite" parent="."]
 position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
 frames = SubResource( 2 )
-frame = 2
+frame = 3
 playing = true
 
 [connection signal="toggled" from="AttackButton" to="." method="_on_AttackButton_toggled"]

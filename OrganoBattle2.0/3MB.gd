@@ -14,8 +14,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
+#Button Pressed Functions
 func _on_Oxymercuration_pressed():
+	get_node("OxymercurationPopup").hide()
 	get_node("Oxymercuration").hide()
 	get_node("Ozonolysis").hide()
 	get_node("Hydroboration").hide()
@@ -36,6 +37,7 @@ func _on_Oxymercuration_pressed():
 	self.hide()
 	nextChemical.show()
 func _on_Ozonolysis_pressed():
+	get_node("OzonolysisPopup").hide()
 	get_node("Oxymercuration").hide()
 	get_node("Ozonolysis").hide()
 	get_node("Hydroboration").hide()
@@ -56,6 +58,7 @@ func _on_Ozonolysis_pressed():
 	self.hide()
 	nextChemical.show()
 func _on_Hydroboration_pressed():
+	get_node("HydroborationPopup").hide()
 	get_node("Oxymercuration").hide()
 	get_node("Ozonolysis").hide()
 	get_node("Hydroboration").hide()
@@ -76,6 +79,7 @@ func _on_Hydroboration_pressed():
 	self.hide()
 	nextChemical.show()
 func _on_FRA_pressed():
+	get_node("FRAPopup").hide()
 	get_node("Oxymercuration").hide()
 	get_node("Ozonolysis").hide()
 	get_node("Hydroboration").hide()
@@ -96,34 +100,20 @@ func _on_FRA_pressed():
 	self.hide()
 	nextChemical.show()
 
-
+#Hover Functions
 func _on_Oxymercuration_mouse_entered():
 	get_node("OxymercurationPopup").show()
-
-
 func _on_Oxymercuration_mouse_exited():
 	get_node("OxymercurationPopup").hide()
-
-
 func _on_Ozonolysis_mouse_entered():
 	get_node("OzonolysisPopup").show()
-
-
 func _on_Ozonolysis_mouse_exited():
 	get_node("OzonolysisPopup").hide()
-
-
 func _on_Hydroboration_mouse_entered():
 	get_node("HydroborationPopup").show()
-
-
 func _on_Hydroboration_mouse_exited():
 	get_node("HydroborationPopup").hide()
-
-
 func _on_FRA_mouse_entered():
 	get_node("FRAPopup").show()
-
-
 func _on_FRA_mouse_exited():
 	get_node("FRAPopup").hide()
