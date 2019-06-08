@@ -3,9 +3,10 @@ extends TextureRect
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var fightWindow
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#fightWindow = load("res://FightingWindow.tscn")
 	get_node("ChemicalMade").set_texture(load("res://Chemicals/" + str(global.targetChemical) + ".png"))
 	global.isFinalChemical = true
 	if (global.currentChemical == global.targetChemical) :

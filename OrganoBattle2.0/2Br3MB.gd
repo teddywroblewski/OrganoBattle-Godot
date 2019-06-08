@@ -11,3 +11,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_ContinueButton_pressed():
+	global.currentChemical = "2-bromo-3-methyl-butane"
+	get_tree().change_scene("res://FinalSynthesisWindow.tscn")

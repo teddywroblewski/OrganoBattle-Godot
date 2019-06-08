@@ -11,7 +11,7 @@ func _ready():
 		get_node("3MB").show()
 		global.currentChemical = "3MB"
 		global.startingChemical = "reload"
-	elif (global.startingChemical == "reload") :
+	elif (global.startingChemical == "reload" && global.nextChemical != null) :
 		get_node(str(global.nextChemical)).show()
 	
 

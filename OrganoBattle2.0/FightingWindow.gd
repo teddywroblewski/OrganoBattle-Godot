@@ -9,7 +9,7 @@ var defense_popup
 func _ready():
 	
 	get_node("PlayerPowerBar").value = global.power
-	
+	get_node("OpponentHealthBar").value = global.enemyHealth
 	if (global.health <= 0) :
 		global.isGameOver = true
 		global.reset()
@@ -44,12 +44,22 @@ func _on_AttackPopupMenu_id_pressed(ID):
 		global.startingChemical = "3MB"
 		global.targetChemical = global.flammableAttack[randi()%global.flammableAttack.size()]
 		get_tree().change_scene("res://BattleWindow.tscn")
-		print(ID)
+		print(global.targetChemical)
 	elif (ID == 1) :
-		global.startingChemical = "3MBoh"
-		global.targetChemical = "Chemical 3"
+		global.startingChemical = "3MB"
+		global.targetChemical = global.corrosiveAttack[randi()%global.corrosiveAttack.size()]
 		get_tree().change_scene("res://BattleWindow.tscn")
-		print(ID)
+		print(global.targetChemical)
+	elif (ID == 2) :
+		global.startingChemical = "3MB"
+		global.targetChemical = global.basicAttack[randi()%global.basicAttack.size()]
+		get_tree().change_scene("res://BattleWindow.tscn")
+		print(global.targetChemical)
+	elif (ID == 3) :
+		global.startingChemical = "3MB"
+		global.targetChemical = global.oralToxicityAttack[randi()%global.oralToxicityAttack.size()]
+		get_tree().change_scene("res://BattleWindow.tscn")
+		print(global.targetChemical)
 	
 
 func _on_DefensePopupMenu_id_pressed(ID):
