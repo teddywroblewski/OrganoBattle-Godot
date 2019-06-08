@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Chemicals/2-chloro-3-methyl-butane.png" type="Texture" id=1]
+
+[node name="2Cl3MB" type="TextureRect"]
+visible = false
+margin_right = 900.0
+margin_bottom = 650.0
+
+[node name="2Cl3MB" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://BattleWindow_Graphics/012_BattleWindow.png" type="Texture" id=1]
 [ext_resource path="res://BattleWindow.gd" type="Script" id=2]
@@ -16,12 +16,16 @@
 [ext_resource path="res://2M2B.tscn" type="PackedScene" id=14]
 [ext_resource path="res://2Br3MB.tscn" type="PackedScene" id=15]
 [ext_resource path="res://2Br3MB.gd" type="Script" id=16]
-[ext_resource path="res://1Cl3MB.tscn" type="PackedScene" id=17]
-[ext_resource path="res://1Cl3MB.gd" type="Script" id=18]
-[ext_resource path="res://1I3MB.tscn" type="PackedScene" id=19]
-[ext_resource path="res://2M2Boh.tscn" type="PackedScene" id=20]
-[ext_resource path="res://2MBane.tscn" type="PackedScene" id=21]
-[ext_resource path="res://23Br2MB.tscn" type="PackedScene" id=22]
+[ext_resource path="res://2I3MB.tscn" type="PackedScene" id=17]
+[ext_resource path="res://2Cl3MB.tscn" type="PackedScene" id=18]
+[ext_resource path="res://2Cl3MB.gd" type="Script" id=19]
+[ext_resource path="res://1Cl3MB.tscn" type="PackedScene" id=20]
+[ext_resource path="res://1Cl3MB.gd" type="Script" id=21]
+[ext_resource path="res://1I3MB.tscn" type="PackedScene" id=22]
+[ext_resource path="res://1P3MB.tscn" type="PackedScene" id=23]
+[ext_resource path="res://2M2Boh.tscn" type="PackedScene" id=24]
+[ext_resource path="res://2MBane.tscn" type="PackedScene" id=25]
+[ext_resource path="res://23Br2MB.tscn" type="PackedScene" id=26]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -74,29 +78,22 @@ visible = false
 visible = false
 script = ExtResource( 16 )
 
-[node name="ADD1_3M2Boh" type="TextureRect" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="ADD2_3M2Boh" type="TextureRect" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="1Cl3MB" parent="." instance=ExtResource( 17 )]
-visible = false
-script = ExtResource( 18 )
-
-[node name="1I3MB" parent="." instance=ExtResource( 19 )]
+[node name="2I3MB" parent="." instance=ExtResource( 17 )]
 visible = false
 
-[node name="ADD1_1Br3MB" type="TextureRect" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="2Cl3MB" parent="." instance=ExtResource( 18 )]
+script = ExtResource( 19 )
 
-[node name="ADD2_1Br3MB" type="TextureRect" parent="."]
+[node name="1Cl3MB" parent="." instance=ExtResource( 20 )]
+visible = false
+script = ExtResource( 21 )
+
+[node name="1I3MB" parent="." instance=ExtResource( 22 )]
+visible = false
+
+[node name="1P3MB" parent="." instance=ExtResource( 23 )]
+
+[node name="3MBMgBr" type="TextureRect" parent="."]
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
@@ -106,20 +103,15 @@ visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="ADD4_1Br3MB" type="TextureRect" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="2M2Boh" parent="." instance=ExtResource( 20 )]
+[node name="2M2Boh" parent="." instance=ExtResource( 24 )]
 visible = false
 margin_right = 900.0
 margin_bottom = 650.0
 
-[node name="2MBane" parent="." instance=ExtResource( 21 )]
+[node name="2MBane" parent="." instance=ExtResource( 25 )]
 visible = false
 
-[node name="23Br2MB" parent="." instance=ExtResource( 22 )]
+[node name="23Br2MB" parent="." instance=ExtResource( 26 )]
 visible = false
 
 [node name="TargetChemical" type="TextureRect" parent="."]
