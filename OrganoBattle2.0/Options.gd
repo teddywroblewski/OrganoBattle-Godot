@@ -50,95 +50,119 @@ func _on_Hydroboration_toggled(button_pressed):
 		global.oralToxicityAttack.remove("1-iodo-3-methyl-butane")
 	else :
 		get_node("ScrollContainer/HBoxContainer/ReactionButtons/HBor/HborCB").set_texture(load("res://OptionsScreen/checkBox.png"))
-		global.flammableAttack.add("1-chloro-3-methyl-butane")
-		global.oralToxicityAttack.add("1-iodo-3-methyl-butane")
+		global.flammableAttack.append("1-chloro-3-methyl-butane")
+		global.oralToxicityAttack.append("1-iodo-3-methyl-butane")
 
 func _on_FRA_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/FRA/FRACB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.basicAttack.remove("1-propoxy-3-methyl-butane")
 		global.oralToxicityAttack.remove("2-methyl-hexane")
 		global.oralToxicityAttack.remove("5-methyl-hexanol")
 	else :
-		global.basicAttack.add("1-propoxy-3-methyl-butane")
-		global.oralToxicityAttack.add("2-methyl-hexane")
-		global.oralToxicityAttack.add("5-methyl-hexanol")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/FRA/FRACB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.basicAttack.append("1-propoxy-3-methyl-butane")
+		global.oralToxicityAttack.append("2-methyl-hexane")
+		global.oralToxicityAttack.append("5-methyl-hexanol")
 
 func _on_Dehydration_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/DeH/DeHCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.basicAttack.remove("2-methyl-butane")
 		global.basicAttack.remove("2,3-dibromo-2-methyl-butane")
 		global.flammableAttack.remove("2-methyl-2-butanol")
 	else :
-		global.basicAttack.add("2-methyl-butane")
-		global.basicAttack.add("2,3-dibromo-2-methyl-butane")
-		global.flammableAttack.add("2-methyl-2-butanol")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/DeH/DeHCB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.basicAttack.append("2-methyl-butane")
+		global.basicAttack.append("2,3-dibromo-2-methyl-butane")
+		global.flammableAttack.append("2-methyl-2-butanol")
 
 
 func _on_PBr3_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/PBr3/PBr3CB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.flammableAttack.remove("2-bromo-3-methyl-butane")
 	else :
-		global.flammableAttack.add("2-bromo-3-methyl-butane")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/PBr3/PBr3CB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.flammableAttack.append("2-bromo-3-methyl-butane")
 
 
 func _on_HHalide_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/HHalide/HHalideCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.oralToxicityAttack.remove("1-iodo-3-methyl-butane")
 		global.basicAttack.remove("2-iodo-3-methyl-butane")
 	else :
-		global.oralToxicityAttack.add("1-iodo-3-methyl-butane")
-		global.basicAttack.add("2-iodo-3-methyl-butane")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/HHalide/HHalideCB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.oralToxicityAttack.append("1-iodo-3-methyl-butane")
+		global.basicAttack.append("2-iodo-3-methyl-butane")
 
 func _on_SOCl2_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/SOCl2/SOCl2CB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.flammableAttack.remove("2-chloro-3-methyl-butane")
 		global.flammableAttack.remove("1-chloro-3-methyl-butane")
 	else :
-		global.flammableAttack.add("2-chloro-3-methyl-butane")
-		global.flammableAttack.add("1-chloro-3-methyl-butane")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/SOCl2/SOCl2CB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.flammableAttack.append("2-chloro-3-methyl-butane")
+		global.flammableAttack.append("1-chloro-3-methyl-butane")
 	
 
 func _on_E2_toggled(button_pressed):
-	pass
-
+	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/E2/E2CB").set_texture(load("res://OptionsScreen/checkClicked.png"))
+	else :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/E2/E2CB").set_texture(load("res://OptionsScreen/checkBox.png"))
 
 func _on_Hydration_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/Hydration/HydraCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.flammableAttack.remove("2-methyl-2-butanol")
 	else :
-		global.flammableAttack.add("2-methyl-2-butanol")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/Hydration/HydraCB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.flammableAttack.append("2-methyl-2-butanol")
 
 
 func _on_Hydrogenation_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/Hydrogenation/HydrogCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.basicAttack.remove("2-methyl-2-butane")
 	else :
-		global.basicAttack.add("2-methyl-2-butane")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/Hydrogenation/HydrogCB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.basicAttack.append("2-methyl-2-butane")
 
 
 func _on_Halogenation_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/Halogenation/HaloCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.basicAttack.remove("2,4-dibromo-2-methyl-butane")
 	else :
-		global.basicAttack.add("2,4-dibromo-2-methyl-butane")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/Halogenation/HaloCB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.basicAttack.append("2,4-dibromo-2-methyl-butane")
 
 
 func _on_Sn2_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/SN2/Sn2CB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.basicAttack.remove("1-propoxy-3-methyl-butane")
 	else :
-		global.basicAttack.add("1-propoxy-3-methyl-butane")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/SN2/Sn2CB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.basicAttack.append("1-propoxy-3-methyl-butane")
 
 
 func _on_EpoxAdd_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/EpoxAdd/EpoxAddCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.oralToxicityAttack.remove("5-methyl-hexanol")
 	else :
-		global.oralToxicityAttack.add("5-methyl-hexanol")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/EpoxAdd/EpoxAddCB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.oralToxicityAttack.append("5-methyl-hexanol")
 
 
 func _on_AHAdd_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/AHAdd/AHAddCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.oralToxicityAttack.remove("2-methyl-hexane")
 	else :
-		global.oralToxicityAttack.add("2-methyl-hexane")
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/AHAdd/AHAddCB").set_texture(load("res://OptionsScreen/checkBox.png"))
+		global.oralToxicityAttack.append("2-methyl-hexane")
