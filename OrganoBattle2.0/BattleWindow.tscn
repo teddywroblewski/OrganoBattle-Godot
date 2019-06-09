@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://BattleWindow.gd" type="Script" id=1]
 [ext_resource path="res://BattleWindow_Graphics/BG1-01.png" type="Texture" id=2]
@@ -39,22 +39,6 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[sub_resource type="GDScript" id=3]
-script/source = "extends TextureRect
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
-
 [sub_resource type="StreamTexture" id=2]
 flags = 4
 load_path = "res://.import/3-methyl-1-butanol.png-9ce3b5437c31610e5c1241dbd26a568e.stex"
@@ -69,8 +53,7 @@ script = ExtResource( 1 )
 position = Vector2( 450, 325 )
 frames = SubResource( 1 )
 animation = "New Anim"
-
-frame = 7
+frame = 20
 playing = true
 
 [node name="3MB" parent="." instance=ExtResource( 13 )]
@@ -115,7 +98,6 @@ visible = false
 
 [node name="2MBMgBr" parent="." instance=ExtResource( 25 )]
 visible = false
-script = SubResource( 3 )
 
 [node name="2M2Boh" parent="." instance=ExtResource( 26 )]
 visible = false
