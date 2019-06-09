@@ -14,10 +14,11 @@ func _ready():
 
 #Button Pressed Functions
 func _on_SN2_pressed():
-	#get_node("DehydrationPopup").hide()
+	get_node("SN2Popup").hide()
 	get_node("SN2").hide()
 	get_node("E2").hide()
 	get_node("Grig").hide()
+	get_node("Blank").hide()
 	nextChemical = parent.get_node("1P3MB")
 	global.power -= 1 
 	var t = Timer.new()
@@ -34,10 +35,11 @@ func _on_SN2_pressed():
 	self.hide()
 	nextChemical.show()
 func _on_E2_pressed():
-	#get_node("DehydrationPopup").hide()
+	get_node("E2Popup").hide()
 	get_node("SN2").hide()
 	get_node("E2").hide()
 	get_node("Grig").hide()
+	get_node("Blank").hide()
 	global.nextChemical = "3MB" #different for backwards
 	global.power -= 1
 	var t = Timer.new()
@@ -54,10 +56,11 @@ func _on_E2_pressed():
 	self.hide()
 	get_tree().change_scene("res://BattleWindow.tscn") #different for backwards
 func _on_Grig_pressed():
-	#get_node("DehydrationPopup").hide()
+	get_node("GrigPopup").hide()
 	get_node("SN2").hide()
 	get_node("E2").hide()
 	get_node("Grig").hide()
+	get_node("Blank").hide()
 	nextChemical = parent.get_node("2MBMgBr")
 	global.power -= 1 
 	var t = Timer.new()
@@ -73,3 +76,17 @@ func _on_Grig_pressed():
 	global.currentChemical = "2MBMgBr"
 	self.hide()
 	nextChemical.show()
+
+#Hover Functions
+func _on_SN2_mouse_entered():
+	get_node("SN2Popup").show()
+func _on_SN2_mouse_exited():
+	get_node("SN2Popup").hide()
+func _on_E2_mouse_entered():
+	get_node("E2Popup").show()
+func _on_E2_mouse_exited():
+	get_node("E2Popup").hide()
+func _on_Grig_mouse_entered():
+	get_node("GrigPopup").show()
+func _on_Grig_mouse_exited():
+	get_node("GrigPopup").hide()

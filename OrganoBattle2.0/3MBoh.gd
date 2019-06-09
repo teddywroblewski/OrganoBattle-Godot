@@ -12,6 +12,7 @@ func _ready():
 	
 	
 func _on_Dehydration_pressed():
+	get_node("DeHPopup").hide()
 	get_node("Dehydration").hide()
 	get_node("SOCl2").hide()
 	get_node("PBr3").hide()
@@ -32,6 +33,7 @@ func _on_Dehydration_pressed():
 	self.hide()
 	get_tree().change_scene("res://BattleWindow.tscn") #different for backwards
 func _on_SOCl2_pressed():
+	get_node("SOCl2Popup").hide()
 	get_node("Dehydration").hide()
 	get_node("SOCl2").hide()
 	get_node("PBr3").hide()
@@ -53,6 +55,7 @@ func _on_SOCl2_pressed():
 	self.hide()
 	nextChemical.show()
 func _on_PBr3_pressed():
+	get_node("PBr3Popup").hide()
 	get_node("Dehydration").hide()
 	get_node("SOCl2").hide()
 	get_node("PBr3").hide()
@@ -73,6 +76,7 @@ func _on_PBr3_pressed():
 	self.hide()
 	nextChemical.show()
 func _on_HydrogenHalide_pressed():
+	get_node("HHalidePopup").hide()
 	get_node("Dehydration").hide()
 	get_node("SOCl2").hide()
 	get_node("PBr3").hide()
@@ -92,3 +96,21 @@ func _on_HydrogenHalide_pressed():
 	global.currentChemical = "1I3MB"
 	self.hide()
 	nextChemical.show()
+	
+#Hover Functions
+func _on_Dehydration_mouse_entered():
+	get_node("DeHPopup").show()
+func _on_Dehydration_mouse_exited():
+	get_node("DeHPopup").hide()
+func _on_SOCl2_mouse_entered():
+	get_node("SOCl2Popup").show()
+func _on_SOCl2_mouse_exited():
+	get_node("SOCl2Popup").hide()
+func _on_PBr3_mouse_entered():
+	get_node("PBr3Popup").show()
+func _on_PBr3_mouse_exited():
+	get_node("PBr3Popup").hide()
+func _on_HydrogenHalide_mouse_entered():
+	get_node("HHalidePopup").show()
+func _on_HydrogenHalide_mouse_exited():
+	get_node("HHalidePopup").hide()
