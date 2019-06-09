@@ -1,39 +1,43 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=34 format=2]
 
-[ext_resource path="res://BattleWindow_Graphics/012_BattleWindow.png" type="Texture" id=1]
-[ext_resource path="res://BattleWindow.gd" type="Script" id=2]
-[ext_resource path="res://BattleWindow_Graphics/013_BWBubbles2-01.png" type="Texture" id=3]
-[ext_resource path="res://BattleWindow_Graphics/013_BWBubbles3-01.png" type="Texture" id=4]
-[ext_resource path="res://BattleWindow_Graphics/013_BWBubbles4-01.png" type="Texture" id=5]
-[ext_resource path="res://BattleWindow_Graphics/013_BWBubbles-01.png" type="Texture" id=6]
-[ext_resource path="res://BattleWindow_Graphics/013_BWBubbles5.png" type="Texture" id=7]
-[ext_resource path="res://BattleWindow_Graphics/013_BWBubbles6.png" type="Texture" id=8]
-[ext_resource path="res://3MB.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Chemical2.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Form2MPal.tscn" type="PackedScene" id=11]
-[ext_resource path="res://3MBoh.tscn" type="PackedScene" id=12]
-[ext_resource path="res://1Br3MB.tscn" type="PackedScene" id=13]
-[ext_resource path="res://2M2B.tscn" type="PackedScene" id=14]
-[ext_resource path="res://2Br3MB.tscn" type="PackedScene" id=15]
-[ext_resource path="res://2I3MB.tscn" type="PackedScene" id=16]
-[ext_resource path="res://2Cl3MB.tscn" type="PackedScene" id=17]
-[ext_resource path="res://1Cl3MB.tscn" type="PackedScene" id=18]
-[ext_resource path="res://1I3MB.tscn" type="PackedScene" id=19]
-[ext_resource path="res://1P3MB.tscn" type="PackedScene" id=20]
-[ext_resource path="res://2MBMgBr.tscn" type="PackedScene" id=21]
-[ext_resource path="res://3MBMgBr.gd" type="Script" id=22]
-[ext_resource path="res://2M2Boh.tscn" type="PackedScene" id=23]
-[ext_resource path="res://2MBane.tscn" type="PackedScene" id=24]
-[ext_resource path="res://23Br2MB.tscn" type="PackedScene" id=25]
-[ext_resource path="res://2MH.tscn" type="PackedScene" id=26]
-[ext_resource path="res://5MHoh.tscn" type="PackedScene" id=27]
+[ext_resource path="res://BattleWindow.gd" type="Script" id=1]
+[ext_resource path="res://BattleWindow_Graphics/BG1-01.png" type="Texture" id=2]
+[ext_resource path="res://BattleWindow_Graphics/BG2-01.png" type="Texture" id=3]
+[ext_resource path="res://BattleWindow_Graphics/BG3-01.png" type="Texture" id=4]
+[ext_resource path="res://BattleWindow_Graphics/BG4-01.png" type="Texture" id=5]
+[ext_resource path="res://BattleWindow_Graphics/BG5-01.png" type="Texture" id=6]
+[ext_resource path="res://BattleWindow_Graphics/BG6-01.png" type="Texture" id=7]
+[ext_resource path="res://BattleWindow_Graphics/BG7-01.png" type="Texture" id=8]
+[ext_resource path="res://BattleWindow_Graphics/BG8-01.png" type="Texture" id=9]
+[ext_resource path="res://BattleWindow_Graphics/BG9-01.png" type="Texture" id=10]
+[ext_resource path="res://BattleWindow_Graphics/BG10-01.png" type="Texture" id=11]
+[ext_resource path="res://BattleWindow_Graphics/BG11-01.png" type="Texture" id=12]
+[ext_resource path="res://3MB.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Chemical2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Form2MPal.tscn" type="PackedScene" id=15]
+[ext_resource path="res://3MBoh.tscn" type="PackedScene" id=16]
+[ext_resource path="res://1Br3MB.tscn" type="PackedScene" id=17]
+[ext_resource path="res://2M2B.tscn" type="PackedScene" id=18]
+[ext_resource path="res://2Br3MB.tscn" type="PackedScene" id=19]
+[ext_resource path="res://2I3MB.tscn" type="PackedScene" id=20]
+[ext_resource path="res://2Cl3MB.tscn" type="PackedScene" id=21]
+[ext_resource path="res://1Cl3MB.tscn" type="PackedScene" id=22]
+[ext_resource path="res://1I3MB.tscn" type="PackedScene" id=23]
+[ext_resource path="res://1P3MB.tscn" type="PackedScene" id=24]
+[ext_resource path="res://2MBMgBr.tscn" type="PackedScene" id=25]
+[ext_resource path="res://3MBMgBr.gd" type="Script" id=26]
+[ext_resource path="res://2M2Boh.tscn" type="PackedScene" id=27]
+[ext_resource path="res://2MBane.tscn" type="PackedScene" id=28]
+[ext_resource path="res://23Br2MB.tscn" type="PackedScene" id=29]
+[ext_resource path="res://2MH.tscn" type="PackedScene" id=30]
+[ext_resource path="res://5MHoh.tscn" type="PackedScene" id=31]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "default",
-"speed": 3.0
+"name": "New Anim",
+"speed": 2.0
 } ]
 
 [sub_resource type="StreamTexture" id=2]
@@ -43,75 +47,75 @@ load_path = "res://.import/3-methyl-1-butanol.png-9ce3b5437c31610e5c1241dbd26a56
 [node name="BattleWindow" type="TextureRect"]
 margin_right = 900.0
 margin_bottom = 650.0
-texture = ExtResource( 1 )
 expand = true
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [node name="Bubble BackGround" type="AnimatedSprite" parent="."]
 position = Vector2( 450, 325 )
 frames = SubResource( 1 )
-frame = 3
+animation = "New Anim"
+frame = 10
 playing = true
 
-[node name="3MB" parent="." instance=ExtResource( 9 )]
+[node name="3MB" parent="." instance=ExtResource( 13 )]
 visible = false
 margin_left = 4.0
 margin_top = 4.0
 margin_right = 898.0
 margin_bottom = 639.0
 
-[node name="3M2Boh" parent="." instance=ExtResource( 10 )]
+[node name="3M2Boh" parent="." instance=ExtResource( 14 )]
 visible = false
 
-[node name="Form2MPal" parent="." instance=ExtResource( 11 )]
+[node name="Form2MPal" parent="." instance=ExtResource( 15 )]
 visible = false
 
-[node name="3MBoh" parent="." instance=ExtResource( 12 )]
+[node name="3MBoh" parent="." instance=ExtResource( 16 )]
 visible = false
 
-[node name="1Br3MB" parent="." instance=ExtResource( 13 )]
+[node name="1Br3MB" parent="." instance=ExtResource( 17 )]
 visible = false
 
-[node name="2M2B" parent="." instance=ExtResource( 14 )]
+[node name="2M2B" parent="." instance=ExtResource( 18 )]
 visible = false
 
-[node name="2Br3MB" parent="." instance=ExtResource( 15 )]
+[node name="2Br3MB" parent="." instance=ExtResource( 19 )]
 visible = false
 
-[node name="2I3MB" parent="." instance=ExtResource( 16 )]
+[node name="2I3MB" parent="." instance=ExtResource( 20 )]
 visible = false
 
-[node name="2Cl3MB" parent="." instance=ExtResource( 17 )]
+[node name="2Cl3MB" parent="." instance=ExtResource( 21 )]
 visible = false
 
-[node name="1Cl3MB" parent="." instance=ExtResource( 18 )]
+[node name="1Cl3MB" parent="." instance=ExtResource( 22 )]
 visible = false
 
-[node name="1I3MB" parent="." instance=ExtResource( 19 )]
+[node name="1I3MB" parent="." instance=ExtResource( 23 )]
 visible = false
 
-[node name="1P3MB" parent="." instance=ExtResource( 20 )]
+[node name="1P3MB" parent="." instance=ExtResource( 24 )]
 visible = false
 
-[node name="2MBMgBr" parent="." instance=ExtResource( 21 )]
+[node name="2MBMgBr" parent="." instance=ExtResource( 25 )]
 visible = false
-script = ExtResource( 22 )
+script = ExtResource( 26 )
 
-[node name="2M2Boh" parent="." instance=ExtResource( 23 )]
+[node name="2M2Boh" parent="." instance=ExtResource( 27 )]
 visible = false
 margin_right = 900.0
 margin_bottom = 650.0
 
-[node name="2MBane" parent="." instance=ExtResource( 24 )]
+[node name="2MBane" parent="." instance=ExtResource( 28 )]
 visible = false
 
-[node name="23Br2MB" parent="." instance=ExtResource( 25 )]
+[node name="23Br2MB" parent="." instance=ExtResource( 29 )]
 visible = false
 
-[node name="2MH" parent="." instance=ExtResource( 26 )]
+[node name="2MH" parent="." instance=ExtResource( 30 )]
 visible = false
 
-[node name="5MHoh" parent="." instance=ExtResource( 27 )]
+[node name="5MHoh" parent="." instance=ExtResource( 31 )]
 visible = false
 
 [node name="TargetChemical" type="TextureRect" parent="."]
