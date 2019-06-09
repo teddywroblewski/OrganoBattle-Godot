@@ -12,13 +12,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-
 func _on_TextureButton_pressed():
 	global.reset()
 	get_tree().change_scene("res://FightingWindow.tscn")
 	
-
-
 func _on_Options_pressed():
 	get_tree().change_scene("res://Options.tscn")

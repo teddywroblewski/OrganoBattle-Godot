@@ -45,9 +45,11 @@ func _on_Ozonolysis_toggled(button_pressed):
 
 func _on_Hydroboration_toggled(button_pressed):
 	if (button_pressed) :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/HBor/HborCB").set_texture(load("res://OptionsScreen/checkClicked.png"))
 		global.flammableAttack.remove("1-chloro-3-methyl-butane")
 		global.oralToxicityAttack.remove("1-iodo-3-methyl-butane")
 	else :
+		get_node("ScrollContainer/HBoxContainer/ReactionButtons/HBor/HborCB").set_texture(load("res://OptionsScreen/checkBox.png"))
 		global.flammableAttack.add("1-chloro-3-methyl-butane")
 		global.oralToxicityAttack.add("1-iodo-3-methyl-butane")
 

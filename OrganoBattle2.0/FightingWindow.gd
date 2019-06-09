@@ -16,7 +16,7 @@ func _ready():
 		get_tree().change_scene("MainMenu.tscn")
 	if (global.isComputerTurn) :
 		get_node("AttackButton").hide()
-		get_node("DefenseButton").hide()
+		#get_node("DefenseButton").hide()
 		var t = Timer.new()
 		t.set_wait_time(3)
 		t.set_one_shot(true)
@@ -27,10 +27,10 @@ func _ready():
 		global.health -= 10
 		global.isComputerTurn = false
 		get_node("AttackButton").show()
-		get_node("DefenseButton").show()
+		#get_node("DefenseButton").show()
 	else :
 		get_node("AttackButton").show()
-		get_node("DefenseButton").show()
+		#get_node("DefenseButton").show()
 	
 	get_node("PlayerHealthBar").value = global.health
 

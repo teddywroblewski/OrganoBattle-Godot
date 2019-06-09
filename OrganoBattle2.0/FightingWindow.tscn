@@ -26,15 +26,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "New Anim 1",
 "speed": 1.7
+}, {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": true,
@@ -57,10 +57,10 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="AttackButton" type="TextureButton" parent="."]
-margin_left = 100.0
-margin_top = 480.0
-margin_right = 350.0
-margin_bottom = 580.0
+margin_left = 330.0
+margin_top = 500.0
+margin_right = 580.0
+margin_bottom = 600.0
 toggle_mode = true
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
@@ -69,13 +69,15 @@ expand = true
 script = ExtResource( 6 )
 
 [node name="AttackPopupMenu" type="PopupMenu" parent="."]
-margin_left = 100.447
-margin_top = 229.908
-margin_right = 346.447
-margin_bottom = 475.908
+margin_left = 330.0
+margin_top = 392.0
+margin_right = 576.0
+margin_bottom = 494.0
+hide_on_state_item_selection = true
 script = ExtResource( 7 )
 
 [node name="DefenseButton" type="TextureButton" parent="."]
+visible = false
 margin_left = 560.0
 margin_top = 480.0
 margin_right = 809.406

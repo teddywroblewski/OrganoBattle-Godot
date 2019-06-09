@@ -1,39 +1,40 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Options.gd" type="Script" id=1]
 [ext_resource path="res://OptionsScreen/BackButton.png" type="Texture" id=2]
 [ext_resource path="res://OptionsScreen/BackPressed.png" type="Texture" id=3]
-[ext_resource path="res://OptionsScreen/checkBox.png" type="Texture" id=4]
-[ext_resource path="res://ReactionsButtons/OxMButton.png" type="Texture" id=5]
-[ext_resource path="res://ReactionsButtons/OxM_Pressed.png" type="Texture" id=6]
-[ext_resource path="res://ReactionsButtons/OzonButton.png" type="Texture" id=7]
-[ext_resource path="res://ReactionsButtons/Ozon_Pressed.png" type="Texture" id=8]
-[ext_resource path="res://ReactionsButtons/HydBorButton.png" type="Texture" id=9]
-[ext_resource path="res://ReactionsButtons/HBro_Pressed.png" type="Texture" id=10]
-[ext_resource path="res://ReactionsButtons/FRAButton.png" type="Texture" id=11]
-[ext_resource path="res://ReactionsButtons/FRA_Pressed.png" type="Texture" id=12]
-[ext_resource path="res://ReactionsButtons/DeHButton.png" type="Texture" id=13]
-[ext_resource path="res://ReactionsButtons/DeH_Pressed.png" type="Texture" id=14]
-[ext_resource path="res://ReactionsButtons/PBr3Button.png" type="Texture" id=15]
-[ext_resource path="res://ReactionsButtons/PBr3_Pressed.png" type="Texture" id=16]
-[ext_resource path="res://ReactionsButtons/HydrogenHalideButton.png" type="Texture" id=17]
-[ext_resource path="res://ReactionsButtons/HydrogenHalide_Pressed.png" type="Texture" id=18]
-[ext_resource path="res://ReactionsButtons/SOCl2Button.png" type="Texture" id=19]
-[ext_resource path="res://ReactionsButtons/SOCl2_Pressed.png" type="Texture" id=20]
-[ext_resource path="res://ReactionsButtons/E2Button.png" type="Texture" id=21]
-[ext_resource path="res://ReactionsButtons/E2_Pressed.png" type="Texture" id=22]
-[ext_resource path="res://ReactionsButtons/H20ationButton.png" type="Texture" id=23]
-[ext_resource path="res://ReactionsButtons/H2OationPressed.png" type="Texture" id=24]
-[ext_resource path="res://ReactionsButtons/H2ationButton.png" type="Texture" id=25]
-[ext_resource path="res://ReactionsButtons/H2ationPressed.png" type="Texture" id=26]
-[ext_resource path="res://ReactionsButtons/HalogenationButton.png" type="Texture" id=27]
-[ext_resource path="res://ReactionsButtons/HalogenationPressed.png" type="Texture" id=28]
-[ext_resource path="res://ReactionsButtons/SN2Button.png" type="Texture" id=29]
-[ext_resource path="res://ReactionsButtons/SN2Pressed.png" type="Texture" id=30]
-[ext_resource path="res://ReactionsButtons/EpoxAddButton.png" type="Texture" id=31]
-[ext_resource path="res://ReactionsButtons/EpoxAddPressed.png" type="Texture" id=32]
-[ext_resource path="res://ReactionsButtons/AHAddButton.png" type="Texture" id=33]
-[ext_resource path="res://ReactionsButtons/AHAddPressed.png" type="Texture" id=34]
+[ext_resource path="res://OptionsScreen/OptionsRxnChoose.png" type="Texture" id=4]
+[ext_resource path="res://OptionsScreen/checkBox.png" type="Texture" id=5]
+[ext_resource path="res://ReactionsButtons/OxMButton.png" type="Texture" id=6]
+[ext_resource path="res://ReactionsButtons/OxM_Pressed.png" type="Texture" id=7]
+[ext_resource path="res://ReactionsButtons/OzonButton.png" type="Texture" id=8]
+[ext_resource path="res://ReactionsButtons/Ozon_Pressed.png" type="Texture" id=9]
+[ext_resource path="res://ReactionsButtons/HydBorButton.png" type="Texture" id=10]
+[ext_resource path="res://ReactionsButtons/HBro_Pressed.png" type="Texture" id=11]
+[ext_resource path="res://ReactionsButtons/FRAButton.png" type="Texture" id=12]
+[ext_resource path="res://ReactionsButtons/FRA_Pressed.png" type="Texture" id=13]
+[ext_resource path="res://ReactionsButtons/DeHButton.png" type="Texture" id=14]
+[ext_resource path="res://ReactionsButtons/DeH_Pressed.png" type="Texture" id=15]
+[ext_resource path="res://ReactionsButtons/PBr3Button.png" type="Texture" id=16]
+[ext_resource path="res://ReactionsButtons/PBr3_Pressed.png" type="Texture" id=17]
+[ext_resource path="res://ReactionsButtons/HydrogenHalideButton.png" type="Texture" id=18]
+[ext_resource path="res://ReactionsButtons/HydrogenHalide_Pressed.png" type="Texture" id=19]
+[ext_resource path="res://ReactionsButtons/SOCl2Button.png" type="Texture" id=20]
+[ext_resource path="res://ReactionsButtons/SOCl2_Pressed.png" type="Texture" id=21]
+[ext_resource path="res://ReactionsButtons/E2Button.png" type="Texture" id=22]
+[ext_resource path="res://ReactionsButtons/E2_Pressed.png" type="Texture" id=23]
+[ext_resource path="res://ReactionsButtons/H20ationButton.png" type="Texture" id=24]
+[ext_resource path="res://ReactionsButtons/H2OationPressed.png" type="Texture" id=25]
+[ext_resource path="res://ReactionsButtons/H2ationButton.png" type="Texture" id=26]
+[ext_resource path="res://ReactionsButtons/H2ationPressed.png" type="Texture" id=27]
+[ext_resource path="res://ReactionsButtons/HalogenationButton.png" type="Texture" id=28]
+[ext_resource path="res://ReactionsButtons/HalogenationPressed.png" type="Texture" id=29]
+[ext_resource path="res://ReactionsButtons/SN2Button.png" type="Texture" id=30]
+[ext_resource path="res://ReactionsButtons/SN2Pressed.png" type="Texture" id=31]
+[ext_resource path="res://ReactionsButtons/EpoxAddButton.png" type="Texture" id=32]
+[ext_resource path="res://ReactionsButtons/EpoxAddPressed.png" type="Texture" id=33]
+[ext_resource path="res://ReactionsButtons/AHAddButton.png" type="Texture" id=34]
+[ext_resource path="res://ReactionsButtons/AHAddPressed.png" type="Texture" id=35]
 
 [node name="Options" type="TextureRect"]
 margin_right = 900.0
@@ -47,6 +48,13 @@ margin_right = 159.018
 margin_bottom = 74.3645
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
+
+[node name="ReactionButtonsTitle" type="TextureRect" parent="."]
+margin_left = 291.201
+margin_top = 41.0824
+margin_right = 586.201
+margin_bottom = 104.082
+texture = ExtResource( 4 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = 319.5
@@ -64,6 +72,7 @@ margin_bottom = 1346.0
 alignment = 1
 
 [node name="OxM" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
+editor/display_folded = true
 margin_right = 221.0
 margin_bottom = 87.0
 custom_constants/separation = 10
@@ -71,7 +80,7 @@ custom_constants/separation = 10
 [node name="OxmCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/OxM"]
 margin_right = 30.0
 margin_bottom = 87.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="Oxymercuration" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/OxM"]
@@ -80,8 +89,8 @@ margin_right = 221.0
 margin_bottom = 87.0
 toggle_mode = true
 action_mode = 0
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
 
 [node name="Ozo" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 91.0
@@ -92,15 +101,15 @@ custom_constants/separation = 10
 [node name="OzoCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/Ozo"]
 margin_right = 30.0
 margin_bottom = 85.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="Ozonolysis" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/Ozo"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 85.0
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
 
 [node name="HBor" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 180.0
@@ -111,15 +120,15 @@ custom_constants/separation = 10
 [node name="HborCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/HBor"]
 margin_right = 30.0
 margin_bottom = 85.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="Hydroboration" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/HBor"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 85.0
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
 
 [node name="FRA" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 269.0
@@ -130,15 +139,15 @@ custom_constants/separation = 10
 [node name="FRACB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/FRA"]
 margin_right = 30.0
 margin_bottom = 82.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="FRA" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/FRA"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 82.0
-texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 12 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
 
 [node name="DeH" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 355.0
@@ -149,15 +158,15 @@ custom_constants/separation = 10
 [node name="DeHCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/DeH"]
 margin_right = 30.0
 margin_bottom = 87.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="Dehydration" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/DeH"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 87.0
-texture_normal = ExtResource( 13 )
-texture_pressed = ExtResource( 14 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
 
 [node name="PBr3" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 446.0
@@ -168,15 +177,15 @@ custom_constants/separation = 10
 [node name="PBr3CB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/PBr3"]
 margin_right = 30.0
 margin_bottom = 92.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="PBr3" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/PBr3"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 92.0
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 16 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
 
 [node name="HHalide" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 542.0
@@ -187,15 +196,15 @@ custom_constants/separation = 10
 [node name="HHalideCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/HHalide"]
 margin_right = 30.0
 margin_bottom = 89.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="HHalide" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/HHalide"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 89.0
-texture_normal = ExtResource( 17 )
-texture_pressed = ExtResource( 18 )
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 19 )
 
 [node name="SOCl2" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 635.0
@@ -206,15 +215,15 @@ custom_constants/separation = 10
 [node name="SOCl2CB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/SOCl2"]
 margin_right = 30.0
 margin_bottom = 92.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="SOCl2" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/SOCl2"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 92.0
-texture_normal = ExtResource( 19 )
-texture_pressed = ExtResource( 20 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 21 )
 
 [node name="E2" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 731.0
@@ -225,15 +234,15 @@ custom_constants/separation = 10
 [node name="E2CB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/E2"]
 margin_right = 30.0
 margin_bottom = 85.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="E2" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/E2"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 85.0
-texture_normal = ExtResource( 21 )
-texture_pressed = ExtResource( 22 )
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 23 )
 
 [node name="Hydration" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 820.0
@@ -244,15 +253,15 @@ custom_constants/separation = 10
 [node name="HydraCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/Hydration"]
 margin_right = 30.0
 margin_bottom = 87.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="Hydration" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/Hydration"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 87.0
-texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 24 )
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 25 )
 
 [node name="Hydrogenation" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 911.0
@@ -263,15 +272,15 @@ custom_constants/separation = 10
 [node name="HydrogCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/Hydrogenation"]
 margin_right = 30.0
 margin_bottom = 87.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="Hydrogenation" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/Hydrogenation"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 87.0
-texture_normal = ExtResource( 25 )
-texture_pressed = ExtResource( 26 )
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
 
 [node name="Halogenation" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 1002.0
@@ -282,15 +291,15 @@ custom_constants/separation = 10
 [node name="HaloCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/Halogenation"]
 margin_right = 30.0
 margin_bottom = 87.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="Halogenation" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/Halogenation"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 87.0
-texture_normal = ExtResource( 27 )
-texture_pressed = ExtResource( 28 )
+texture_normal = ExtResource( 28 )
+texture_pressed = ExtResource( 29 )
 
 [node name="SN2" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 1093.0
@@ -301,15 +310,15 @@ custom_constants/separation = 10
 [node name="Sn2CB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/SN2"]
 margin_right = 30.0
 margin_bottom = 87.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="Sn2" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/SN2"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 87.0
-texture_normal = ExtResource( 29 )
-texture_pressed = ExtResource( 30 )
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 31 )
 
 [node name="EpoxAdd" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 1184.0
@@ -320,15 +329,15 @@ custom_constants/separation = 10
 [node name="EpoxAddCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/EpoxAdd"]
 margin_right = 30.0
 margin_bottom = 79.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="EpoxAdd" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/EpoxAdd"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 79.0
-texture_normal = ExtResource( 31 )
-texture_pressed = ExtResource( 32 )
+texture_normal = ExtResource( 32 )
+texture_pressed = ExtResource( 33 )
 
 [node name="AHAdd" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/ReactionButtons"]
 margin_top = 1267.0
@@ -339,15 +348,15 @@ custom_constants/separation = 10
 [node name="AHAddCB" type="TextureRect" parent="ScrollContainer/HBoxContainer/ReactionButtons/AHAdd"]
 margin_right = 30.0
 margin_bottom = 79.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="AHAdd" type="TextureButton" parent="ScrollContainer/HBoxContainer/ReactionButtons/AHAdd"]
 margin_left = 40.0
 margin_right = 221.0
 margin_bottom = 79.0
-texture_normal = ExtResource( 33 )
-texture_pressed = ExtResource( 34 )
+texture_normal = ExtResource( 34 )
+texture_pressed = ExtResource( 35 )
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="toggled" from="ScrollContainer/HBoxContainer/ReactionButtons/OxM/Oxymercuration" to="." method="_on_Oxymercuration_toggled"]

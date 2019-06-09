@@ -28,6 +28,4 @@ script = ExtResource( 5 )
 [node name="MainMenu" parent="." instance=ExtResource( 6 )]
 visible = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
