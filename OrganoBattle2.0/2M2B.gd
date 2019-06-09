@@ -16,6 +16,7 @@ func _ready():
 
 
 func _on_H2Oation_pressed():
+	get_node("HydrationPopup").hide()
 	get_node("H2Oation").hide()
 	get_node("H2ation").hide()
 	get_node("Hydroboration").hide()
@@ -36,6 +37,7 @@ func _on_H2Oation_pressed():
 	self.hide()
 	nextChemical.show()
 func _on_H2ation_pressed():
+	get_node("HydrogPopup").hide()
 	get_node("H2Oation").hide()
 	get_node("H2ation").hide()
 	get_node("Hydroboration").hide()
@@ -56,6 +58,7 @@ func _on_H2ation_pressed():
 	self.hide()
 	nextChemical.show()
 func _on_Hydroboration_pressed():
+	get_node("HBorPopup").hide()
 	get_node("H2Oation").hide()
 	get_node("H2ation").hide()
 	get_node("Hydroboration").hide()
@@ -76,6 +79,7 @@ func _on_Hydroboration_pressed():
 	self.hide()
 	get_tree().change_scene("res://BattleWindow.tscn") #different for backwards
 func _on_Halogenation_pressed():
+	get_node("HaloPopup").hide()
 	get_node("H2Oation").hide()
 	get_node("H2ation").hide()
 	get_node("Hydroboration").hide()
@@ -95,3 +99,22 @@ func _on_Halogenation_pressed():
 	global.currentChemical = "23Br2MB"
 	self.hide()
 	nextChemical.show()
+	
+#Hover Functions
+func _on_H2Oation_mouse_entered():
+	get_node("HydrationPopup").show()
+func _on_H2Oation_mouse_exited():
+	get_node("HydrationPopup").hide()
+func _on_H2ation_mouse_entered():
+	get_node("HydrogPopup").show()
+func _on_H2ation_mouse_exited():
+	get_node("HydrogPopup").hide()
+func _on_Hydroboration_mouse_entered():
+	get_node("HBorPopup").show()
+func _on_Hydroboration_mouse_exited():
+	get_node("HBorPopup").hide()
+func _on_Halogenation_mouse_entered():
+	get_node("HaloPopup").show()
+func _on_Halogenation_mouse_exited():
+	get_node("HaloPopup").hide()
+

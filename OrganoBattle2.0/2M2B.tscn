@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://2M2B.gd" type="Script" id=1]
 [ext_resource path="res://Chemicals/2-methyl-2-butene-01.png" type="Texture" id=2]
@@ -41,6 +41,10 @@
 [ext_resource path="res://2M2B-23Br2MB-Halo/7-01.png" type="Texture" id=39]
 [ext_resource path="res://2M2B-23Br2MB-Halo/8-01.png" type="Texture" id=40]
 [ext_resource path="res://2M2B-23Br2MB-Halo/9-01.png" type="Texture" id=41]
+[ext_resource path="res://Popups/H2oPU.png" type="Texture" id=42]
+[ext_resource path="res://Popups/H2PU.png" type="Texture" id=43]
+[ext_resource path="res://Popups/HBorPU.png" type="Texture" id=44]
+[ext_resource path="res://Popups/Br2PU.png" type="Texture" id=45]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -73,6 +77,22 @@ animations = [ {
 "name": "2M2B-23Br2MB-Halo",
 "speed": 1.5
 } ]
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 42 )
+region_rect = Rect2( 0, 0, 180, 80 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 43 )
+region_rect = Rect2( 0, 0, 180, 80 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 44 )
+region_rect = Rect2( 0, 0, 180, 86 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 45 )
+region_rect = Rect2( 0, 0, 180, 80 )
 
 [node name="2M2B" type="TextureRect"]
 margin_right = 900.0
@@ -145,7 +165,43 @@ frames = SubResource( 4 )
 animation = "2M2B-23Br2MB-Halo"
 centered = false
 
+[node name="HydrationPopup" type="PopupPanel" parent="."]
+margin_left = 41.0
+margin_top = 465.0
+margin_right = 221.0
+margin_bottom = 540.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="HydrogPopup" type="PopupPanel" parent="."]
+margin_left = 253.045
+margin_top = 465.0
+margin_right = 433.045
+margin_bottom = 540.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="HBorPopup" type="PopupPanel" parent="."]
+margin_left = 466.683
+margin_top = 465.0
+margin_right = 646.683
+margin_bottom = 545.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="HaloPopup" type="PopupPanel" parent="."]
+margin_left = 675.768
+margin_top = 465.0
+margin_right = 855.768
+margin_bottom = 540.0
+custom_styles/panel = SubResource( 8 )
+
+[connection signal="mouse_entered" from="H2Oation" to="." method="_on_H2Oation_mouse_entered"]
+[connection signal="mouse_exited" from="H2Oation" to="." method="_on_H2Oation_mouse_exited"]
 [connection signal="pressed" from="H2Oation" to="." method="_on_H2Oation_pressed"]
+[connection signal="mouse_entered" from="H2ation" to="." method="_on_H2ation_mouse_entered"]
+[connection signal="mouse_exited" from="H2ation" to="." method="_on_H2ation_mouse_exited"]
 [connection signal="pressed" from="H2ation" to="." method="_on_H2ation_pressed"]
+[connection signal="mouse_entered" from="Hydroboration" to="." method="_on_Hydroboration_mouse_entered"]
+[connection signal="mouse_exited" from="Hydroboration" to="." method="_on_Hydroboration_mouse_exited"]
 [connection signal="pressed" from="Hydroboration" to="." method="_on_Hydroboration_pressed"]
+[connection signal="mouse_entered" from="Halogenation" to="." method="_on_Halogenation_mouse_entered"]
+[connection signal="mouse_exited" from="Halogenation" to="." method="_on_Halogenation_mouse_exited"]
 [connection signal="pressed" from="Halogenation" to="." method="_on_Halogenation_pressed"]

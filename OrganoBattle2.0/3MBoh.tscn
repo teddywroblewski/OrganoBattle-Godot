@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://3MBoh.gd" type="Script" id=1]
 [ext_resource path="res://Chemicals/3-methyl-1-butanol.png" type="Texture" id=2]
@@ -46,6 +46,10 @@
 [ext_resource path="res://3MBoh-1I3MB-HHalide/5-01.png" type="Texture" id=44]
 [ext_resource path="res://3MBoh-1I3MB-HHalide/6-01.png" type="Texture" id=45]
 [ext_resource path="res://3MBoh-1I3MB-HHalide/7-01.png" type="Texture" id=46]
+[ext_resource path="res://Popups/DeHPU.png" type="Texture" id=47]
+[ext_resource path="res://Popups/SOCl2PU.png" type="Texture" id=48]
+[ext_resource path="res://Popups/PBr3PU.png" type="Texture" id=49]
+[ext_resource path="res://Popups/HHalidePU.png" type="Texture" id=50]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -78,6 +82,22 @@ animations = [ {
 "name": "3MBoh-1I3MB-HHalide",
 "speed": 1.5
 } ]
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 47 )
+region_rect = Rect2( 0, 0, 180, 86 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 48 )
+region_rect = Rect2( 0, 0, 180, 80 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 49 )
+region_rect = Rect2( 0, 0, 180, 80 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 50 )
+region_rect = Rect2( 0, 0, 180, 80 )
 
 [node name="3MBoh" type="TextureRect"]
 margin_right = 900.0
@@ -150,7 +170,43 @@ frames = SubResource( 4 )
 animation = "3MBoh-1I3MB-HHalide"
 centered = false
 
+[node name="DeHPopup" type="PopupPanel" parent="."]
+margin_left = 40.0
+margin_top = 466.0
+margin_right = 220.0
+margin_bottom = 546.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="SOCl2Popup" type="PopupPanel" parent="."]
+margin_left = 253.0
+margin_top = 465.0
+margin_right = 433.0
+margin_bottom = 541.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="PBr3Popup" type="PopupPanel" parent="."]
+margin_left = 463.676
+margin_top = 465.267
+margin_right = 643.676
+margin_bottom = 541.267
+custom_styles/panel = SubResource( 7 )
+
+[node name="HHalidePopup" type="PopupPanel" parent="."]
+margin_left = 678.913
+margin_top = 463.697
+margin_right = 858.913
+margin_bottom = 539.697
+custom_styles/panel = SubResource( 8 )
+
+[connection signal="mouse_entered" from="Dehydration" to="." method="_on_Dehydration_mouse_entered"]
+[connection signal="mouse_exited" from="Dehydration" to="." method="_on_Dehydration_mouse_exited"]
 [connection signal="pressed" from="Dehydration" to="." method="_on_Dehydration_pressed"]
+[connection signal="mouse_entered" from="SOCl2" to="." method="_on_SOCl2_mouse_entered"]
+[connection signal="mouse_exited" from="SOCl2" to="." method="_on_SOCl2_mouse_exited"]
 [connection signal="pressed" from="SOCl2" to="." method="_on_SOCl2_pressed"]
+[connection signal="mouse_entered" from="PBr3" to="." method="_on_PBr3_mouse_entered"]
+[connection signal="mouse_exited" from="PBr3" to="." method="_on_PBr3_mouse_exited"]
 [connection signal="pressed" from="PBr3" to="." method="_on_PBr3_pressed"]
+[connection signal="mouse_entered" from="HydrogenHalide" to="." method="_on_HydrogenHalide_mouse_entered"]
+[connection signal="mouse_exited" from="HydrogenHalide" to="." method="_on_HydrogenHalide_mouse_exited"]
 [connection signal="pressed" from="HydrogenHalide" to="." method="_on_HydrogenHalide_pressed"]

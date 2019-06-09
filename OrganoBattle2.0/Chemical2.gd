@@ -100,20 +100,20 @@ func _on_SOCl2_pressed():
 	nextChemical.show()
 	
 #Hover Functions
-func _on_DehydrationPopup_mouse_entered():
+func _on_Dehydration_mouse_entered():
 	get_node("DehydrationPopup").show()
-func _on_DehydrationPopup_mouse_exited():
+func _on_Dehydration_mouse_exited():
 	get_node("DehydrationPopup").hide()
-func _on_PBr3Popup_mouse_entered():
+func _on_PBr3_mouse_entered():
 	get_node("PBr3Popup").show()
-func _on_PBr3Popup_mouse_exited():
+func _on_PBr3_mouse_exited():
 	get_node("PBr3Popup").hide()
-func _on_HHalidePopup_mouse_entered():
+func _on_HHalide_mouse_entered():
 	get_node("HHalidePopup").show()
-func _on_HHalidePopup_mouse_exited():
+func _on_HHalide_mouse_exited():
 	get_node("HHalidePopup").hide()
-func _on_SOCl2Popup_mouse_entered():
+func _on_SOCl2_mouse_entered():
 	get_node("SOCl2Popup").show()
-func _on_SOCl2Popup_mouse_exited():
+func _on_SOCl2_mouse_exited():
 	get_node("SOCl2Popup").hide()
 

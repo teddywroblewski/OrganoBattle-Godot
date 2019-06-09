@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Chemical2.gd" type="Script" id=1]
 [ext_resource path="res://Chemicals/3-methyl-2-butanol-01.png" type="Texture" id=2]
@@ -50,6 +50,10 @@
 [ext_resource path="res://3M2Boh-2Cl3MB-SOCl2/9-01.png" type="Texture" id=48]
 [ext_resource path="res://3M2Boh-2Cl3MB-SOCl2/10-01.png" type="Texture" id=49]
 [ext_resource path="res://3M2Boh-2Cl3MB-SOCl2/11-01.png" type="Texture" id=50]
+[ext_resource path="res://Popups/DeHPU.png" type="Texture" id=51]
+[ext_resource path="res://Popups/PBr3PU.png" type="Texture" id=52]
+[ext_resource path="res://Popups/HHalidePU.png" type="Texture" id=53]
+[ext_resource path="res://Popups/SOCl2PU.png" type="Texture" id=54]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -82,6 +86,22 @@ animations = [ {
 "name": "3M2Boh-2Cl3MB-SOCl2",
 "speed": 1.5
 } ]
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 51 )
+region_rect = Rect2( 0, 0, 180, 80 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 52 )
+region_rect = Rect2( 0, 0, 180, 80 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 53 )
+region_rect = Rect2( 0, 0, 180, 80 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 54 )
+region_rect = Rect2( 0, 0, 180, 80 )
 
 [node name="3M2Boh" type="TextureRect"]
 margin_right = 900.0
@@ -151,30 +171,42 @@ animation = "3M2Boh-2Cl3MB-SOCl2"
 centered = false
 
 [node name="DehydrationPopup" type="PopupPanel" parent="."]
-margin_right = 8.0
-margin_bottom = 8.0
+margin_left = 41.094
+margin_top = 465.0
+margin_right = 221.094
+margin_bottom = 540.0
+custom_styles/panel = SubResource( 5 )
 
 [node name="PBr3Popup" type="PopupPanel" parent="."]
-margin_right = 8.0
-margin_bottom = 8.0
+margin_left = 252.733
+margin_top = 465.0
+margin_right = 432.733
+margin_bottom = 540.0
+custom_styles/panel = SubResource( 6 )
 
 [node name="HHalidePopup" type="PopupPanel" parent="."]
-margin_right = 8.0
-margin_bottom = 8.0
+margin_left = 466.006
+margin_top = 465.0
+margin_right = 646.006
+margin_bottom = 540.0
+custom_styles/panel = SubResource( 7 )
 
 [node name="SOCl2Popup" type="PopupPanel" parent="."]
-margin_right = 8.0
-margin_bottom = 8.0
+margin_left = 677.719
+margin_top = 465.0
+margin_right = 857.719
+margin_bottom = 540.0
+custom_styles/panel = SubResource( 8 )
 
+[connection signal="mouse_entered" from="Dehydration" to="." method="_on_Dehydration_mouse_entered"]
+[connection signal="mouse_exited" from="Dehydration" to="." method="_on_Dehydration_mouse_exited"]
 [connection signal="pressed" from="Dehydration" to="." method="_on_Option_1_pressed"]
+[connection signal="mouse_entered" from="PBr3" to="." method="_on_PBr3_mouse_entered"]
+[connection signal="mouse_exited" from="PBr3" to="." method="_on_PBr3_mouse_exited"]
 [connection signal="pressed" from="PBr3" to="." method="_on_PBr3_pressed"]
+[connection signal="mouse_entered" from="HHalide" to="." method="_on_HHalide_mouse_entered"]
+[connection signal="mouse_exited" from="HHalide" to="." method="_on_HHalide_mouse_exited"]
 [connection signal="pressed" from="HHalide" to="." method="_on_HHalide_pressed"]
+[connection signal="mouse_entered" from="SOCl2" to="." method="_on_SOCl2_mouse_entered"]
+[connection signal="mouse_exited" from="SOCl2" to="." method="_on_SOCl2_mouse_exited"]
 [connection signal="pressed" from="SOCl2" to="." method="_on_SOCl2_pressed"]
-[connection signal="mouse_entered" from="DehydrationPopup" to="." method="_on_DehydrationPopup_mouse_entered"]
-[connection signal="mouse_exited" from="DehydrationPopup" to="." method="_on_DehydrationPopup_mouse_exited"]
-[connection signal="mouse_entered" from="PBr3Popup" to="." method="_on_PBr3Popup_mouse_entered"]
-[connection signal="mouse_exited" from="PBr3Popup" to="." method="_on_PBr3Popup_mouse_exited"]
-[connection signal="mouse_entered" from="HHalidePopup" to="." method="_on_HHalidePopup_mouse_entered"]
-[connection signal="mouse_exited" from="HHalidePopup" to="." method="_on_HHalidePopup_mouse_exited"]
-[connection signal="mouse_entered" from="SOCl2Popup" to="." method="_on_SOCl2Popup_mouse_entered"]
-[connection signal="mouse_exited" from="SOCl2Popup" to="." method="_on_SOCl2Popup_mouse_exited"]
