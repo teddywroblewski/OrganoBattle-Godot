@@ -26,15 +26,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
-"loop": true,
-"name": "New Anim 1",
-"speed": 1.7
-}, {
 "frames": [  ],
 "loop": true,
 "name": "default",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "New Anim 1",
+"speed": 1.7
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": true,
@@ -148,14 +148,13 @@ position = Vector2( 365.262, 303.813 )
 scale = Vector2( 0.912347, 0.912347 )
 frames = SubResource( 1 )
 animation = "New Anim 1"
-frame = 1
 playing = true
 
 [node name="Bubbles" type="AnimatedSprite" parent="."]
 position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
 frames = SubResource( 2 )
-frame = 2
+frame = 3
 playing = true
 
 [connection signal="toggled" from="AttackButton" to="." method="_on_AttackButton_toggled"]

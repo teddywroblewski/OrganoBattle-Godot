@@ -25,12 +25,11 @@
 [ext_resource path="res://1I3MB.tscn" type="PackedScene" id=23]
 [ext_resource path="res://1P3MB.tscn" type="PackedScene" id=24]
 [ext_resource path="res://2MBMgBr.tscn" type="PackedScene" id=25]
-[ext_resource path="res://3MBMgBr.gd" type="Script" id=26]
-[ext_resource path="res://2M2Boh.tscn" type="PackedScene" id=27]
-[ext_resource path="res://2MBane.tscn" type="PackedScene" id=28]
-[ext_resource path="res://23Br2MB.tscn" type="PackedScene" id=29]
-[ext_resource path="res://2MH.tscn" type="PackedScene" id=30]
-[ext_resource path="res://5MHoh.tscn" type="PackedScene" id=31]
+[ext_resource path="res://2M2Boh.tscn" type="PackedScene" id=26]
+[ext_resource path="res://2MBane.tscn" type="PackedScene" id=27]
+[ext_resource path="res://23Br2MB.tscn" type="PackedScene" id=28]
+[ext_resource path="res://2MH.tscn" type="PackedScene" id=29]
+[ext_resource path="res://5MHoh.tscn" type="PackedScene" id=30]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -39,6 +38,22 @@ animations = [ {
 "name": "New Anim",
 "speed": 2.0
 } ]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends TextureRect
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
@@ -54,7 +69,7 @@ script = ExtResource( 1 )
 position = Vector2( 450, 325 )
 frames = SubResource( 1 )
 animation = "New Anim"
-frame = 10
+frame = 7
 playing = true
 
 [node name="3MB" parent="." instance=ExtResource( 13 )]
@@ -99,23 +114,23 @@ visible = false
 
 [node name="2MBMgBr" parent="." instance=ExtResource( 25 )]
 visible = false
-script = ExtResource( 26 )
+script = SubResource( 3 )
 
-[node name="2M2Boh" parent="." instance=ExtResource( 27 )]
+[node name="2M2Boh" parent="." instance=ExtResource( 26 )]
 visible = false
 margin_right = 900.0
 margin_bottom = 650.0
 
-[node name="2MBane" parent="." instance=ExtResource( 28 )]
+[node name="2MBane" parent="." instance=ExtResource( 27 )]
 visible = false
 
-[node name="23Br2MB" parent="." instance=ExtResource( 29 )]
+[node name="23Br2MB" parent="." instance=ExtResource( 28 )]
 visible = false
 
-[node name="2MH" parent="." instance=ExtResource( 30 )]
+[node name="2MH" parent="." instance=ExtResource( 29 )]
 visible = false
 
-[node name="5MHoh" parent="." instance=ExtResource( 31 )]
+[node name="5MHoh" parent="." instance=ExtResource( 30 )]
 visible = false
 
 [node name="TargetChemical" type="TextureRect" parent="."]
