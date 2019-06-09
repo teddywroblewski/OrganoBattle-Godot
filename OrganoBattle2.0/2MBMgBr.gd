@@ -14,7 +14,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-#Button Pressed Functions
+
+#Button Pressed Function
+
 func _on_AHAdd_pressed():
 	#get_node("OxymercurationPopup").hide()
 	get_node("AHAdd").hide()
@@ -36,6 +38,8 @@ func _on_AHAdd_pressed():
 	global.currentChemical = "2MH"
 	self.hide()
 	nextChemical.show()
+
+
 func _on_EpoxAdd_pressed():
 	#get_node("OxymercurationPopup").hide()
 	get_node("AHAdd").hide()
