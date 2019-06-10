@@ -45,7 +45,7 @@ func _ready():
 #Button Pressed Function
 
 func _on_AHAdd_pressed():
-	#get_node(\"OxymercurationPopup\").hide()
+	get_node(\"AHAddPU\").hide()
 	get_node(\"AHAdd\").hide()
 	get_node(\"EpoxAdd\").hide()
 	get_node(\"Blank1\").hide()
@@ -68,7 +68,7 @@ func _on_AHAdd_pressed():
 
 
 func _on_EpoxAdd_pressed():
-	#get_node(\"OxymercurationPopup\").hide()
+	get_node(\"EpoxPU\").hide()
 	get_node(\"AHAdd\").hide()
 	get_node(\"EpoxAdd\").hide()
 	get_node(\"Blank1\").hide()

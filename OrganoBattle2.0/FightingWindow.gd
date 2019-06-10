@@ -17,6 +17,7 @@ func _ready():
 	if (global.isComputerTurn) :
 		get_node("AttackButton").hide()
 		#get_node("DefenseButton").hide()
+		get_node("OpponentTurn").show()
 		var t = Timer.new()
 		t.set_wait_time(3)
 		t.set_one_shot(true)
@@ -26,6 +27,7 @@ func _ready():
 		t.queue_free()
 		global.health -= 10
 		global.isComputerTurn = false
+		get_node("OpponentTurn").hide()
 		get_node("AttackButton").show()
 		#get_node("DefenseButton").show()
 	else :
