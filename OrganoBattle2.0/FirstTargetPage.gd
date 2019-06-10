@@ -18,7 +18,7 @@ func _on_ContinueButton_pressed():
 	self.hide()
 	parent.get_node("TargetChemical").show()
 	parent.get_node("TargetText").show()
-	parent.get_node("TargetChemical").set_texture(load("res://TargetMolecules/" + str(global.targetChemical) + ".png"))
+	parent.get_node("TargetChemical").set_texture(load("res://TargetMolecules/" + str(global.targetChemical) + "-1.png"))
 	if (global.startingChemical == "3MB"):
 		parent.get_node("3MB").show()
 		global.currentChemical = "3MB"

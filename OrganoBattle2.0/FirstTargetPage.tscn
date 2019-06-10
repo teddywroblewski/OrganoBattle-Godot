@@ -25,10 +25,10 @@ texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
 
 [node name="TargetTextBox" type="TextureRect" parent="."]
-margin_left = 356.804
-margin_top = 30.3283
-margin_right = 562.804
-margin_bottom = 117.328
+margin_left = 378.501
+margin_top = 45.6369
+margin_right = 487.501
+margin_bottom = 91.6369
 texture = ExtResource( 5 )
 expand = true
 

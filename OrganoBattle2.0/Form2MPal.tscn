@@ -1,11 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Form2MPal.gd" type="Script" id=1]
-[ext_resource path="res://Chemicals/Formaldehyde_2-methyl-propanal.png" type="Texture" id=2]
+[ext_resource path="res://Chemicals/formaldehyde_2-methylpropanal.png" type="Texture" id=2]
 [ext_resource path="res://FinalSynthesis_Graphics/ContinueButton.png" type="Texture" id=3]
 [ext_resource path="res://FinalSynthesis_Graphics/ContinueButton_Pressed.png" type="Texture" id=4]
 [ext_resource path="res://FinalSynthesis_Graphics/ContinueButton_Hover.png" type="Texture" id=5]
-
 
 [node name="Form2MPal" type="TextureRect"]
 margin_right = 40.0
