@@ -5,13 +5,7 @@ extends TextureRect
 # var b = "text"
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("In ready")
-	get_node("TargetChemical").set_texture(load("res://TargetMolecules/" + str(global.targetChemical) + ".png"))
-	if (global.startingChemical == "3MB"):
-		get_node("3MB").show()
-		global.currentChemical = "3MB"
-		global.startingChemical = "reload"
-	elif (global.startingChemical == "reload" && global.nextChemical != null) :
+	if (global.startingChemical == "reload" && global.nextChemical != null) :
 		get_node(str(global.nextChemical)).show()
 	
 
@@ -19,9 +13,3 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-
-
-
-func _on_3MBoh_visibility_changed():
-	print("changed")

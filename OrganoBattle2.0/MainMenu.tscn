@@ -58,6 +58,7 @@ margin_right = 1020.0
 margin_bottom = 730.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+editor/display_folded = true
 margin_left = 120.0
 margin_top = 80.0
 margin_right = 780.0
@@ -129,7 +130,6 @@ texture = ExtResource( 17 )
 [node name="AnimatedLogo" type="AnimatedSprite" parent="HBoxContainer/CenterContainer"]
 position = Vector2( 244.406, 227.154 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/MenuOptions/NewGame" to="." method="_on_NewGame_pressed"]

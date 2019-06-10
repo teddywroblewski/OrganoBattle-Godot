@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://BattleWindow.gd" type="Script" id=1]
 [ext_resource path="res://BattleWindow_Graphics/BG1-01.png" type="Texture" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://2MH.tscn" type="PackedScene" id=29]
 [ext_resource path="res://5MHoh.tscn" type="PackedScene" id=30]
 [ext_resource path="res://BattleWindow_Graphics/TargetText.png" type="Texture" id=31]
+[ext_resource path="res://FirstTargetPage.tscn" type="PackedScene" id=32]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -54,7 +55,7 @@ script = ExtResource( 1 )
 position = Vector2( 450, 325 )
 frames = SubResource( 1 )
 animation = "New Anim"
-frame = 4
+frame = 11
 playing = true
 
 [node name="3MB" parent="." instance=ExtResource( 13 )]
@@ -118,6 +119,7 @@ visible = false
 visible = false
 
 [node name="TargetChemical" type="TextureRect" parent="."]
+visible = false
 margin_left = 637.0
 margin_top = 65.0
 margin_right = 862.0
@@ -127,10 +129,13 @@ expand = true
 stretch_mode = 1
 
 [node name="TargetText" type="TextureRect" parent="."]
+visible = false
 margin_left = 716.021
 margin_top = 40.8275
 margin_right = 774.021
 margin_bottom = 64.8275
 texture = ExtResource( 31 )
 expand = true
+
+[node name="FirstTargetPage" parent="." instance=ExtResource( 32 )]
 
