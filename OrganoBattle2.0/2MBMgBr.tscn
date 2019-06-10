@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Chemicals/2-methyl-butane-magnesium-bromide-01.png" type="Texture" id=1]
 [ext_resource path="res://ReactionsButtons/AHAddButton.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://2MBMgBr-5MHoh-EpoxAdd/5-01.png" type="Texture" id=20]
 [ext_resource path="res://2MBMgBr-5MHoh-EpoxAdd/6-01.png" type="Texture" id=21]
 [ext_resource path="res://2MBMgBr-5MHoh-EpoxAdd/7-01.png" type="Texture" id=22]
+[ext_resource path="res://Popups/EpoxPU.png" type="Texture" id=23]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends TextureRect
@@ -87,6 +88,17 @@ func _on_EpoxAdd_pressed():
 	global.currentChemical = \"5MHoh\"
 	self.hide()
 	nextChemical.show()
+	
+#Hover Functions
+func _on_EpoxAdd_mouse_entered():
+	get_node(\"EpoxPU\").show()
+func _on_EpoxAdd_mouse_exited():
+	get_node(\"EpoxPU\").hide()
+func _on_AHAdd_mouse_entered():
+	get_node(\"AHAddPU\").show()
+func _on_AHAdd_mouse_exited():
+	get_node(\"AHAddPU\").hide()
+
 "
 
 [sub_resource type="SpriteFrames" id=2]
@@ -104,6 +116,12 @@ animations = [ {
 "name": "2MBMgBr-5MHoh-EpoxAdd",
 "speed": 1.5
 } ]
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 23 )
+region_rect = Rect2( 0, 0, 180, 80 )
 
 [node name="2MBMgBr" type="TextureRect"]
 margin_right = 900.0
@@ -165,5 +183,21 @@ frames = SubResource( 3 )
 animation = "2MBMgBr-5MHoh-EpoxAdd"
 centered = false
 
+[node name="AHAddPU" type="PopupPanel" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="EpoxPU" type="PopupPanel" parent="."]
+margin_left = 251.941
+margin_top = 465.0
+margin_right = 431.941
+margin_bottom = 540.0
+custom_styles/panel = SubResource( 5 )
+
+[connection signal="mouse_entered" from="AHAdd" to="." method="_on_AHAdd_mouse_entered"]
+[connection signal="mouse_exited" from="AHAdd" to="." method="_on_AHAdd_mouse_exited"]
 [connection signal="pressed" from="AHAdd" to="." method="_on_AHAdd_pressed"]
+[connection signal="mouse_entered" from="EpoxAdd" to="." method="_on_EpoxAdd_mouse_entered"]
+[connection signal="mouse_exited" from="EpoxAdd" to="." method="_on_EpoxAdd_mouse_exited"]
 [connection signal="pressed" from="EpoxAdd" to="." method="_on_EpoxAdd_pressed"]
