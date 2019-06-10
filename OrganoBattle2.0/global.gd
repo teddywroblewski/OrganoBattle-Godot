@@ -13,10 +13,10 @@ var targetChemical
 var isGameOver
 var isComputerTurn
 var nextChemical
-var corrosiveAttack = ["Formaldehyde_2-methylpropanal", "3-methylbutane_magnesium_bromide"]
-var flammableAttack = ["2-methyl-2-butanol", "2-bromo-3-methyl-butane", "2-chloro-3-methyl-butane", "1-chloro-3-methyl-butane"]
-var oralToxicityAttack = ["2-methyl-hexane", " 5-methyl-hexanol"]
-var basicAttack = ["2-methyl-2-butane", " 2,3-dibromo-3-methyl-butane", "2-iodo-3-methyl-butane", "1-propoxy-3-methyl-butane"]
+var corrosiveAttack = ["Formaldehyde_2-methylpropanal", "2-methyl-butane-magnesium-bromide"]
+var flammableAttack = ["2-methyl-2-butanol", "2-bromo-3-methylbutane", "2-chloro-3-methyl-butane", "1-Chloro-3-methylbutane"]
+var oralToxicityAttack = ["2-methyl-hexane", " 5-methyl-1-hexanol"]
+var basicAttack = ["2-methyl-2-butane", " 2,3-dibromo-2-methyl-butane", "2-iodo-3-methyl-butane", "1-propoxy-3-methyl-butane"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1-Iodo-3-methylbutane.png-d8df85eaa2ca8b0c0378900ed2d66119.stex"
+path="res://.import/2-methyl-butane.png-5244dfd801a33c04eed234ad4ebda5c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://1-Iodo-3-methylbutane.png"
-dest_files=[ "res://.import/1-Iodo-3-methylbutane.png-d8df85eaa2ca8b0c0378900ed2d66119.stex" ]
+source_file="res://TargetMolecules/2-methyl-butane.png"
+dest_files=[ "res://.import/2-methyl-butane.png-5244dfd801a33c04eed234ad4ebda5c6.stex" ]
 
 [params]
 

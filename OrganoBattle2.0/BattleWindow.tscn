@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://BattleWindow.gd" type="Script" id=1]
 [ext_resource path="res://BattleWindow_Graphics/BG1-01.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://23Br2MB.tscn" type="PackedScene" id=28]
 [ext_resource path="res://2MH.tscn" type="PackedScene" id=29]
 [ext_resource path="res://5MHoh.tscn" type="PackedScene" id=30]
+[ext_resource path="res://BattleWindow_Graphics/TargetText.png" type="Texture" id=31]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -53,6 +54,7 @@ script = ExtResource( 1 )
 position = Vector2( 450, 325 )
 frames = SubResource( 1 )
 animation = "New Anim"
+
 frame = 19
 playing = true
 
@@ -124,4 +126,11 @@ margin_bottom = 233.0
 texture = SubResource( 2 )
 expand = true
 stretch_mode = 1
+
+[node name="TargetText" type="TextureRect" parent="."]
+margin_left = 718.163
+margin_top = 211.965
+margin_right = 830.163
+margin_bottom = 258.965
+texture = ExtResource( 31 )
 

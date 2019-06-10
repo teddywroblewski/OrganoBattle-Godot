@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2-chloro-3-methyl-butane.png-5fc7e273c5d22ee9513702130e88478d.stex"
+path="res://.import/2-methyl-2-butanol.png-e1f4df94bdbcc598abe1af044bffa1c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2-chloro-3-methyl-butane.png"
-dest_files=[ "res://.import/2-chloro-3-methyl-butane.png-5fc7e273c5d22ee9513702130e88478d.stex" ]
+source_file="res://TargetMolecules/2-methyl-2-butanol.png"
+dest_files=[ "res://.import/2-methyl-2-butanol.png-e1f4df94bdbcc598abe1af044bffa1c8.stex" ]
 
 [params]
 
