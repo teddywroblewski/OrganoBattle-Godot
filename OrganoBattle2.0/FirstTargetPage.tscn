@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://FirstTargetPage.gd" type="Script" id=1]
+[ext_resource path="res://FinalSynthesis_Graphics/ContinueButton.png" type="Texture" id=2]
+[ext_resource path="res://FinalSynthesis_Graphics/ContinueButton_Pressed.png" type="Texture" id=3]
+[ext_resource path="res://FinalSynthesis_Graphics/ContinueButton_Hover.png" type="Texture" id=4]
+[ext_resource path="res://BattleWindow_Graphics/TargetText.png" type="Texture" id=5]
+
+[node name="FirstTargetPage" type="TextureRect"]
+margin_right = 900.0
+margin_bottom = 650.0
+script = ExtResource( 1 )
+
+[node name="Target" type="TextureRect" parent="."]
+margin_right = 900.0
+margin_bottom = 650.0
+
+[node name="ContinueButton" type="TextureButton" parent="."]
+margin_left = 276.175
+margin_top = 493.413
+margin_right = 640.175
+margin_bottom = 589.413
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+
+[node name="TargetTextBox" type="TextureRect" parent="."]
+margin_left = 356.804
+margin_top = 30.3283
+margin_right = 562.804
+margin_bottom = 117.328
+texture = ExtResource( 5 )
+expand = true
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

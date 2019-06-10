@@ -14,5 +14,5 @@ func _ready():
 
 
 func _on_ContinueButton_pressed():
-	global.currentChemical = "Formaldehyde_2-methyl-propanal"
+	global.currentChemical = "formaldehyde_2-methylpropanal"
 	get_tree().change_scene("res://FinalSynthesisWindow.tscn")
