@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1-Chloro-3-methylbutane.png-2df9561506d10c26b91ba0a207ee0dc6.stex"
+path="res://.import/TargetText.png-9abac4a50eef2c2b2fdc309b0a4ba017.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://1-Chloro-3-methylbutane.png"
-dest_files=[ "res://.import/1-Chloro-3-methylbutane.png-2df9561506d10c26b91ba0a207ee0dc6.stex" ]
+source_file="res://BattleWindow_Graphics/TargetText.png"
+dest_files=[ "res://.import/TargetText.png-9abac4a50eef2c2b2fdc309b0a4ba017.stex" ]
 
 [params]
 

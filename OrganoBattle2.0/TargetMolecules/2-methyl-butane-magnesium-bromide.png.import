@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1-propoxy-3-methyl-butane.png-8990d8b0203f304c8f162270e9e2889b.stex"
+path="res://.import/2-methyl-butane-magnesium-bromide.png-b43cf64fc01875ab00b2e9d2456727c5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://1-propoxy-3-methyl-butane.png"
-dest_files=[ "res://.import/1-propoxy-3-methyl-butane.png-8990d8b0203f304c8f162270e9e2889b.stex" ]
+source_file="res://TargetMolecules/2-methyl-butane-magnesium-bromide.png"
+dest_files=[ "res://.import/2-methyl-butane-magnesium-bromide.png-b43cf64fc01875ab00b2e9d2456727c5.stex" ]
 
 [params]
 
