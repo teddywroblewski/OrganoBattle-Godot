@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://FightingWindow_Graphics/07_FightingWindow-01.png" type="Texture" id=1]
 [ext_resource path="res://FightingWindow.gd" type="Script" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://FightingWindow_Graphics/09_Bubble2.png" type="Texture" id=21]
 [ext_resource path="res://FightingWindow_Graphics/09_Bubble3.png" type="Texture" id=22]
 [ext_resource path="res://FightingWindow_Graphics/09_Bubble4.png" type="Texture" id=23]
+[ext_resource path="res://FightingWindow_Graphics/OpponentTurnSign.png" type="Texture" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -31,15 +32,15 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": true,
-"name": "New Anim",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "New Anim 1",
 "speed": 1.7
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -69,10 +70,10 @@ expand = true
 script = ExtResource( 6 )
 
 [node name="AttackPopupMenu" type="PopupMenu" parent="."]
-margin_left = 330.0
-margin_top = 392.0
-margin_right = 576.0
-margin_bottom = 494.0
+margin_left = 330.641
+margin_top = 402.263
+margin_right = 576.641
+margin_bottom = 494.263
 hide_on_state_item_selection = true
 script = ExtResource( 7 )
 
@@ -156,6 +157,14 @@ position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
 frames = SubResource( 2 )
 playing = true
+
+[node name="OpponentTurn" type="TextureRect" parent="."]
+visible = false
+margin_left = 301.413
+margin_top = 484.767
+margin_right = 606.413
+margin_bottom = 618.767
+texture = ExtResource( 24 )
 
 [connection signal="toggled" from="AttackButton" to="." method="_on_AttackButton_toggled"]
 [connection signal="id_pressed" from="AttackPopupMenu" to="." method="_on_AttackPopupMenu_id_pressed"]

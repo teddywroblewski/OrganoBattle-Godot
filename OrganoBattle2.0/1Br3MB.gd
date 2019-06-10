@@ -64,7 +64,7 @@ func _on_Grig_pressed():
 	nextChemical = parent.get_node("2MBMgBr")
 	global.power -= 1 
 	var t = Timer.new()
-	t.set_wait_time(9)
+	t.set_wait_time(6)
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()
