@@ -10,6 +10,8 @@ func _ready():
 	
 	get_node("PlayerPowerBar").value = global.power
 	get_node("OpponentHealthBar").value = global.enemyHealth
+	get_node("PlayerHealthBar").value = global.health
+	
 	if (global.health <= 0) :
 		global.isGameOver = true
 		global.reset()

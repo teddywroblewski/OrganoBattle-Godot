@@ -6,6 +6,7 @@ extends TextureRect
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if (global.startingChemical == "reload" && global.nextChemical != null) :
+		get_node("FirstTargetPage").hide()
 		get_node(str(global.nextChemical)).show()
 	
 
