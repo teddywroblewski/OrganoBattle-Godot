@@ -15,6 +15,11 @@ func _ready():
 func _on_BackButton_pressed():
 	get_tree().change_scene("res://MainMenu.tscn")
 
+func _on_DisableBackground_toggled(button_pressed):
+	if (button_pressed) :
+		global.disableBackground = true
+	else :
+		global.disableBackground = false
 
 func _on_Oxymercuration_toggled(button_pressed):
 	if (button_pressed) :
@@ -166,3 +171,4 @@ func _on_AHAdd_toggled(button_pressed):
 	else :
 		get_node("ScrollContainer/HBoxContainer/ReactionButtons/AHAdd/AHAddCB").set_texture(load("res://OptionsScreen/checkBox.png"))
 		global.oralToxicityAttack.append("2-methyl-hexane")
+

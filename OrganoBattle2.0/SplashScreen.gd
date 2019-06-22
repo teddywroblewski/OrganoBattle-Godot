@@ -14,4 +14,5 @@ func _ready():
 
 
 func _on_StartButton_pressed():
+	global.bgMusic.play()
 	get_tree().change_scene("res://MainMenu.tscn")
