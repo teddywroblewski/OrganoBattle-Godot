@@ -14,15 +14,56 @@ func _ready():
 	
 	if (global.isEnemyEffect) :
 		if (global.enemyEffect == "fire") :
-			get_node("OpponentHealthBar").texture_over.set("")
+			var t = Timer.new()
+			t.set_wait_time(3)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			get_node("FlameAttack").show()
+			get_node("Scientist").hide()
+			get_node("FlameAttack").play()
+			yield(t, "timeout")
+			t.queue_free()
+			get_node("FlameAttack").hide()
+			get_node("Scientist").show()
 		elif (global.enemyEffect == "corrosive") :
-			get_node("OpponentHealthBar").texture_over.set("")
+			var t = Timer.new()
+			t.set_wait_time(5)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			get_node("CorrosiveAttack").show()
+			get_node("Scientist").hide()
+			get_node("CorrosiveAttack").play()
+			yield(t, "timeout")
+			t.queue_free()
+			get_node("CorrosiveAttack").hide()
+			get_node("Scientist").show()
 		elif (global.enemyEffect == "oral") :
-			get_node("OpponentHealthBar").texture_over.set("")
+			var t = Timer.new()
+			t.set_wait_time(3)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			get_node("OralToxicityAttack").show()
+			get_node("Scientist").hide()
+			get_node("OralToxicityAttack").play()
+			yield(t, "timeout")
+			t.queue_free()
+			get_node("OralToxicityAttack").hide()
+			get_node("Scientist").show()
 		else :
+			var t = Timer.new()
+			t.set_wait_time(2)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			get_node("PowerUp").show()
 			global.power += 10
-			get_node("OpponentHealthBar").texture_over.set("res://FightingWindow_Graphics/011_HealthBar.png")
-		
+			yield(t, "timeout")
+			t.queue_free()
+			get_node("PowerUp").hide()
+			
 	global.isEnemyEffect = false
 	
 	if (global.health <= 0) :
@@ -34,7 +75,7 @@ func _ready():
 		#get_node("DefenseButton").hide()
 		get_node("OpponentTurn").show()
 		var t = Timer.new()
-		t.set_wait_time(3)
+		t.set_wait_time(5)
 		t.set_one_shot(true)
 		self.add_child(t)
 		t.start()

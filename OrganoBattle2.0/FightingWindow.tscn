@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://FightingWindow_Graphics/07_FightingWindow-01.png" type="Texture" id=1]
 [ext_resource path="res://FightingWindow.gd" type="Script" id=2]
@@ -19,11 +19,28 @@
 [ext_resource path="res://FightingWindow_Graphics/011_PowerProgress.png" type="Texture" id=17]
 [ext_resource path="res://FightingWindow_Graphics/08_Scientist1.png" type="Texture" id=18]
 [ext_resource path="res://FightingWindow_Graphics/08_Scientist2.png" type="Texture" id=19]
-[ext_resource path="res://FightingWindow_Graphics/09_Bubble1.png" type="Texture" id=20]
-[ext_resource path="res://FightingWindow_Graphics/09_Bubble2.png" type="Texture" id=21]
-[ext_resource path="res://FightingWindow_Graphics/09_Bubble3.png" type="Texture" id=22]
-[ext_resource path="res://FightingWindow_Graphics/09_Bubble4.png" type="Texture" id=23]
-[ext_resource path="res://FightingWindow_Graphics/OpponentTurnSign.png" type="Texture" id=24]
+[ext_resource path="res://AttackAnimations/ScientistFlame1.png" type="Texture" id=20]
+[ext_resource path="res://AttackAnimations/ScientistFlame2.png" type="Texture" id=21]
+[ext_resource path="res://AttackAnimations/ScientistFlame3.png" type="Texture" id=22]
+[ext_resource path="res://AttackAnimations/ScientistFlame4.png" type="Texture" id=23]
+[ext_resource path="res://AttackAnimations/ScientistFlame5.png" type="Texture" id=24]
+[ext_resource path="res://AttackAnimations/ScientistFlame6.png" type="Texture" id=25]
+[ext_resource path="res://AttackAnimations/ScientistFlame7.png" type="Texture" id=26]
+[ext_resource path="res://AttackAnimations/ScientistOT2-01.png" type="Texture" id=27]
+[ext_resource path="res://AttackAnimations/ScientistOT3-01.png" type="Texture" id=28]
+[ext_resource path="res://AttackAnimations/ScientistOT4-01.png" type="Texture" id=29]
+[ext_resource path="res://AttackAnimations/ScientistOT6-01.png" type="Texture" id=30]
+[ext_resource path="res://AttackAnimations/ScientistCorrosive1-01.png" type="Texture" id=31]
+[ext_resource path="res://AttackAnimations/ScientistCorrosive2-01.png" type="Texture" id=32]
+[ext_resource path="res://AttackAnimations/ScientistCorrosive3-01.png" type="Texture" id=33]
+[ext_resource path="res://AttackAnimations/ScientistCorrosive4-01.png" type="Texture" id=34]
+[ext_resource path="res://AttackAnimations/ScientistCorrosive6-01.png" type="Texture" id=35]
+[ext_resource path="res://FightingWindow_Graphics/09_Bubble1.png" type="Texture" id=36]
+[ext_resource path="res://FightingWindow_Graphics/09_Bubble2.png" type="Texture" id=37]
+[ext_resource path="res://FightingWindow_Graphics/09_Bubble3.png" type="Texture" id=38]
+[ext_resource path="res://FightingWindow_Graphics/09_Bubble4.png" type="Texture" id=39]
+[ext_resource path="res://FightingWindow_Graphics/ComputersTurn.png" type="Texture" id=40]
+[ext_resource path="res://FightingWindow_Graphics/PowerIncreased.png" type="Texture" id=41]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -32,20 +49,41 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": true,
-"name": "New Anim",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "New Anim 1",
 "speed": 1.7
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "New Anim 1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": false,
+"name": "New Anim",
+"speed": 1.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -152,20 +190,46 @@ animation = "New Anim 1"
 frame = 1
 playing = true
 
+[node name="FlameAttack" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 373.398, 235.255 )
+frames = SubResource( 2 )
+animation = "New Anim 1"
+
+[node name="OralToxicityAttack" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 373.398, 235.255 )
+frames = SubResource( 2 )
+animation = "New Anim"
+
+[node name="CorrosiveAttack" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 396.65, 241.638 )
+scale = Vector2( 0.963526, 0.963526 )
+frames = SubResource( 4 )
+
 [node name="Bubbles" type="AnimatedSprite" parent="."]
 position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
-frames = SubResource( 2 )
-frame = 3
+frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="OpponentTurn" type="TextureRect" parent="."]
 visible = false
 margin_left = 301.413
-margin_top = 484.767
+margin_top = 498.445
 margin_right = 606.413
-margin_bottom = 618.767
-texture = ExtResource( 24 )
+margin_bottom = 632.445
+texture = ExtResource( 40 )
+
+[node name="PowerUp" type="TextureRect" parent="."]
+visible = false
+margin_left = 306.624
+margin_top = 228.185
+margin_right = 573.624
+margin_bottom = 378.185
+texture = ExtResource( 41 )
 
 [connection signal="toggled" from="AttackButton" to="." method="_on_AttackButton_toggled"]
 [connection signal="id_pressed" from="AttackPopupMenu" to="." method="_on_AttackPopupMenu_id_pressed"]
