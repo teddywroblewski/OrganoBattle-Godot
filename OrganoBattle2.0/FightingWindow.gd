@@ -12,6 +12,19 @@ func _ready():
 	get_node("OpponentHealthBar").value = global.enemyHealth
 	get_node("PlayerHealthBar").value = global.health
 	
+	if (global.isEnemyEffect) :
+		if (global.enemyEffect == "fire") :
+			get_node("OpponentHealthBar").texture_over.set("")
+		elif (global.enemyEffect == "corrosive") :
+			get_node("OpponentHealthBar").texture_over.set("")
+		elif (global.enemyEffect == "oral") :
+			get_node("OpponentHealthBar").texture_over.set("")
+		else :
+			global.power += 10
+			get_node("OpponentHealthBar").texture_over.set("res://FightingWindow_Graphics/011_HealthBar.png")
+		
+	global.isEnemyEffect = false
+	
 	if (global.health <= 0) :
 		global.isGameOver = true
 		global.reset()
@@ -46,21 +59,25 @@ func _ready():
 func _on_AttackPopupMenu_id_pressed(ID):
 	if (ID == 0) :
 		global.startingChemical = "3MB"
+		global.enemyEffect = "fire"
 		global.targetChemical = global.flammableAttack[randi()%global.flammableAttack.size()]
 		get_tree().change_scene("res://BattleWindow.tscn")
 		print(global.targetChemical)
 	elif (ID == 1) :
 		global.startingChemical = "3MB"
+		global.enemyEffect = "corrosive"
 		global.targetChemical = global.corrosiveAttack[randi()%global.corrosiveAttack.size()]
 		get_tree().change_scene("res://BattleWindow.tscn")
 		print(global.targetChemical)
 	elif (ID == 2) :
 		global.startingChemical = "3MB"
+		global.enemyEffect = "none"
 		global.targetChemical = global.basicAttack[randi()%global.basicAttack.size()]
 		get_tree().change_scene("res://BattleWindow.tscn")
 		print(global.targetChemical)
 	elif (ID == 3) :
 		global.startingChemical = "3MB"
+		global.enemyEffect = "oral"
 		global.targetChemical = global.oralToxicityAttack[randi()%global.oralToxicityAttack.size()]
 		get_tree().change_scene("res://BattleWindow.tscn")
 		print(global.targetChemical)

@@ -49,6 +49,12 @@ margin_bottom = 74.3645
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 
+[node name="DisableBackground" type="TextureButton" parent="."]
+margin_left = 70.0
+margin_top = 120.0
+margin_right = 110.0
+margin_bottom = 160.0
+
 [node name="ReactionButtonsTitle" type="TextureRect" parent="."]
 margin_left = 291.201
 margin_top = 41.0824
@@ -372,6 +378,7 @@ texture_normal = ExtResource( 34 )
 texture_pressed = ExtResource( 35 )
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="toggled" from="DisableBackground" to="." method="_on_DisableBackground_toggled"]
 [connection signal="toggled" from="ScrollContainer/HBoxContainer/ReactionButtons/OxM/Oxymercuration" to="." method="_on_Oxymercuration_toggled"]
 [connection signal="toggled" from="ScrollContainer/HBoxContainer/ReactionButtons/Ozo/Ozonolysis" to="." method="_on_Ozonolysis_toggled"]
 [connection signal="toggled" from="ScrollContainer/HBoxContainer/ReactionButtons/HBor/Hydroboration" to="." method="_on_Hydroboration_toggled"]

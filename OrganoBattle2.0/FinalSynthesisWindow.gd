@@ -13,6 +13,7 @@ func _ready():
 		get_node("SuccessPage").show()
 		print("sucess")
 		global.enemyHealth -= 10
+		global.isEnemyEffect = true
 	else :
 		print("failed")
 		get_node("FailurePage").show()
