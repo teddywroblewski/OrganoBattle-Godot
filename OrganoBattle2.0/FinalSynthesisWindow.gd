@@ -17,6 +17,7 @@ func _ready():
 	else :
 		print("failed")
 		get_node("FailurePage").show()
+	fightWindow = preload("res://FightingWindow.tscn").instance()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -26,5 +27,6 @@ func _ready():
 func _on_ContinueButton_pressed():
 	print("pressed")
 	global.isComputerTurn = true
-	get_tree().change_scene("res://FightingWindow.tscn")
+	get_tree().get_root().add_child(fightWindow)
+	get_tree().get_root().remove_child(self)
 	
