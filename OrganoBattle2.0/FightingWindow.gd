@@ -12,6 +12,11 @@ func _ready():
 	get_node("OpponentHealthBar").value = global.enemyHealth
 	get_node("PlayerHealthBar").value = global.health
 	
+	if (global.isComputerTurn) :
+		get_node("AttackButton").hide()
+		#get_node("DefenseButton").hide()
+		get_node("OpponentTurn").show()
+		
 	if (global.isEnemyEffect) :
 		if (global.enemyEffect == "fire") :
 			var t = Timer.new()
@@ -60,6 +65,7 @@ func _ready():
 			t.start()
 			get_node("PowerUp").show()
 			global.power += 10
+			get_node("PlayerPowerBar").value = global.power
 			yield(t, "timeout")
 			t.queue_free()
 			get_node("PowerUp").hide()
@@ -71,9 +77,6 @@ func _ready():
 		global.reset()
 		get_tree().change_scene("MainMenu.tscn")
 	if (global.isComputerTurn) :
-		get_node("AttackButton").hide()
-		#get_node("DefenseButton").hide()
-		get_node("OpponentTurn").show()
 		var t = Timer.new()
 		t.set_wait_time(5)
 		t.set_one_shot(true)
