@@ -44,6 +44,15 @@ margin_right = 900.0
 margin_bottom = 650.0
 script = ExtResource( 1 )
 
+[node name="NotEnoughReactionError" type="AcceptDialog" parent="."]
+margin_left = 100.0
+margin_top = 120.0
+margin_right = 412.0
+margin_bottom = 202.0
+resizable = true
+dialog_text = "Not enough reactions to play the game. 
+Please add some reactions and then continue."
+
 [node name="BackButton" type="TextureButton" parent="."]
 margin_left = 33.0178
 margin_top = 21.3645
