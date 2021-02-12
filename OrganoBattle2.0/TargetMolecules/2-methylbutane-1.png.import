@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2-methyl-hexane-1.png-b047da0d8c487e946a4fb3260d006890.stex"
+path="res://.import/2-methylbutane-1.png-9819a104b67ab602cf2a0954b27720c1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TargetMolecules/2-methyl-hexane-1.png"
-dest_files=[ "res://.import/2-methyl-hexane-1.png-b047da0d8c487e946a4fb3260d006890.stex" ]
+source_file="res://TargetMolecules/2-methylbutane-1.png"
+dest_files=[ "res://.import/2-methylbutane-1.png-9819a104b67ab602cf2a0954b27720c1.stex" ]
 
 [params]
 

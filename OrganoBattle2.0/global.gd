@@ -16,7 +16,7 @@ var nextChemical
 var corrosiveAttack = ["formaldehyde_2-methylpropanal", "2-methylbutane-magnesiumbromide"]
 var flammableAttack = ["2-methyl-2-butanol", "2-bromo-3-methylbutane", "2-chloro-3-methylbutane", "1-chloro-3-methylbutane"]
 var oralToxicityAttack = ["2-methylhexane", "5-methyl-1-hexanol"]
-var basicAttack = ["2-methylbutane", " 2,3-dibromo-2-methylbutane", "2-iodo-3-methylbutane", "1-propoxy-3-methylbutane"]
+var basicAttack = ["2-methylbutane", "2,3-dibromo-2-methylbutane", "2-iodo-3-methylbutane", "1-propoxy-3-methylbutane"]
 var enemyEffect
 var isEnemyEffect
 var disableBackground
