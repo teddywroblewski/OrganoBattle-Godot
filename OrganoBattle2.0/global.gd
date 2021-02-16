@@ -27,7 +27,7 @@ func _ready():
 	bgMusic.set_stream(load("res://MainMenu_Graphics/rolemu_-_La_Calahorra.wav"))
 	add_child(bgMusic)
 	health = 100
-	power = 10
+	power = 100
 	enemyHealth = 100
 	startingChemical = null
 	isFinalChemical = false
@@ -42,7 +42,7 @@ func _ready():
 
 func reset() :
 	health = 100
-	power = 10
+	power = 100
 	enemyHealth = 100
 	startingChemical = null
 	isFinalChemical = false

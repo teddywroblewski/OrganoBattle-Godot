@@ -13,7 +13,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
+func show_starting():
+	get_node("3MB").show()
+	get_node("Oxymercuration").show()
+	get_node("Ozonolysis").show()
+	get_node("Hydroboration").show()
+	get_node("FRA").show()
+	
 #Button Pressed Functions
 func _on_Oxymercuration_pressed():
 	get_node("OxymercurationPopup").hide()
@@ -33,6 +39,7 @@ func _on_Oxymercuration_pressed():
 	get_node("3MB-2HMB-OxM").play()
 	yield(t, "timeout")
 	t.queue_free()
+	get_node("3MB-2HMB-OxM").hide()
 	global.currentChemical = "3M2Boh"
 	self.hide()
 	nextChemical.show()
@@ -54,6 +61,7 @@ func _on_Ozonolysis_pressed():
 	get_node("3MB-Form2MPal-Ozo").play()
 	yield(t, "timeout")
 	t.queue_free()
+	get_node("3MB-Form2MPal-Ozo").hide()
 	global.currentChemical = "Form2MPal"
 	self.hide()
 	nextChemical.show()
@@ -75,9 +83,12 @@ func _on_Hydroboration_pressed():
 	get_node("3MB-3MBoH-HBor").play()
 	yield(t, "timeout")
 	t.queue_free()
+	get_node("3MB-3MBoH-HBor").hide()
+	get_node("3MB-3MBoH-HBor").set_frame(0)
 	global.currentChemical = "3MBoh"
 	self.hide()
 	nextChemical.show()
+	nextChemical.show_starting()
 func _on_FRA_pressed():
 	get_node("FRAPopup").hide()
 	get_node("Oxymercuration").hide()
@@ -96,6 +107,7 @@ func _on_FRA_pressed():
 	get_node("3MB-1Br3MB-FRA").play()
 	yield(t, "timeout")
 	t.queue_free()
+	get_node("3MB-1Br3MB-FRA").hide()
 	global.currentChemical = "1Br3MB"
 	self.hide()
 	nextChemical.show()

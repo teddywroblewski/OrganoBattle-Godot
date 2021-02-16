@@ -27,6 +27,8 @@ func _ready():
 func _on_ContinueButton_pressed():
 	print("pressed")
 	global.isComputerTurn = true
+	print_tree()
+	#get_tree().change_scene("res://FightingWindow.tscn")
 	get_tree().get_root().add_child(fightWindow)
 	get_tree().get_root().remove_child(self)
 	

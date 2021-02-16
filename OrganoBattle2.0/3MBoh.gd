@@ -10,6 +10,12 @@ func _ready():
 	parent = get_tree().get_root().get_node("BattleWindow")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 	
+func show_starting():
+	get_node("3MBoh").show()
+	get_node("Dehydration").show()
+	get_node("SOCl2").show()
+	get_node("PBr3").show()
+	get_node("HydrogenHalide").show()
 	
 func _on_Dehydration_pressed():
 	get_node("DeHPopup").hide()
@@ -17,7 +23,7 @@ func _on_Dehydration_pressed():
 	get_node("SOCl2").hide()
 	get_node("PBr3").hide()
 	get_node("HydrogenHalide").hide()
-	global.nextChemical = "3MB" #different for backwards
+	nextChemical = parent.get_node("3MB")
 	global.power -= 1
 	var t = Timer.new()
 	t.set_wait_time(10)
@@ -29,9 +35,11 @@ func _on_Dehydration_pressed():
 	get_node("3MBoh-3MB-DeH").play()
 	yield(t, "timeout")
 	t.queue_free()
-	global.currentChemical = "3MB" 
+	get_node("3MBoh-3MB-DeH").hide()
+	global.currentChemical = "3MB"
 	self.hide()
-	get_tree().change_scene("res://BattleWindow.tscn") #different for backwards
+	nextChemical.show()
+	nextChemical.show_starting()
 func _on_SOCl2_pressed():
 	get_node("SOCl2Popup").hide()
 	get_node("Dehydration").hide()
