@@ -10,6 +10,7 @@ func _ready():
 		get_node("Bubble BackGround").stop()
 	
 	if (global.startingChemical == "reload" && global.nextChemical != null) :
+		get_node("FirstTargetPage")._on_ContinueButton_pressed()
 		get_node("FirstTargetPage").hide()
 		get_node(str(global.nextChemical)).show()
 	

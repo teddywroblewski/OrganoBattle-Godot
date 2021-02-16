@@ -156,8 +156,7 @@ margin_left = 599.142
 margin_top = 58.8729
 margin_right = 809.142
 margin_bottom = 125.873
-max_value = 10.0
-value = 10.0
+value = 100.0
 texture_over = ExtResource( 16 )
 texture_progress = ExtResource( 17 )
 
@@ -187,6 +186,7 @@ position = Vector2( 365.262, 303.813 )
 scale = Vector2( 0.912347, 0.912347 )
 frames = SubResource( 1 )
 animation = "New Anim 1"
+frame = 1
 playing = true
 
 [node name="FlameAttack" type="AnimatedSprite" parent="."]
@@ -211,7 +211,6 @@ frames = SubResource( 3 )
 position = Vector2( 483.747, 386.005 )
 scale = Vector2( 1.50049, 1.5005 )
 frames = SubResource( 4 )
-frame = 2
 playing = true
 
 [node name="OpponentTurn" type="TextureRect" parent="."]
